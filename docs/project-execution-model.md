@@ -221,4 +221,4 @@ Scale coordination and checks to risk, uncertainty, and complexity. Combine acti
 
 ## Boundary
 
-This model is self-contained guidance for project execution. General definitions and rules for work, roles, work-item structures, and the mechanics of operational planning belong to the separate Work Execution Model.
+This model is self-contained guidance for project execution. General definitions and rules for work, roles, work-item structures, and the mechanics of operational planning belong to the separate Work Management Model.

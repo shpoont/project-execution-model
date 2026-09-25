@@ -285,3 +285,13 @@ agreed limits, applicable obligations, and the decision-maker's authority.
 **Current guidance:** [project journey](project-execution-model.md#the-project-journey),
 [implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
 and [tests throughout the project](project-execution-model.md#develop-tests-throughout).
+
+## D18 — 2026-09-25: Update the Name of the Separate Work Model
+
+**Status: adopted.** The separate model formerly called Work Execution Model
+is now named Work Management Model. This naming change leaves its concepts and
+semantics unchanged. The responsibility boundary also remains unchanged:
+this repository covers project execution, while the separate model covers
+general work definitions and the mechanics of operational planning.
+
+**Current guidance:** [project model boundary](project-execution-model.md#boundary).
