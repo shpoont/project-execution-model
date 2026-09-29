@@ -77,7 +77,7 @@ A mock is a stand-in used to explore how something would work. It might be a pro
 
 Mocks give people something concrete to try and question. They help expose misunderstandings and missing behavior before investing in the real result, while design changes are still inexpensive.
 
-Prefer inexpensive mocks that answer the relevant questions. Use the smallest useful new or existing mock, or reuse still-applicable review evidence that already answers the question. More mocks are useful only when they resolve additional relevant uncertainty. Plan each mock's creation and review around clear questions, conditions, and participants. Include draft usage guidance where it helps.
+Explore **all the main agreed activities and their important interactions** through simple mocks or rehearsals, including what must happen to make the result usable. Prioritize coverage over polish. Reuse suitable mocks and still-applicable review evidence. Plan reviews around clear questions, conditions, and participants; include draft usage guidance where it helps.
 
 When a new review is needed, have appropriate people try the mock manually, involving intended users, affected parties, or relevant expertise where needed. Look for problems with usefulness, clarity, feasibility, and missing behavior. Refine the mock or return to the decisions the findings challenge.
 
