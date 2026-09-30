@@ -101,7 +101,7 @@ Organize mocks so contributors can understand what each represents, how they fit
 
 Tests can originate in any of the four areas; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** The tests can live in an existing checklist or other project record; no separate document or test framework is required.
 
-**Prepare these checks before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
+**[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
 > **At the café:** Before changing live service, the team agrees on the pickup-point implementation contract and prepares its checks:
 >
@@ -109,7 +109,9 @@ Tests can originate in any of the four areas; mock review informs and refines th
 > - **Missing order:** staff notify the kitchen and give the customer an accurate update.
 > - **Safe handling:** real orders meet the café's existing food-handling rules.
 > - **Staffing budget:** recorded staff hours and costs stay within the agreed staffing budget.
-> - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of an observer's record during the pilot.
+> - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of the owner's record during the pilot.
+>
+> Before the live trial, the owner practices recording arrivals and collection outcomes with a clock and a prepared sheet. This checks the recording method; the accuracy of the real setup's records remains unproven.
 >
 > The plan starts with a small trial, then a full lunchtime pilot. The team agrees on the prerequisites for the trial and the evidence required before each expansion. All five checks must pass on the real combined setup under busy conditions before regular service is accepted. The separate week-long benefit test remains the owner's later obligation.
 
@@ -187,7 +189,9 @@ Cover all agreed expectations for behavior, quality, delivery acceptance, intend
 
 Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change.
 
-For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method. Prepare any measurement capability needed. Keep outcomes clear:
+**Preparing a test means having a usable way to assess the result, not just naming what to check.** For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method.
+
+The method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them; make later prerequisites explicit. Preparation alone provides no pass. Keep outcomes clear:
 
 - **Passed:** valid, applicable evidence shows that the agreed criteria were met under the recorded conditions.
 - **Failed:** the check ran and its criteria were not met. This includes a check that fails as expected because the real component has not yet been built; record why it failed.
