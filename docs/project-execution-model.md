@@ -87,6 +87,8 @@ If no mock can credibly answer a material question, use reviewed findings from a
 
 Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty.
 
+Organize mocks so contributors can understand what each represents, how they fit together, and how to use them to explore the proposed result. Identify current versions and alternatives. Check that each supports meaningful exploration of its intended question. Update or retire affected mocks when decisions change.
+
 ![Design: the team rehearses separate Order and Pickup areas and discovers confusion between two customers named Alex.](assets/cafe-design.png)
 
 > **At the café:** The team sketches a pickup area with bags labeled by customer name. A staff member checks each collection and alerts the kitchen about missing orders. Staff and a few customers rehearse with empty bags, including two customers named Alex. The Alex orders get swapped. The team changes the design to use order numbers and rehearses again.
@@ -97,7 +99,7 @@ Review findings develop the design and its tests together. If preparing a check 
 
 **The implementation contract is the agreed set of tests a piece of work must satisfy to count as implemented.** This subset of project tests is the main agreement between Design and Implementation. It covers all agreed expectations assigned to that piece: what it must do, how people or parts exchange work or information, the required quality and limits, and how they work together. Select tests from those responsibilities, not from what is easiest to pass.
 
-Tests can originate in any of the four areas; mock review informs and refines them. Use the agreed need and success criteria to judge the result. Keep the design and the reasons for it alongside the checks: passing an incomplete set does not settle a known problem. The tests can live in an existing checklist or other project record; no separate document or test framework is required.
+Tests can originate in any of the four areas; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** The tests can live in an existing checklist or other project record; no separate document or test framework is required.
 
 **Prepare these checks before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
@@ -182,6 +184,8 @@ Correcting a test or adding coverage is different from changing the intended tar
 Develop tests across all four areas. **Prepare relevant checks before the work they will guide.** Agree on the checks assigned to an implementation increment as its [implementation contract](#agree-on-the-implementation-contract). Exploration can have its own questions and checks; run each check when the necessary evidence is available.
 
 Cover all agreed expectations for behavior, quality, delivery acceptance, intended benefits (such as profit where relevant), and execution constraints. Include important assumptions, failure cases, and unintended effects.
+
+Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change.
 
 For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method. Prepare any measurement capability needed. Keep outcomes clear:
 
