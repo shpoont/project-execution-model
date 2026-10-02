@@ -25,15 +25,15 @@ Four recurring areas of work give the project direction:
 
 These areas form **one iterative process**. Work moves between them as findings require: a review can change the design, a test can challenge an assumption, and actual use can reopen the original need. Revisit only affected work and retain what still holds. One contribution may already be in use while another is being designed. At any point, the decision may be to continue, investigate, revise, pause, or stop.
 
-Use the journey to see the model in practice. [Main Concepts](#main-concepts) brings together the rules that apply throughout.
+Use the journey to see the model in practice. Return to [Main Concepts](#main-concepts) for detailed guidance on tests, evidence, commitments, and scale.
 
 **Review and testing run throughout.** Tests are checks against expectations, including manual assessments. They develop across all four areas as expectations emerge. Mocks—stand-ins or rehearsals—help people explore and review proposed behavior.
 
-Work in **increments**: manageable pieces with a result you can check. Before implementing each increment, agree on its checks and prepare them. These form the **implementation contract**, the shared agreement about what that piece must demonstrate. Implementation satisfies it and checks how its parts are built and work together.
+Work in **increments**: manageable pieces with a result you can check. Before implementing each increment, agree on its checks and prepare them. These form the **implementation contract**, the shared agreement about what that piece must demonstrate. During implementation, satisfy the contract and check how the real parts are built and work together.
 
 Progress brings greater commitments. Before a major purchase, live trial, wider rollout, or other consequential action, [check readiness](#check-readiness-before-committing) for that particular commitment. A milestone can record that decision and its scope; later findings may require it to be revisited.
 
-**Plan throughout the project**, including mock creation and reviews, and revise plans when findings change the approach. Keep the project's scope, assumptions, decisions, and evidence current. Manage its dependencies, resources, budget, risks, and communication. Address relevant safety, privacy, security, accessibility, and other obligations.
+**Plan throughout the project**, including mock creation and reviews, and revise plans when findings change the approach.
 
 The whole project need not be specified upfront, and the areas and practices do not require separate documents.
 
@@ -127,7 +127,9 @@ Tests can originate in any of the four areas; mock review informs and refines th
 
 The agreed tests turn expectations into a concrete target for implementation. Satisfying them provides evidence that the real result meets those expectations under the tested conditions; failures guide corrections or reveal a decision that needs revisiting.
 
-**Start with the prepared tests.** Before adding new behavior, run its checks against the current real result where possible to establish what already works and confirm that the checks expose the intended missing behavior. Failures caused by missing implementation are expected at this point: they show what the implementation still needs to satisfy. Record them as [failures, not passes](#develop-tests-throughout). Retain valid passes for behavior that already exists. If a check has not yet run, record it as pending, with its assessment method ready. A pass against a mock supports only the behavior and conditions actually tested.
+**Start with the prepared tests.** Before adding new behavior, run the prepared checks against what already exists, where possible. Establish what already works, and confirm that the checks fail where required behavior is still missing. For checks that depend on service delivery, see [Live Services](#live-services).
+
+Failures caused by missing implementation are expected at this point: they show what the implementation still needs to satisfy. Record them as [failures, not passes](#develop-tests-throughout). Retain valid passes for behavior that already exists. If a check has not yet run, record it as pending, with its assessment method ready. A pass against a mock supports only the behavior and conditions actually tested.
 
 A costly or destructive check need not run merely to confirm known missing work. Prepare its assessment before implementation and agree when it must run. It stays pending until run; any pass required for the next commitment is still required.
 
@@ -191,7 +193,9 @@ For every permitted pending check, identify when it will run, who will act on it
 
 ## Main Concepts
 
-These principles bring together the rules used throughout the journey, with more detail on evidence, commitments, and scale. They apply whether the project changes software, a service, a physical product, or a way of working.
+Use this section as a reference throughout the project for test preparation and results, evidence limits, commitment decisions, and scale. These principles apply whether the project changes software, a service, a physical product, or a way of working.
+
+Keep the project's scope, assumptions, decisions, and evidence current. Manage its dependencies, resources, budget, risks, and communication. Address relevant safety, privacy, security, accessibility, and other obligations.
 
 ### Advance With Evidence
 
@@ -203,21 +207,21 @@ Correcting a test or adding coverage is different from changing the intended tar
 
 ### Develop Tests Throughout
 
+**Preparing a test means having a usable way to assess the result, not just naming what to check.** For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method.
+
 Develop tests across all four areas. **Prepare relevant checks before the work they will guide.** Agree on the checks assigned to an implementation increment as its [implementation contract](#agree-on-the-implementation-contract). Exploration can have its own questions and checks; run each check when the necessary evidence is available.
 
 Cover all agreed expectations for behavior, quality, delivery acceptance, intended benefits (such as profit where relevant), and execution constraints. Include important assumptions, failure cases, and unintended effects.
 
 Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change.
 
-**Preparing a test means having a usable way to assess the result, not just naming what to check.** For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method.
-
-The method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them; make later prerequisites explicit. Preparation alone provides no pass. Keep outcomes clear:
+The assessment method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them; make later prerequisites explicit. Preparation alone provides no pass. Keep outcomes clear:
 
 - **Passed:** valid, applicable evidence shows that the agreed criteria were met under the recorded conditions.
 - **Failed:** the check ran and its criteria were not met. This includes a check that fails as expected because the real component has not yet been built; record why it failed.
 - **Pending:** the check has not run or completed, so it has no outcome yet. This is distinct from a check that ran and failed. Neither status is a pass.
 
-Record a decision and any follow-up for every known failure, even if the check does not block the next commitment. For expected failures caused by work not yet implemented, the existing implementation agreement can serve as the recorded decision and follow-up. Failures that challenge that agreement need a further decision. Record approved exceptions separately. The same evidence limits apply to contract tests, internal verification, and later project checks.
+Record a decision and any follow-up for every known failure, even if the check does not block the next commitment. For expected failures caused by work not yet implemented, the existing agreement to complete that work can serve as the recorded decision and follow-up. Failures that challenge that agreement need a further decision. Record approved exceptions separately. The same evidence limits apply to contract tests, internal verification, and later project checks.
 
 ### Check Readiness Before Committing
 
