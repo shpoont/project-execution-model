@@ -37,7 +37,7 @@ Progress brings greater commitments. Before a major purchase, live trial, wider 
 
 The whole project need not be specified upfront, and the areas and practices do not require separate documents.
 
-The example running through these areas follows a café. At lunchtime, customers who phoned ahead still queue for ten minutes to collect their food. Some give up and leave.
+The example running through these areas follows a café. At lunchtime, bags of ready food pile up behind the counter. Customers who phoned ahead still wait ten minutes to collect them. Some give up and leave.
 
 ### Define
 
@@ -59,11 +59,11 @@ Identify who can authorize commitments, accept delivery, approve permitted excep
 
 ![Define: ready takeaway orders pile up while customers queue through the café doorway and the manager observes the bottleneck.](assets/cafe-define.png)
 
-> **At the café:** The owner compares another cashier with a separate pickup point. Observations show that ready orders sit waiting while the cashier takes new orders, so the owner chooses to try the cheaper pickup point first. Delivery means handing over the correct food safely. The change must fit the existing staffing budget.
+> **At the café:** The owner watches the queue. One employee packs orders, but the bags wait for the cashier, who is busy taking new orders. The owner compares hiring another cashier with having the existing packer hand orders directly to collection customers. A separate pickup point could avoid another hire—if the packer can manage both jobs. The owner chooses to explore that option within the existing staffing budget.
 >
-> The owner prepares the benefit test now: **at least nine in ten customers arriving to collect food must receive it within five minutes**. During the first week of regular use, record every collection attempt: the arrival time and either the handover time or that the customer left without their food. Leaving without food counts as missing the target. The owner will review the result at the end of that week. This test exists before any mock, although the evidence cannot yet be collected.
+> The target is **at least nine in ten customers arriving to collect food receive it within five minutes**. During the first week of regular use, the team will record arrival at the café and handover, or that the customer left without food. Time spent finding the right queue counts too; leaving empty-handed counts as missing the target.
 >
-> The owner also agrees on the completion boundary: the setup must pass its required checks, be accepted, and be handed over. The later benefit review remains the owner's responsibility.
+> The owner will accept the setup once it passes its checks and staff can take over. That can finish the setup work; the owner will still review the week's results and decide whether the change needs more work.
 
 ### Design
 
@@ -91,11 +91,15 @@ Organize mocks so contributors can understand what each represents, how they fit
 
 ![Design: the team rehearses separate Order and Pickup areas and discovers confusion between two customers named Alex.](assets/cafe-design.png)
 
-> **At the café:** The team lists the connected activities: prepare and label food, find the customer's order, and hand it over. Its pickup sketch covers only ready orders. Walking through a customer's arrival reveals a gap: who handles an order that is not there? They add a handoff to the kitchen and an update to the customer.
+> **At the café:** Before moving anything, staff sketch the journey from the entrance. Directions visible from outside split arrivals before they join a queue: **Place an order → Order** on the left; **Already ordered → Pickup** on the right. The cashier takes new orders. The existing packer labels each ready bag with the customer's name and hands it over at pickup.
 >
-> Staff and a few customers try the flow with empty bags, including two customers named Alex. The Alex orders get swapped. The team switches from names to order numbers, marks the old sketch as replaced, and rehearses again. It keeps the missing-order scenario alongside the revised collection scenario.
+> Walking through the sketch exposes a gap: what happens when a collection customer arrives before the food? They still go to pickup. The packer checks with the kitchen and gives them an accurate update.
 >
-> Participants can now follow these handoffs under the rehearsed conditions. Real-food safety and rush-time performance remain unproven and need later checks.
+> To try the whole journey, colleagues approach the café in mixed order, some wanting to order and others to collect. Staff check whether they follow the directions to the right queue, then act out packing and handover with empty bags. Two collection customers are both called Alex.
+>
+> The wrong Alex gets the wrong bag.
+>
+> They change the design: each order gets a number, shared by the customer, the order record, and the bag. They repeat the arrivals, collection, and missing-order scenarios. The revised flow works in rehearsal. They replace the old sketch and keep those scenarios for future checks.
 
 #### Agree on the Implementation Contract
 
@@ -105,19 +109,17 @@ Tests can originate in any of the four areas; mock review informs and refines th
 
 **[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
-> **At the café:** Before changing live service, the team turns these scenarios and the owner's limits into checks. A readable number on every bag could still leave customers with the wrong food, so the correct-order check follows each order through to its recipient:
+> **At the café:** Before putting the plan into practice, the owner and staff agree on five results:
 >
-> - **Correct order:** two customers with the same name each receive the food they ordered, under their own order number.
-> - **Missing order:** staff notify the kitchen and give the customer an accurate update.
-> - **Safe handling:** real orders meet the café's existing food-handling rules.
-> - **Staffing budget:** recorded staff hours and costs stay within the agreed staffing budget.
-> - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of the owner's record during the pilot.
+> 1. Customers find the right queue and receive their own food, matched by order number.
+> 2. Every missing order gets a kitchen check and an accurate update to the customer.
+> 3. Every order passes the café's usual food-handling checks.
+> 4. The packer completes both packing and handover within the agreed staff hours and budget.
+> 5. Every collection attempt is recorded accurately, including customers who leave without food.
 >
-> Before the trial, the owner tries the recording sheet and clock during a rehearsal, including someone leaving without food. Every attempt is recorded; accuracy during live service remains unproven.
+> A numbered bag alone cannot satisfy the first check: they must follow the food through to its recipient. They keep the checklist beside the sketch, noting when each check applies and separating rehearsal results from live results.
 >
-> Beside the current sketch, the team keeps a checklist linking each check to its purpose and when to run it: in rehearsal, on real parts such as labels and records, or on the combined service. Rehearsal results stay separate from real-service results.
->
-> The plan starts with a small trial, then a full lunchtime pilot. The team agrees on the prerequisites for the trial and the evidence required before each expansion. All five checks must pass on the real combined setup under busy conditions before regular service is accepted. The separate week-long benefit test remains the owner's later obligation.
+> The owner prepares the recording sheet and tries it from arrival at the entrance through collection or leaving without food. Every attempt is captured. During the live trial, recorded times must also match the owner's comparison timings within ten seconds. All five checks must pass during busy service before the setup is accepted for regular use.
 
 ### Implement
 
@@ -141,11 +143,19 @@ Run relevant contract and internal checks as each mocked part is replaced or inc
 
 ![Implement: a worker hands over order 17, matching the customer's phone, while the manager records checks during the live trial.](assets/cafe-implement.png)
 
-> **At the café:** The team first runs the checks it can against the existing service and retains applicable evidence. Checks that cannot yet run stay pending. It installs the pickup point; before serving trial orders, staff confirm that it follows the café's food-handling rules and rehearse the handoffs. The owner then authorizes a few real orders. The correct-order check fails when a number folds underneath a bag.
+> **At the café:** The team puts the sketch and checklist on the counter and starts making the plan real. They first run the checks they can against the current service. The recording check fails: nobody records arrivals or customers leaving empty-handed. Checks requiring the new pickup point remain “not yet tested.”
 >
-> Staff add an internal check: numbers must remain readable when bags are stacked and carried. It fails with the current labels. They change the label position in the sketch and real setup, add the check beside the correct-order check, and rerun both and other affected checks. The missing-order rehearsal findings still apply. Once the small-trial requirements pass, the team can expand.
+> First, collection customers must find pickup without joining the order queue. Staff clear space within the packer's reach and install the entrance directions, with Order on the left and Pickup on the right. Colleagues approach as customers while others form a queue. One joins the wrong line: people standing in front of the entrance sign hide its arrow. Staff move the sign higher, update the sketch, and repeat the walk-through. Both routes now work in this check.
 >
-> The full lunchtime pilot checks the real kitchen, staff, pickup area, and customers together. Correct-order, missing-order, safe-handling, staffing-budget, and time-record checks all pass under busy conditions. This fulfils the increment's contract. It also establishes that the owner can collect the evidence for the week-long benefit test, whose outcome remains pending.
+> Next, every collection attempt must leave an accurate record. They put the prepared sheet and clock where counter staff can see arrivals and handovers, then practise recording them. One colleague leaves without collecting anything; that must appear on the sheet too. They compare the entries and timings with the owner's record. The check passes in practice; keeping the records accurate during lunch still needs testing.
+>
+> For correct handovers, they introduce matching numbers on order slips and bags and practise giving each customer their number. The packer uses it to match the food to its recipient and checks with the kitchen when an order is missing. Once food-handling checks pass and staff can carry out the handoffs and recording routine, the owner authorizes a few real orders. A full lunchtime trial will follow only when the small trial's required checks pass.
+>
+> Then part of an order number folds underneath a bag. The packer misreads it and hands the bag to the wrong customer.
+>
+> The failed handover leads to another check: **do numbers stay readable when bags are stacked and carried?** The current labels fail. Staff move them higher on the bags and update the sketch. They add the visibility check beside the handover check, then repeat both and any other affected checks. This time, both pass in the small trial. The missing-order rehearsal result still applies: moving the labels changes neither the kitchen check nor the customer update.
+>
+> Once the small trial passes, they run a full lunchtime trial, checking customer routing and how the kitchen, packing, and pickup work together. All five checks pass under these conditions: customers find the right queue, the packer handles both jobs within budget, and the collection records are accurate. The setup is ready to hand over.
 
 #### Live Services
 
@@ -169,9 +179,15 @@ For every permitted pending check, identify when it will run, who will act on it
 
 ![Deliver and Learn: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
 
-> **At the café:** The owner accepts the setup for regular service after the required checks pass. The setup project can close once its handover obligations are settled; the owner accepts responsibility for the one-week review and the decision that follows.
+> **At the café:** The owner reviews the results and accepts the setup for regular use. Staff take over the revised packing and pickup routine, using the updated sketch and checklist, and know to bring new problems to the owner. With the handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and acting on the result.
 >
-> After a week, only seven in ten customers arriving to collect food receive it within five minutes. **Delivery was accepted; the intended benefit was not achieved.** The owner authorizes improvement work, returning to Design with the collection records to locate the remaining delay. Checks and evidence that still apply are retained.
+> At the end of that week, the result is **seven in ten**.
+>
+> The target was nine.
+>
+> The setup passed its delivery checks, but too many customers still wait too long or leave without food. The change has not achieved the benefit that justified it.
+>
+> The owner approves further improvement. The team returns to Design with the collection records to find the remaining delay, keeping the checks and evidence that still apply. What they learn may change the pickup process—or make them reconsider whether it addresses the main cause of the waiting.
 
 ## Main Concepts
 
