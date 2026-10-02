@@ -91,9 +91,11 @@ Organize mocks so contributors can understand what each represents, how they fit
 
 ![Design: the team rehearses separate Order and Pickup areas and discovers confusion between two customers named Alex.](assets/cafe-design.png)
 
-> **At the café:** The team sketches a pickup area with bags labeled by customer name. A staff member checks each collection and alerts the kitchen about missing orders. Staff and a few customers rehearse with empty bags, including two customers named Alex. The Alex orders get swapped. The team changes the design to use order numbers and rehearses again.
+> **At the café:** The team lists the connected activities: prepare and label food, find the customer's order, and hand it over. Its pickup sketch covers only ready orders. Walking through a customer's arrival reveals a gap: who handles an order that is not there? They add a handoff to the kitchen and an update to the customer.
 >
-> People can now follow the handoff in those sample situations. This does **not** establish whether real food will be handled safely or collected quickly during a rush. The findings refine the design and add checks for real orders alongside the benefit test.
+> Staff and a few customers try the flow with empty bags, including two customers named Alex. The Alex orders get swapped. The team switches from names to order numbers, marks the old sketch as replaced, and rehearses again. It keeps the missing-order scenario alongside the revised collection scenario.
+>
+> Participants can now follow these handoffs under the rehearsed conditions. Real-food safety and rush-time performance remain unproven and need later checks.
 
 #### Agree on the Implementation Contract
 
@@ -103,15 +105,17 @@ Tests can originate in any of the four areas; mock review informs and refines th
 
 **[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
-> **At the café:** Before changing live service, the team agrees on the pickup-point implementation contract and prepares its checks:
+> **At the café:** Before changing live service, the team turns these scenarios and the owner's limits into checks. A readable number on every bag could still leave customers with the wrong food, so the correct-order check follows each order through to its recipient:
 >
-> - **Correct order:** two customers with the same name each receive their own numbered order.
+> - **Correct order:** two customers with the same name each receive the food they ordered, under their own order number.
 > - **Missing order:** staff notify the kitchen and give the customer an accurate update.
 > - **Safe handling:** real orders meet the café's existing food-handling rules.
 > - **Staffing budget:** recorded staff hours and costs stay within the agreed staffing budget.
 > - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of the owner's record during the pilot.
 >
-> Before the live trial, the owner practices recording arrivals and collection outcomes with a clock and a prepared sheet. This checks the recording method; the accuracy of the real setup's records remains unproven.
+> Before the trial, the owner tries the recording sheet and clock during a rehearsal, including someone leaving without food. Every attempt is recorded; accuracy during live service remains unproven.
+>
+> Beside the current sketch, the team keeps a checklist linking each check to its purpose and when to run it: in rehearsal, on real parts such as labels and records, or on the combined service. Rehearsal results stay separate from real-service results.
 >
 > The plan starts with a small trial, then a full lunchtime pilot. The team agrees on the prerequisites for the trial and the evidence required before each expansion. All five checks must pass on the real combined setup under busy conditions before regular service is accepted. The separate week-long benefit test remains the owner's later obligation.
 
@@ -137,9 +141,9 @@ Run relevant contract and internal checks as each mocked part is replaced or inc
 
 ![Implement: a worker hands over order 17, matching the customer's phone, while the manager records checks during the live trial.](assets/cafe-implement.png)
 
-> **At the café:** The team first runs the checks it can against the existing service and retains applicable evidence. Checks that cannot yet run stay pending. Once ready for the limited trial, it installs the pickup point and starts with a few real orders. The correct-order check fails when a number folds underneath a bag.
+> **At the café:** The team first runs the checks it can against the existing service and retains applicable evidence. Checks that cannot yet run stay pending. It installs the pickup point; before serving trial orders, staff confirm that it follows the café's food-handling rules and rehearse the handoffs. The owner then authorizes a few real orders. The correct-order check fails when a number folds underneath a bag.
 >
-> Staff add an internal check: numbers must remain readable when bags are stacked and carried. It fails with the current labels. They change the label position, then rerun this check and the affected contract checks. Once the small-trial requirements pass, the team can expand.
+> Staff add an internal check: numbers must remain readable when bags are stacked and carried. It fails with the current labels. They change the label position in the sketch and real setup, add the check beside the correct-order check, and rerun both and other affected checks. The missing-order rehearsal findings still apply. Once the small-trial requirements pass, the team can expand.
 >
 > The full lunchtime pilot checks the real kitchen, staff, pickup area, and customers together. Correct-order, missing-order, safe-handling, staffing-budget, and time-record checks all pass under busy conditions. This fulfils the increment's contract. It also establishes that the owner can collect the evidence for the week-long benefit test, whose outcome remains pending.
 
