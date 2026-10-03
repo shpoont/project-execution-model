@@ -6,12 +6,13 @@ and open questions connected as work passes between human or AI contributors.
 
 ## Documents
 
-- [Project Execution Model v1.0](docs/project-execution-model.md) — the current
+- [Project Execution Model v1.1.0](docs/project-execution-model.md) — the current
   model has four recurring areas: Define, Design, Implement, and Deliver & Learn.
   Review and testing run throughout. Agreed checks guide each implementation
   increment, and new findings can reopen affected decisions.
 - [Decision log](docs/decision-log.md) — lasting decisions and their rationale.
   The model document contains the guidance to use.
+- [Changelog](CHANGELOG.md) — summaries of changes by version.
 
 ## Feedback
 

@@ -208,7 +208,8 @@ with seven steps while keeping the sequence visible and iterative.
 
 ## D15 — 2026-09-22 to 2026-09-23: Adopt and lock Version 1.0
 
-**Status: adopted; seven-step structure superseded by D17.** The Project
+**Status: adopted for the initial version; seven-step structure superseded by
+D17.** The Project
 Execution Model is the one current core document, named
 `docs/project-execution-model.md`. Its original seven steps showed
 increasing commitment with returns to affected earlier decisions. Planning
@@ -224,7 +225,7 @@ document for every activity. General work semantics remain outside this model's
 scope.
 
 The former ten-stage standard, record template, and separate model-boundary
-file were retired. The Version 1.0 designation remains inside the model rather
+file were retired. The version designation remains inside the model rather
 than in its filename.
 
 **Current guidance:** [Project Execution Model](project-execution-model.md).
@@ -295,3 +296,28 @@ this repository covers project execution, while the separate model covers
 general work definitions and the mechanics of operational planning.
 
 **Current guidance:** [project model boundary](project-execution-model.md#boundary).
+
+## D19 — 2026-10-03: Strengthen Mock and Test Practice and Release Version 1.1.0
+
+**Status: adopted.** [PR #2](https://github.com/shpoont/project-execution-model/pull/2)
+strengthens mock coverage, organization of mocks and tests, and practical test
+preparation. The aim is to expose important missing behavior, keep contributors'
+working material understandable and current, and make assessments usable before
+relying on them. Review whether all checks could pass while an important part
+of the intended result remains missing or wrong.
+
+[PR #3](https://github.com/shpoont/project-execution-model/pull/3) rewrites the
+café example and improves wording and navigation. The example should show checks
+guiding actual implementation and corrections, verification of the combined
+service, and a later benefit review that can challenge an accepted result.
+
+Release these changes as **v1.1.0 — Evidence in Practice**, preserving the four
+recurring areas, readiness and evidence safeguards, and outcome and closure
+responsibilities. Add no stage or required project document. Retain the initial
+release date, 22 September 2026, and the `v1.0.0` baseline at `eb126d1`.
+Versioned change summaries belong in the changelog; this log preserves decisions
+and their reasons.
+
+**Current guidance:** [mock review](project-execution-model.md#review-the-proposal-with-mocks),
+[test preparation](project-execution-model.md#develop-tests-throughout),
+and the [changelog](../CHANGELOG.md).

@@ -1,6 +1,8 @@
 # Project Execution Model
 
-*Version 1.0 — Initial release | 22 September 2026*
+*Version 1.1.0 — Evidence in Practice | Released 3 October 2026*
+
+*Initial release: 22 September 2026*
 
 Author: **Leon.id Komarovsky** — [leonid@komarovsky.info](mailto:leonid@komarovsky.info)
 
