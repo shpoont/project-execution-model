@@ -77,7 +77,7 @@ A mock is a stand-in used to explore how something would work. It might be a pro
 
 Mocks give people something concrete to try and question. They help expose misunderstandings and missing behavior before investing in the real result, while design changes are still inexpensive.
 
-Prefer inexpensive mocks that answer the relevant questions. Use the smallest useful new or existing mock, or reuse still-applicable review evidence that already answers the question. More mocks are useful only when they resolve additional relevant uncertainty. Plan each mock's creation and review around clear questions, conditions, and participants. Include draft usage guidance where it helps.
+Explore **all the main agreed activities and their important interactions** through simple mocks or rehearsals, including what must happen to make the result usable. Prioritize coverage over polish. Reuse suitable mocks and still-applicable review evidence. Plan reviews around clear questions, conditions, and participants; include draft usage guidance where it helps.
 
 When a new review is needed, have appropriate people try the mock manually, involving intended users, affected parties, or relevant expertise where needed. Look for problems with usefulness, clarity, feasibility, and missing behavior. Refine the mock or return to the decisions the findings challenge.
 
@@ -87,27 +87,35 @@ If no mock can credibly answer a material question, use reviewed findings from a
 
 Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty.
 
+Organize mocks so contributors can understand what each represents, how they fit together, and how to use them to explore the proposed result. Identify current versions and alternatives. Check that each supports meaningful exploration of its intended question. Update or retire affected mocks when decisions change.
+
 ![Design: the team rehearses separate Order and Pickup areas and discovers confusion between two customers named Alex.](assets/cafe-design.png)
 
-> **At the café:** The team sketches a pickup area with bags labeled by customer name. A staff member checks each collection and alerts the kitchen about missing orders. Staff and a few customers rehearse with empty bags, including two customers named Alex. The Alex orders get swapped. The team changes the design to use order numbers and rehearses again.
+> **At the café:** The team lists the connected activities: prepare and label food, find the customer's order, and hand it over. Its pickup sketch covers only ready orders. Walking through a customer's arrival reveals a gap: who handles an order that is not there? They add a handoff to the kitchen and an update to the customer.
 >
-> People can now follow the handoff in those sample situations. This does **not** establish whether real food will be handled safely or collected quickly during a rush. The findings refine the design and add checks for real orders alongside the benefit test.
+> Staff and a few customers try the flow with empty bags, including two customers named Alex. The Alex orders get swapped. The team switches from names to order numbers, marks the old sketch as replaced, and rehearses again. It keeps the missing-order scenario alongside the revised collection scenario.
+>
+> Participants can now follow these handoffs under the rehearsed conditions. Real-food safety and rush-time performance remain unproven and need later checks.
 
 #### Agree on the Implementation Contract
 
 **The implementation contract is the agreed set of tests a piece of work must satisfy to count as implemented.** This subset of project tests is the main agreement between Design and Implementation. It covers all agreed expectations assigned to that piece: what it must do, how people or parts exchange work or information, the required quality and limits, and how they work together. Select tests from those responsibilities, not from what is easiest to pass.
 
-Tests can originate in any of the four areas; mock review informs and refines them. Use the agreed need and success criteria to judge the result. Keep the design and the reasons for it alongside the checks: passing an incomplete set does not settle a known problem. The tests can live in an existing checklist or other project record; no separate document or test framework is required.
+Tests can originate in any of the four areas; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** The tests can live in an existing checklist or other project record; no separate document or test framework is required.
 
-**Prepare these checks before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
+**[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Assign responsibility and timing for checks that need delivery or actual use. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
-> **At the café:** Before changing live service, the team agrees on the pickup-point implementation contract and prepares its checks:
+> **At the café:** Before changing live service, the team turns these scenarios and the owner's limits into checks. A readable number on every bag could still leave customers with the wrong food, so the correct-order check follows each order through to its recipient:
 >
-> - **Correct order:** two customers with the same name each receive their own numbered order.
+> - **Correct order:** two customers with the same name each receive the food they ordered, under their own order number.
 > - **Missing order:** staff notify the kitchen and give the customer an accurate update.
 > - **Safe handling:** real orders meet the café's existing food-handling rules.
 > - **Staffing budget:** recorded staff hours and costs stay within the agreed staffing budget.
-> - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of an observer's record during the pilot.
+> - **Time records:** every collection attempt has an arrival time and either a handover time or a record that the customer left without food. Recorded times are accurate to within ten seconds of the owner's record during the pilot.
+>
+> Before the trial, the owner tries the recording sheet and clock during a rehearsal, including someone leaving without food. Every attempt is recorded; accuracy during live service remains unproven.
+>
+> Beside the current sketch, the team keeps a checklist linking each check to its purpose and when to run it: in rehearsal, on real parts such as labels and records, or on the combined service. Rehearsal results stay separate from real-service results.
 >
 > The plan starts with a small trial, then a full lunchtime pilot. The team agrees on the prerequisites for the trial and the evidence required before each expansion. All five checks must pass on the real combined setup under busy conditions before regular service is accepted. The separate week-long benefit test remains the owner's later obligation.
 
@@ -133,9 +141,9 @@ Run relevant contract and internal checks as each mocked part is replaced or inc
 
 ![Implement: a worker hands over order 17, matching the customer's phone, while the manager records checks during the live trial.](assets/cafe-implement.png)
 
-> **At the café:** The team first runs the checks it can against the existing service and retains applicable evidence. Checks that cannot yet run stay pending. Once ready for the limited trial, it installs the pickup point and starts with a few real orders. The correct-order check fails when a number folds underneath a bag.
+> **At the café:** The team first runs the checks it can against the existing service and retains applicable evidence. Checks that cannot yet run stay pending. It installs the pickup point; before serving trial orders, staff confirm that it follows the café's food-handling rules and rehearse the handoffs. The owner then authorizes a few real orders. The correct-order check fails when a number folds underneath a bag.
 >
-> Staff add an internal check: numbers must remain readable when bags are stacked and carried. It fails with the current labels. They change the label position, then rerun this check and the affected contract checks. Once the small-trial requirements pass, the team can expand.
+> Staff add an internal check: numbers must remain readable when bags are stacked and carried. It fails with the current labels. They change the label position in the sketch and real setup, add the check beside the correct-order check, and rerun both and other affected checks. The missing-order rehearsal findings still apply. Once the small-trial requirements pass, the team can expand.
 >
 > The full lunchtime pilot checks the real kitchen, staff, pickup area, and customers together. Correct-order, missing-order, safe-handling, staffing-budget, and time-record checks all pass under busy conditions. This fulfils the increment's contract. It also establishes that the owner can collect the evidence for the week-long benefit test, whose outcome remains pending.
 
@@ -183,7 +191,11 @@ Develop tests across all four areas. **Prepare relevant checks before the work t
 
 Cover all agreed expectations for behavior, quality, delivery acceptance, intended benefits (such as profit where relevant), and execution constraints. Include important assumptions, failure cases, and unintended effects.
 
-For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method. Prepare any measurement capability needed. Keep outcomes clear:
+Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change.
+
+**Preparing a test means having a usable way to assess the result, not just naming what to check.** For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method.
+
+The method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them; make later prerequisites explicit. Preparation alone provides no pass. Keep outcomes clear:
 
 - **Passed:** valid, applicable evidence shows that the agreed criteria were met under the recorded conditions.
 - **Failed:** the check ran and its criteria were not met. This includes a check that fails as expected because the real component has not yet been built; record why it failed.
