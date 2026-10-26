@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Execution Model — Six Recurring Steps</title>
+  <style>
+    /* Fit preset: 1280 × 480. Retains the existing approved overview's
+       white paper, blue accents and serif/sans contrast. Uses local system
+       font stacks; no original font-family match is claimed. */
+    :root { --paper: #ffffff; --ink: #202833; --muted: #495463;
+      --accent: #076da8; --accent-tint: #f0f7fc; --rule: #d6dee6; }
+    body { margin: 0; background: var(--paper); color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    svg { display: block; width: 100%; min-width: 1280px; }
+    .title { font-family: Georgia, 'Times New Roman', serif; font-size: 40px;
+      font-weight: 700; fill: var(--ink); }
+    .subtitle, .footer { font-size: 20px; fill: var(--muted); }
+    .node-name { font-size: 23px; font-weight: 700; fill: var(--ink); }
+    .focal-name { fill: var(--accent); }
+    .detail { font-size: 16px; fill: var(--ink); }
+    .step { fill: var(--paper); stroke: var(--rule); stroke-width: 1.5; }
+    .focal { fill: var(--accent-tint); stroke: var(--accent); stroke-width: 1.5; }
+    .connector { stroke: var(--muted); stroke-width: 1.5; }
+    @media print { .diagram-container { overflow: visible; } }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480"
+         role="img" aria-labelledby="project-execution-model-overview-title project-execution-model-overview-desc">
+      <title id="project-execution-model-overview-title">Project Execution Model — Six Recurring Steps</title>
+      <desc id="project-execution-model-overview-desc">Define, Design, Mock, Prepare Tests, Implement and Deliver form one iterative process, with planning, review and testing throughout and findings returning to affected decisions.</desc>
+      <defs>
+        <marker id="pem-arrow" viewBox="0 0 8 8" refX="7" refY="4"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M1 1 L7 4 L1 7" fill="none" stroke="#495463" stroke-width="1.3"/>
+        </marker>
+      </defs>
+      <rect width="1280" height="480" fill="#ffffff"/>
+      <text x="64" y="64" class="title">Project Execution Model</text>
+      <text x="64" y="104" class="subtitle">One iterative process · Planning, review and testing throughout</text>
+
+      <g class="connector" marker-start="url(#pem-arrow)" marker-end="url(#pem-arrow)">
+        <line x1="240" y1="248" x2="256" y2="248"/>
+        <line x1="436" y1="248" x2="452" y2="248"/>
+        <line x1="632" y1="248" x2="648" y2="248"/>
+        <line x1="828" y1="248" x2="844" y2="248"/>
+        <line x1="1024" y1="248" x2="1040" y2="248"/>
+      </g>
+      <g text-anchor="middle">
+        <rect x="64" y="160" width="172" height="184" rx="6" class="step"/>
+        <text x="150" y="208" class="node-name">Define</text>
+        <text x="150" y="268" class="detail"><tspan x="150">Choose the need,</tspan><tspan x="150" dy="24">benefit and limits.</tspan></text>
+
+        <rect x="260" y="160" width="172" height="184" rx="6" class="step"/>
+        <text x="346" y="208" class="node-name">Design</text>
+        <text x="346" y="268" class="detail"><tspan x="346">Shape the whole</tspan><tspan x="346" dy="24">and its parts.</tspan></text>
+
+        <rect x="456" y="160" width="172" height="184" rx="6" class="focal"/>
+        <text x="542" y="208" class="node-name focal-name">Mock</text>
+        <text x="542" y="256" class="detail"><tspan x="542">Try prototypes</tspan><tspan x="542" dy="24">or rehearsals.</tspan><tspan x="542" dy="24">Review findings.</tspan></text>
+
+        <rect x="652" y="160" width="172" height="184" rx="6" class="focal"/>
+        <text x="738" y="196" class="node-name focal-name"><tspan x="738">Prepare</tspan><tspan x="738" dy="28">Tests</tspan></text>
+        <text x="738" y="268" class="detail"><tspan x="738">Agree expectations</tspan><tspan x="738" dy="24">and prepare checks.</tspan></text>
+
+        <rect x="848" y="160" width="172" height="184" rx="6" class="step"/>
+        <text x="934" y="208" class="node-name">Implement</text>
+        <text x="934" y="244" class="detail"><tspan x="934">Replace stand-ins;</tspan><tspan x="934" dy="24">satisfy agreed tests.</tspan><tspan x="934" dy="24">Verify the real</tspan><tspan x="934" dy="24">combined result.</tspan></text>
+
+        <rect x="1044" y="160" width="172" height="184" rx="6" class="step"/>
+        <text x="1130" y="208" class="node-name">Deliver</text>
+        <text x="1130" y="256" class="detail"><tspan x="1130">Accept, hand over.</tspan><tspan x="1130" dy="24">Monitor use;</tspan><tspan x="1130" dy="24">assess benefits.</tspan></text>
+      </g>
+      <text x="640" y="396" text-anchor="middle" class="footer">Carry forward goals, decisions, evidence and open questions.</text>
+      <text x="640" y="428" text-anchor="middle" class="footer">Findings can reopen any affected step. Reuse what still holds.</text>
+    </svg>
+  </div>
+</body>
+</html>

@@ -50,7 +50,7 @@ the design is inexpensive to change.
 When used, draft documentation remains unverified until reconciled with the
 actual result. It complements appropriate usage evidence.
 
-**Current guidance:** [review the proposal with mocks](project-execution-model.md#review-the-proposal-with-mocks).
+**Current guidance:** [mock review](project-execution-model.md#mock).
 
 ## D04 — 2026-06-19: Check the project as a whole
 
@@ -64,7 +64,7 @@ document coverage, not empirical proof that the standard guarantees successful
 projects. Component results still need a combined-result assessment.
 
 **Current guidance:** [test the combined result](project-execution-model.md#implement)
-and [deliver and learn](project-execution-model.md#deliver--learn).
+and [delivery and learning](project-execution-model.md#deliver).
 
 ## D05 — 2026-06-19: One core standard with focused supporting standards
 
@@ -133,7 +133,7 @@ evidence where it is required. Review findings remain distinct from
 implementation or release authorization. Detailed universal approval gates
 were removed under D13; project readiness checks remain.
 
-**Current guidance:** [review the proposal with mocks](project-execution-model.md#review-the-proposal-with-mocks)
+**Current guidance:** [mock review](project-execution-model.md#mock)
 and [develop tests throughout](project-execution-model.md#develop-tests-throughout).
 
 ## D10 — 2026-07-04: Keep the project outcome central
@@ -242,7 +242,8 @@ standards without treating the whole collection as a required part of the model.
 
 ## D17 — 2026-09-24: Use Recurring Areas of Work and Implementation Contracts
 
-**Status: adopted.** Organize the model around Define, Design, Implement, and
+**Status: adopted for v1.1.0; structural revision proposed in D20.** Organize the
+model around Define, Design, Implement, and
 Deliver & Learn as recurring areas within one iterative process. Mock review,
 test preparation, and testing continue throughout the project rather than
 occupying separate stages. Findings can reopen affected decisions while valid
@@ -283,9 +284,9 @@ as their recorded decision and follow-up. Findings that challenge that
 agreement need a further decision. Exceptions remain bounded by the project's
 agreed limits, applicable obligations, and the decision-maker's authority.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
-and [tests throughout the project](project-execution-model.md#develop-tests-throughout).
+**Published v1.1.0 guidance:** [project journey](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#the-project-journey),
+[implementation contract](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#agree-on-the-implementation-contract),
+and [tests throughout the project](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#develop-tests-throughout).
 
 ## D18 — 2026-09-25: Update the Name of the Separate Work Model
 
@@ -318,6 +319,36 @@ release date, 22 September 2026, and the `v1.0.0` baseline at `eb126d1`.
 Versioned change summaries belong in the changelog; this log preserves decisions
 and their reasons.
 
-**Current guidance:** [mock review](project-execution-model.md#review-the-proposal-with-mocks),
-[test preparation](project-execution-model.md#develop-tests-throughout),
+**Published v1.1.0 guidance:** [mock review](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#review-the-proposal-with-mocks),
+[test preparation](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#develop-tests-throughout),
 and the [changelog](../CHANGELOG.md).
+
+## D20 — 2026-10-24: Propose Six Recurring Steps and Subsystem Cycles
+
+**Status: proposal for issue #4, increment 1; not adopted.** Give Mock and
+Prepare Tests their own recurring steps alongside Define, Design, Implement
+and Deliver. Their work needs greater visibility and clearer connections to
+the designed system. Deliver retains learning, later outcome checks and
+closure responsibilities.
+
+Make Design explicit about the system's elements, responsibilities, ownership,
+interfaces, interactions and decomposition. Apply the full cycle within
+substantial subsystems when uncertainty or consequential commitments warrant
+it. Inherit relevant parent context, return findings that challenge parent
+decisions, and return real results, checks and evidence. The parent remains
+responsible for integration and verification of the combined outcome. Minor,
+well-understood tasks need no nested cycle or separate set of documents.
+
+This proposes revising D17's four-area structure while preserving its iteration,
+implementation-contract, readiness and evidence principles. Implementation
+replaces relevant mocks with real parts; useful test substitutes may remain
+with their evidence limits explicit. Separate steps do not freeze earlier
+decisions or require a separate document for each activity.
+
+The remaining increments in [issue #4](https://github.com/shpoont/project-execution-model/issues/4)
+cover mock/test relationships, assessment validation and practical usability.
+Adoption and a release decision follow review of the complete revision.
+
+**Proposal guidance:** [project journey](project-execution-model.md#the-project-journey),
+[design](project-execution-model.md#design), and
+[application at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale).
