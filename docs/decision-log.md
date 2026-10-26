@@ -352,3 +352,35 @@ Adoption and a release decision follow review of the complete revision.
 **Proposal guidance:** [project journey](project-execution-model.md#the-project-journey),
 [design](project-execution-model.md#design), and
 [application at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale).
+
+## D21 — 2026-10-26: Propose Recursive Coverage and Incremental Test Preparation
+
+**Status: proposal for issue #4, increment 2; not adopted.** Connect mock and
+check coverage to the designed system and every child element. Assess each
+element's significant aspects against its own responsibilities, requirements,
+constraints and interactions. Recursive coverage does not require a separate
+mock artifact or full project cycle for every child.
+
+Keep Mock and Prepare Tests distinct. Explain reviewing mocks to develop
+checks, checking actual elements with mocked dependencies, checking mocks
+themselves, and applying suitable shared checks to substitutes and their real
+replacements. Their evidence has different limits; useful dependency
+substitutes can remain alongside checks of actual elements and integration.
+
+Review and reuse existing checks, adapt or correct them, and retire obsolete
+or redundant checks without losing coverage of still-agreed expectations.
+Prepare usable checks for the next behavior before implementing it, while
+scenarios and checks develop incrementally. Set expected outcomes from agreed
+expectations rather than copying observed output, and refine implementation
+without silently changing its target.
+
+Preserve contract coverage, readiness for each commitment, evidence states,
+real combined verification and later outcome obligations. A complete, frozen
+suite is not a prerequisite to starting implementation. Assessment calibration
+and the broader practical-use workflow remain for later increments in
+[issue #4](https://github.com/shpoont/project-execution-model/issues/4); adoption
+and release follow review of the complete revision.
+
+**Proposal guidance:** [mock coverage](project-execution-model.md#mock),
+[mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
+and [incremental check preparation](project-execution-model.md#prepare-the-next-scenario).

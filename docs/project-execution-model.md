@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increment 1*
+*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–2*
 
 *Published baseline: Version 1.1.0 — Evidence in Practice | Released 3 October 2026*
 
@@ -33,11 +33,11 @@ Six recurring steps give the project direction:
 
 These steps form **one iterative process**. Work moves between them as findings require: a review can change the design, a test can challenge an assumption, and actual use can reopen the original need. Revisit only affected work and retain what still holds. One contribution may already be in use while another is being designed. At any point, the decision may be to continue, investigate, revise, pause, or stop.
 
-Use the journey to see the model in practice. Return to [Main Concepts](#main-concepts) for detailed guidance on tests, evidence, commitments, and scale.
+Use the journey to see the model in practice. Return to [Main Concepts](#main-concepts) for detailed guidance on [tests](#develop-tests-throughout), evidence, [commitments](#check-readiness-before-committing), and [scale](#apply-the-model-at-a-useful-scale).
 
 **Review and testing run throughout.** Tests are checks against expectations, including manual assessments. They develop across all six steps as expectations emerge. Mocks—stand-ins or rehearsals—help people explore and review proposed behavior.
 
-Work in **increments**: manageable pieces with a result you can check. Before implementing each increment, agree on its expectations and checks, and prepare those checks. Together, these form the **implementation contract**, the shared agreement about what that piece must deliver and demonstrate. During implementation, satisfy the contract and check how the real parts are built and work together.
+Work in **increments**: manageable pieces with a result you can check. Before implementing each increment, agree on its expectations and checks. Together, these form the **implementation contract**, the shared agreement about what that piece must deliver and demonstrate. Prepare relevant checks before implementing the behavior they guide. During implementation, satisfy the contract and check how the real parts are built and work together.
 
 Progress brings greater commitments. Before a major purchase, live trial, wider rollout, or other consequential action, [check readiness](#check-readiness-before-committing) for that particular commitment. A milestone can record that decision and its scope; later findings may require it to be revisited.
 
@@ -97,18 +97,6 @@ A mock is a stand-in used to explore how something would work. It might be a pro
 
 Mocks give people something concrete to try and question. They help expose misunderstandings and missing behavior before investing in the real result, while design changes are still inexpensive.
 
-Explore **all the main agreed activities and their important interactions** through simple mocks or rehearsals, including what must happen to make the result usable. Prioritize coverage over polish. Reuse suitable mocks and still-applicable review evidence. Plan reviews around clear questions, conditions, and participants; include draft usage guidance where it helps.
-
-When a new review is needed, have appropriate people try the mock manually, involving intended users, affected parties, or relevant expertise where needed. Look for problems with usefulness, clarity, feasibility, and missing behavior. Refine the mock or return to the decisions the findings challenge.
-
-For each meaningful mock, briefly identify **what it represents, what people observed under the tested conditions, and what remains unproven**. Carry those open claims into later checks. For example, a user interface connected to a simulated service can show how it handles a reply that does not arrive in time; it cannot show that the real service recovers correctly.
-
-If no mock can credibly answer a material question, use reviewed findings from a [bounded real experiment](#check-readiness-before-committing). Keep mocks for questions they can answer.
-
-Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty.
-
-Organize mocks so contributors can understand what each represents, how they fit together, and how to use them to explore the proposed result. Identify current versions and alternatives. Check that each supports meaningful exploration of its intended question. Update or retire affected mocks when decisions change.
-
 ![Mock: the team rehearses separate Order and Pickup areas and discovers confusion between two customers named Alex.](assets/cafe-design.png)
 
 > **At the café:** With the journey sketched, colleagues try it together. They approach the café in mixed order, some wanting to order and others to collect. Staff check whether they follow the directions to the right queue, then act out packing and handover with empty bags. Two collection customers are both called Alex.
@@ -117,19 +105,49 @@ Organize mocks so contributors can understand what each represents, how they fit
 >
 > They change the design: each order gets a number, shared by the customer, the order record, and the bag. They repeat the arrivals, collection, and missing-order scenarios. The revised flow works in rehearsal. They replace the old sketch and keep those scenarios for future checks.
 
+#### Cover the System and Its Parts
+
+For each system element defined in Design, mocks must cover whatever is needed to review how that element fulfils its responsibilities, meets its requirements and constraints, and interacts with other elements. These are the **significant aspects** of its design.
+
+Apply this to the whole system, then recursively to every child element in its decomposition. At each level, consider each part's own purpose and responsibilities as its design develops; being small within its parent does not remove it from consideration. Use simple mocks or rehearsals, prioritize coverage over polish, and reuse suitable mocks or still-applicable review evidence. A separate mock or full execution cycle is not required for every child.
+
+#### Review and Carry Findings Forward
+
+Plan reviews around clear questions, conditions and participants, including draft usage guidance where it helps. Check that each mock represents the agreed design well enough for meaningful review of its significant aspects under those conditions. When a new review is needed, have appropriate people try the mock manually, involving intended users, affected parties, or relevant expertise where needed. Look for problems with usefulness, clarity, feasibility, and missing behavior. Refine the mock or return to the decisions the findings challenge.
+
+For each meaningful mock, briefly identify **what it represents, what people observed under the tested conditions, and what remains unproven**. Carry those open claims into later checks. For example, a user interface connected to a simulated service can show how it handles a reply that does not arrive in time; it cannot show that the real service recovers correctly.
+
+If no mock can credibly answer a material question, use reviewed findings from a [bounded real experiment](#check-readiness-before-committing). Keep mocks for questions they can answer.
+
+Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty. Keep each element identifiable through its design, mocks, checks, implementation and later evidence.
+
+Organize mocks so contributors can understand what each represents, how they fit together, and how to use them to explore the proposed result. Identify current versions and alternatives. Update or retire affected mocks when decisions change.
+
 ### Prepare Tests
 
 > *What must the next increment demonstrate, and how will we check it?*
 
+Review existing checks: reuse or adapt what applies, create or correct checks where needed, and retire obsolete or redundant ones. Preserve coverage of still-agreed expectations.
+
 #### Agree on the Implementation Contract
 
-**The implementation contract is the agreement on what an increment must deliver, the conditions it must meet, and how completion will be assessed.** Prepare its tests before implementation and use their results to assess those expectations. The contract covers all agreed expectations assigned to the increment. Include what the increment must do, how people or parts exchange work or information, the required quality and limits, and how those people or parts work together. Select tests from those responsibilities, not from what is easiest to pass.
+**The implementation contract is the agreement on what an increment must deliver, the conditions it must meet, and how completion will be assessed.** Prepare relevant tests before implementing the behavior they guide, and use their results to assess those expectations. The contract covers all agreed expectations assigned to the increment. Include what the increment must do, how people or parts exchange work or information, the required quality and limits, and how those people or parts work together. Select tests from those responsibilities, not from what is easiest to pass.
 
 Bring forward the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. Make the agreement findable from the increment's existing record, stating its expectations or referencing the specific current design, reviewed mocks, and tests that apply. No separate contract document or test framework is required.
+
+Follow the same decomposition as the mocks: cover each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual checks, automated tests or agent evaluations according to what each can credibly establish.
 
 Tests can originate in any of the six steps; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** Identify and address gaps in assessment. An omitted or inadequate test does not remove an agreed expectation.
 
 **[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Distinguish checks required to complete this increment from those assigned to later delivery or actual use, with responsibility and timing for the latter. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
+
+See [Connect Mocks and Tests](#connect-mocks-and-tests) for how reviews, substitutes, and real parts can inform different checks.
+
+#### Prepare the Next Scenario
+
+Use concrete scenarios to agree relevant rules, assumptions and open questions: **given these conditions, when this action or event occurs, then this observable result is expected**. Define expected outcomes from the agreed expectations, independently of what the implementation happens to produce. Prefer observable results; check particular interactions when those interactions are themselves required behavior.
+
+Keep the increment's scenarios as a working list. Select the next behavior and prepare its usable check before implementing it. Extend the list and affected checks as understanding develops; a complete, frozen suite is not required before implementation begins. Apply the [readiness rules](#check-readiness-before-committing) to each commitment.
 
 > **At the café:** Before putting the plan into practice, the owner and staff agree to introduce separate pickup using the existing packer. The setup must demonstrate five results:
 >
@@ -149,7 +167,7 @@ Tests can originate in any of the six steps; mock review informs and refines the
 
 The agreed tests turn expectations into a concrete target for implementation. Make the reviewed design real, replacing some or all mocked parts and interactions and moving rehearsed human work into live practice. Satisfying the tests provides evidence that the real result meets those expectations under the tested conditions; failures guide corrections or reveal a decision that needs revisiting.
 
-**Start with the prepared tests.** Before adding new behavior, run the prepared checks against what already exists, where possible. Establish what already works, and confirm that the checks fail where required behavior is still missing. For checks that depend on service delivery, see [Live Services](#live-services).
+**Start with the prepared tests.** For the selected scenario, run the prepared checks against what already exists, where possible, before adding its behavior. Establish what already works, and confirm that the checks fail where required behavior is still missing. For checks that depend on service delivery, see [Live Services](#live-services).
 
 Failures caused by missing implementation are expected at this point: they show what the implementation still needs to satisfy. Record them as [failures, not passes](#develop-tests-throughout). Retain valid passes for behavior that already exists. If a check has not yet run, record it as pending, with its assessment method ready. A pass against a mock supports only the behavior and conditions actually tested.
 
@@ -159,7 +177,7 @@ A costly or destructive check need not run merely to confirm known missing work.
 
 **Add internal verification where needed.** Check the implementation's own choices: individual parts, calculations, connections, failure handling, or operational procedures. Prepare these checks before the corresponding work when the need is known, and add or revise them as findings expose gaps. A check can serve both internal verification and the contract. "Internal" does not mean a lower standard or permission to ignore a failure.
 
-Run relevant contract and internal checks as each mocked part is replaced or increment of real work is introduced. Use failures to guide changes, then rerun affected checks. Combine contributions and collect evidence. If a finding exposes a missing expectation or flawed approach, return it to the affected decision and explicitly agree on any change to the contract. Make deviations visible; do not weaken a check merely to obtain a pass.
+Run relevant contract and internal checks as each mocked part is replaced or increment of real work is introduced. Use failures to guide changes, then rerun affected checks. After the relevant checks pass, refine or restructure the implementation as needed while preserving agreed behavior and applicable checks. Combine contributions and collect evidence. If a finding exposes a missing expectation or flawed approach, return it to the affected decision and explicitly agree on any change to the contract. Make deviations visible; do not weaken a check merely to obtain a pass.
 
 **Verify the combined result before finishing.** Check the real parts working together against the agreed criteria in their intended setting where available. Identify the real parts and conditions each piece of evidence applies to. Successful individual parts, mocks, or partial replacements do not establish that the whole works. Check documentation, quality, and readiness for delivery, adoption, support, and recovery where relevant. Reuse valid evidence already collected during implementation.
 
@@ -231,11 +249,11 @@ Correcting a test or adding coverage is different from changing the intended tar
 
 **Preparing a test means having a usable way to assess the result, not just naming what to check.** For each check, specify the conditions, expected result, evidence, timing, and responsibility. Use measurable criteria where meaningful; otherwise specify observable criteria and an explicit assessment method.
 
-Develop tests across all six steps. **Prepare relevant checks before the work they will guide.** Agree on the checks assigned to an implementation increment as part of its [implementation contract](#agree-on-the-implementation-contract). Exploration can have its own questions and checks; run each check when the necessary evidence is available.
+Develop tests across all six steps. **[Prepare relevant checks](#prepare-the-next-scenario) before the work they will guide.** Agree on the checks assigned to an implementation increment as part of its [implementation contract](#agree-on-the-implementation-contract). Exploration can have its own questions and checks; run each check when the necessary evidence is available.
 
 Cover all agreed expectations for behavior, quality, delivery acceptance, intended benefits (such as profit where relevant), and execution constraints. Include important assumptions, failure cases, and unintended effects.
 
-Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change.
+Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change, preserving coverage of still-agreed expectations.
 
 The assessment method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them. For checks scheduled later, identify what must be ready before they can run. Preparation alone provides no pass. Keep outcomes clear:
 
@@ -249,7 +267,7 @@ Record a decision and any follow-up for every known failure, even if the check d
 
 Before **any costly or consequential commitment**, check that the evidence is sufficient and the approach, dependencies, resources, authorization, and other prerequisites are ready. You need enough evidence for that commitment, not certainty about the whole project. Do not implement work that depends on material decisions still being explored.
 
-Begin an implementation increment only when its relevant decisions have been sufficiently reviewed, its test preparation is ready, and its other prerequisites are met. Agree which checks must pass for each commitment and which may remain pending. Distinguish checks needed to begin a limited live trial from those the trial will produce for later rollout or acceptance. A behavior test may fail before implementation and be required to pass before delivery.
+Begin an implementation increment only when its relevant decisions have been sufficiently reviewed, checks for the work being started are prepared, and its other prerequisites are met. Agree which checks must pass for each commitment and which may remain pending. Distinguish checks needed to begin a limited live trial from those the trial will produce for later rollout or acceptance. A behavior test may fail before implementation and be required to pass before delivery.
 
 **A required test without a valid, applicable pass blocks the commitment it governs**, unless an authorized decision-maker explicitly approves a permitted exception. An exception is permitted only within the project's agreed limits, applicable obligations, and the decision-maker's authority. Record the justification, the specific commitment permitted, remaining risk, and any conditions or follow-up. An exception permits a specified action; it does not change a test result or supply missing evidence.
 
@@ -261,7 +279,20 @@ For each useful increment, build on [reviewed mocks or still-applicable review e
 
 As stand-ins become real parts and rehearsals become live practice, [verify each change and the relevant real combined result](#implement). Carry unresolved claims into later checks.
 
-Mocks can remain in tests for controlled conditions such as replies that do not arrive in time. Their passes support only what was actually tested; they do not prove that the substituted component works or that the real parts work together.
+Mocks can remain in tests for [controlled conditions](#connect-mocks-and-tests) such as replies that do not arrive in time. Their passes support only what was actually tested; they do not prove that the substituted component works or that the real parts work together.
+
+#### Connect Mocks and Tests
+
+Mocks and tests can relate in several ways. Prototypes and rehearsals count too; the appropriate assessment method may change as the work becomes real.
+
+| Relationship | What It Can Establish |
+| --- | --- |
+| Review a mock to create or refine checks | Explore expectations and cases to check against the agreed requirements and reviewed design. |
+| Test an actual element with mocked dependencies | Assess its behavior under controlled conditions. This leaves the actual dependencies and their integration unverified. |
+| Test a mock itself | Check whether the mock is suitable for exploration or behaves as intended. A reusable substitute can also be checked for how faithfully it represents the relevant design. The result applies to the mock. |
+| Apply suitable shared checks to a substitute and its real replacement | Check relevant interface and behavior expectations and detect drift. Wider behavior and real integration still need their own evidence. |
+
+These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Useful dependency substitutes may remain for controlled conditions after implementation, alongside checks of the actual elements and combined result.
 
 ### Apply the Model at a Useful Scale
 
