@@ -413,3 +413,28 @@ adoption and release follow review of the complete revision.
 
 **Proposal guidance:** [assessment validation](project-execution-model.md#validate-assessments)
 and [result interpretation](project-execution-model.md#interpret-results).
+
+## D23 — 2026-10-27: Propose Connected Use and Maintenance of Mocks and Checks
+
+**Status: proposal for issue #4, increment 4; not adopted.** Connect the current
+design, mocks, checks and evidence so contributors can select relevant work,
+establish usable prerequisites, apply instructions and interpret scoped results.
+Include checks for affected smaller and larger parts and how they work together,
+and retain the checks required for each commitment.
+
+Use evidence to investigate whether a finding concerns implementation, a mock,
+an assessment, supporting arrangements or unresolved expectations. Involve the
+relevant owner or decision-maker and keep uncertain causes and follow-up visible.
+Coordinate affected updates, prepare checks before the behavior they guide,
+and revisit relevant assessment validation when its basis changes.
+
+Retain decisions and reasons, findings, evidence and open questions across
+contributors. Distinguish current, superseded and historical work, and reuse
+suitable work and evidence with effort proportionate to risk and uncertainty.
+Preserve existing coverage, authority, result states and evidence limits.
+
+Add no execution stage, required document, project layout, runner or framework.
+Keep the public model self-contained. The complete proposal still needs
+integrated review and an adoption decision before release.
+
+**Proposal guidance:** [use and maintenance](project-execution-model.md#use-and-maintain-mocks-and-checks).

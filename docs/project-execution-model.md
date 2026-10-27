@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–3*
+*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–4*
 
 *Published baseline: Version 1.1.0 — Evidence in Practice | Released 3 October 2026*
 
@@ -123,7 +123,7 @@ If no mock can credibly answer a material question, use reviewed findings from a
 
 Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty. Keep each element identifiable through its design, mocks, checks, implementation and later evidence.
 
-Organize mocks so contributors can understand what each represents, how they fit together, and how to use them to explore the proposed result. Identify current versions and alternatives. Update or retire affected mocks when decisions change.
+Organize mocks so contributors can understand what each represents, how they fit together, and [how to use them](#use-and-maintain-mocks-and-checks) to explore the proposed result. Identify current versions and alternatives. Update or retire affected mocks when decisions change.
 
 ### Prepare Tests
 
@@ -135,9 +135,9 @@ Review existing checks: reuse or adapt what applies, create or correct checks wh
 
 **The implementation contract is the agreement on what an increment must deliver, the conditions it must meet, and how completion will be assessed.** Prepare relevant tests before implementing the behavior they guide, and use their results to assess those expectations. The contract covers all agreed expectations assigned to the increment. Include what the increment must do, how people or parts exchange work or information, the required quality and limits, and how those people or parts work together. Select tests from those responsibilities, not from what is easiest to pass.
 
-Bring forward the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. Make the agreement findable from the increment's existing record, stating its expectations or referencing the specific current design, reviewed mocks, and tests that apply. No separate contract document or test framework is required.
+Bring forward the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. Make the agreement findable from the increment's existing record, stating its expectations or referencing the specific current design, reviewed mocks, and tests that apply. No separate contract document or test framework is required. The [café example below](#prepare-the-next-scenario) records this agreement in a sketch and checklist.
 
-Prepare checks for the same parts and levels as the mocks, covering each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual checks, automated tests or agent evaluations according to what each can credibly establish.
+Prepare checks for the same parts and levels as the mocks, covering each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual or automated checks, including assessments of an AI agent's behavior where relevant, according to what each can credibly establish.
 
 Tests can originate in any of the six steps; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** Identify and address gaps in assessment. An omitted or inadequate test does not remove an agreed expectation.
 
@@ -235,7 +235,7 @@ For every permitted pending check, identify when it will run, who will act on it
 
 ## Main Concepts
 
-Use this section as a reference throughout the project for [test preparation](#develop-tests-throughout), [assessment methods](#validate-assessments), [results](#interpret-results), [evidence limits](#replace-mocks-with-reality-progressively), [commitment decisions](#check-readiness-before-committing), and [scale](#apply-the-model-at-a-useful-scale). These principles apply whether the project changes software, a service, a physical product, or a way of working.
+Use this section as a reference throughout the project for [test preparation](#develop-tests-throughout), [assessment methods](#validate-assessments), [results](#interpret-results), [evidence limits](#replace-mocks-with-reality-progressively), [use and maintenance](#use-and-maintain-mocks-and-checks), [commitment decisions](#check-readiness-before-committing), and [scale](#apply-the-model-at-a-useful-scale). These principles apply whether the project changes software, a service, a physical product, or a way of working.
 
 Keep the project's scope, assumptions, decisions, and evidence current. Manage its dependencies, resources, budget, risks, and communication. Address relevant safety, privacy, security, accessibility, and other obligations.
 
@@ -255,7 +255,7 @@ Develop tests across all six steps. **[Prepare relevant checks](#prepare-the-nex
 
 Cover all agreed expectations for behavior, quality, delivery acceptance, intended benefits (such as profit where relevant), and execution constraints. Include important assumptions, failure cases, and unintended effects.
 
-Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change, preserving coverage of still-agreed expectations.
+Organize tests so contributors can understand what each checks, how they fit together, and [how to run them and interpret their results](#use-and-maintain-mocks-and-checks). Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change, preserving coverage of still-agreed expectations.
 
 The assessment method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them. For checks scheduled later, identify what must be ready before they can run. Preparation alone provides no pass.
 
@@ -313,6 +313,18 @@ Mocks and tests can relate in several ways. Prototypes and rehearsals count too;
 | Apply suitable shared checks to a substitute and its real replacement | Check relevant interface and behavior expectations and spot differences as the design or implementation changes. Wider behavior and the real parts working together still need their own evidence. |
 
 These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Stand-ins for supporting parts may remain useful for controlled conditions after implementation, alongside checks of the real parts and combined result.
+
+#### Use and Maintain Mocks and Checks
+
+Start from the expectation or change and the part it concerns. Keep the relevant current design, mocks, checks and evidence connected and easy to find. Include checks for affected smaller parts, the larger parts they belong to, and how those parts work together. Include the checks required for the next commitment.
+
+Make instructions and prerequisites easy to find. Before exploring a mock or running a check, confirm that the needed people, tools, access and records are ready. Follow the applicable instructions and keep the result and supporting evidence accessible: what was assessed, relevant conditions or versions, what was simulated and what remains unproven.
+
+Investigate findings before choosing what to change. The problem may be in the implementation, mock, check or assessment method, supporting setup, or unresolved expectations. Involve the relevant owner or decision-maker. If the cause remains uncertain, record that uncertainty and the next investigation. Use the [result rules](#interpret-results) and [commitment rules](#check-readiness-before-committing) when deciding what can proceed.
+
+When work changes, coordinate updates to the affected design, mocks, checks and instructions with their owners. [Prepare checks for new scenarios](#prepare-the-next-scenario) before implementing the behavior they guide. Revisit relevant [assessment validation](#validate-assessments) when its basis changes. Distinguish current, superseded and historical work.
+
+Retain the decisions and reasons, findings, evidence and open questions needed to continue without reconstructing earlier discussions. Reuse suitable mocks, checks, methods and evidence. Select preparation and rechecks according to affected responsibilities and the next commitment, proportionate to risk and uncertainty.
 
 ### Apply the Model at a Useful Scale
 
