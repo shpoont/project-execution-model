@@ -384,3 +384,32 @@ and release follow review of the complete revision.
 **Proposal guidance:** [mock coverage](project-execution-model.md#mock),
 [mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
 and [incremental check preparation](project-execution-model.md#prepare-the-next-scenario).
+
+## D22 — 2026-10-26: Propose Assessment Validation and Explicit Assessment Failures
+
+**Status: proposal for issue #4, increment 3; not adopted.** Validate checks
+and assessment methods with representative acceptable results and plausible
+violations. Establish reference assessments independently from the method
+being checked, using agreed expectations, relevant evidence and appropriate
+review. Include acceptable variation, investigate mistaken acceptance and
+rejection, and check judgment consistency where it matters. Scale validation
+to the expectation and the decisions that depend on it.
+
+Review the collection for important omissions even when its included checks
+pass. Preserve the implementation contract and coverage of still-agreed
+expectations; correcting an assessment does not quietly change its target.
+
+Distinguish a failed assessment attempt or insufficient evidence from an
+observed violation of the work's criterion. An assessment that cannot establish
+an outcome remains pending with the reason. Missing access to evidence differs
+from evidence that a required result is absent. Neither an assessment failure
+nor an authorized exception supplies a valid pass or changes an observed result.
+
+Keep Passed, Failed and Pending, commitment-specific readiness, real combined
+verification, later outcome responsibilities and the six-step process. Add no
+required framework, dataset or document. The broader practical-use workflow
+remains for increment 4 of [issue #4](https://github.com/shpoont/project-execution-model/issues/4);
+adoption and release follow review of the complete revision.
+
+**Proposal guidance:** [assessment validation](project-execution-model.md#validate-assessments)
+and [result interpretation](project-execution-model.md#interpret-results).

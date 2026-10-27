@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–2*
+*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–3*
 
 *Published baseline: Version 1.1.0 — Evidence in Practice | Released 3 October 2026*
 
@@ -77,9 +77,11 @@ Identify who can authorize commitments, accept delivery, approve permitted excep
 
 > *How should the whole system and its parts work?*
 
-Describe the requirements and intended experience alongside the **architecture**, the structure that makes them possible. Identify the **system** being designed: its purpose and boundary. Break it into **elements**—identifiable parts such as software, agents, data, people, processes or hardware. An element can contain child elements; this is its **decomposition**.
+Describe the requirements and intended experience alongside the **architecture**, the structure that makes them possible. Identify the **system** being designed: its purpose and boundary.
 
-For each element, make its **responsibility** clear: what it must do or contribute. Identify **ownership**: who builds, integrates, operates or maintains it.
+Break the system into **elements**—identifiable parts such as software, agents, data, people, processes or hardware. An element can contain smaller parts, called child elements. This breakdown into parts and smaller parts is its **decomposition**.
+
+For each part, make clear what it must do or contribute: its **responsibility**. Identify who builds, brings together, operates or maintains it: its **ownership**.
 
 Describe its **interfaces**, the means through which it exchanges information or work, and its **interactions**, what happens through those interfaces. At the café, the pickup point is an interface between the packer and collection customers; checking an order and handing over its bag are interactions there. Show dependencies and how failures are handled. Where relevant, clarify who makes decisions, takes actions and owns information during use.
 
@@ -109,7 +111,7 @@ Mocks give people something concrete to try and question. They help expose misun
 
 For each system element defined in Design, mocks must cover whatever is needed to review how that element fulfils its responsibilities, meets its requirements and constraints, and interacts with other elements. These are the **significant aspects** of its design.
 
-Apply this to the whole system, then recursively to every child element in its decomposition. At each level, consider each part's own purpose and responsibilities as its design develops; being small within its parent does not remove it from consideration. Use simple mocks or rehearsals, prioritize coverage over polish, and reuse suitable mocks or still-applicable review evidence. A separate mock or full execution cycle is not required for every child.
+Apply this to the whole system, then recursively to every child element in its decomposition. At each level, consider each part's own purpose and responsibilities as its design develops; being small within its parent does not remove it from consideration. Use simple mocks or rehearsals, prioritize coverage over polish, and reuse suitable mocks or still-applicable review evidence. A separate mock or [full execution cycle](#apply-the-model-at-a-useful-scale) is not required for every child.
 
 #### Review and Carry Findings Forward
 
@@ -127,7 +129,7 @@ Organize mocks so contributors can understand what each represents, how they fit
 
 > *What must the next increment demonstrate, and how will we check it?*
 
-Review existing checks: reuse or adapt what applies, create or correct checks where needed, and retire obsolete or redundant ones. Preserve coverage of still-agreed expectations.
+Review existing checks: reuse or adapt what applies, create or correct checks where needed, and retire obsolete or redundant ones. Preserve coverage of still-agreed expectations. Validate the [checks and assessment methods](#validate-assessments) before relying on their results.
 
 #### Agree on the Implementation Contract
 
@@ -135,7 +137,7 @@ Review existing checks: reuse or adapt what applies, create or correct checks wh
 
 Bring forward the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. Make the agreement findable from the increment's existing record, stating its expectations or referencing the specific current design, reviewed mocks, and tests that apply. No separate contract document or test framework is required.
 
-Follow the same decomposition as the mocks: cover each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual checks, automated tests or agent evaluations according to what each can credibly establish.
+Prepare checks for the same parts and levels as the mocks, covering each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual checks, automated tests or agent evaluations according to what each can credibly establish.
 
 Tests can originate in any of the six steps; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** Identify and address gaps in assessment. An omitted or inadequate test does not remove an agreed expectation.
 
@@ -169,7 +171,7 @@ The agreed tests turn expectations into a concrete target for implementation. Ma
 
 **Start with the prepared tests.** For the selected scenario, run the prepared checks against what already exists, where possible, before adding its behavior. Establish what already works, and confirm that the checks fail where required behavior is still missing. For checks that depend on service delivery, see [Live Services](#live-services).
 
-Failures caused by missing implementation are expected at this point: they show what the implementation still needs to satisfy. Record them as [failures, not passes](#develop-tests-throughout). Retain valid passes for behavior that already exists. If a check has not yet run, record it as pending, with its assessment method ready. A pass against a mock supports only the behavior and conditions actually tested.
+Failures caused by missing implementation are expected at this point: they show what the implementation still needs to satisfy. Record them as [failures, not passes](#interpret-results). Retain valid passes for behavior that already exists. If a check has not yet run, record it as pending, with its assessment method ready. A pass against a mock supports only the behavior and conditions actually tested.
 
 A costly or destructive check need not run merely to confirm known missing work. Prepare its assessment before implementation and agree when it must run. It stays pending until run; any pass required for the next commitment is still required.
 
@@ -233,7 +235,7 @@ For every permitted pending check, identify when it will run, who will act on it
 
 ## Main Concepts
 
-Use this section as a reference throughout the project for test preparation and results, evidence limits, commitment decisions, and scale. These principles apply whether the project changes software, a service, a physical product, or a way of working.
+Use this section as a reference throughout the project for [test preparation](#develop-tests-throughout), [assessment methods](#validate-assessments), [results](#interpret-results), [evidence limits](#replace-mocks-with-reality-progressively), [commitment decisions](#check-readiness-before-committing), and [scale](#apply-the-model-at-a-useful-scale). These principles apply whether the project changes software, a service, a physical product, or a way of working.
 
 Keep the project's scope, assumptions, decisions, and evidence current. Manage its dependencies, resources, budget, risks, and communication. Address relevant safety, privacy, security, accessibility, and other obligations.
 
@@ -255,11 +257,29 @@ Cover all agreed expectations for behavior, quality, delivery acceptance, intend
 
 Organize tests so contributors can understand what each checks, how they fit together, and how to run them and interpret their results. Make clear which checks apply to which conditions and commitments. Check that they would detect relevant wrong results. Update affected tests when decisions change, preserving coverage of still-agreed expectations.
 
-The assessment method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them. For checks scheduled later, identify what must be ready before they can run. Preparation alone provides no pass. Keep outcomes clear:
+The assessment method may be manual or automated. Check that necessary tools, access, and measurement capability are usable before relying on them. For checks scheduled later, identify what must be ready before they can run. Preparation alone provides no pass.
+
+#### Validate Assessments
+
+Validate checks and assessment methods using representative examples that should pass and plausible examples that should fail. Review the set of checks for important omissions, and keep assessment failures and insufficient evidence explicit.
+
+First decide how each example should be assessed, using the agreed expectations, relevant outcome evidence and appropriate review. Make those decisions independently of the method being checked.
+
+For the café's timing comparison, a recorded time within the agreed ten seconds of the owner's time should pass; one outside that tolerance should fail.
+
+Include acceptable variation: different results can still meet the agreement. For an accuracy check, suppose the kitchen confirms that an order is being prepared. "The kitchen is preparing your order" and "Your order is being prepared" can both pass; "Your order is ready" should fail.
+
+Investigate mistaken acceptance or rejection, and check consistency where judgment matters. Introducing a known defect or comparing a check's decisions with examples independently reviewed by appropriate people can help. Scale validation to the importance of the expectation and the decisions that depend on it.
+
+#### Interpret Results
+
+If a check cannot determine whether a criterion was met, keep it pending and explain why. Record problems with the person, tool, process, or supporting systems used for the check separately from the work being assessed. An unsuccessful assessment attempt supplies neither a valid pass nor proof that the work violates the criterion. Inability to access evidence differs from reliable evidence that a required result is absent. Keep insufficient evidence explicit.
+
+Keep outcomes clear:
 
 - **Passed:** valid, applicable evidence shows that the agreed criteria were met under the recorded conditions.
 - **Failed:** the check ran and its criteria were not met. This includes a check that fails as expected because the real component has not yet been built; record why it failed.
-- **Pending:** the check has not run or completed, so it has no outcome yet. This is distinct from a check that ran and failed. Neither status is a pass.
+- **Pending:** no valid outcome is available yet: the check has not run or completed, or the assessment could not determine whether its criteria were met. This differs from a valid failed result; neither status is a pass.
 
 Record a decision and any follow-up for every known failure, even if the check does not block the next commitment. For expected failures caused by work not yet implemented, the existing agreement to complete that work can serve as the recorded decision and follow-up. Failures that challenge that agreement need a further decision. Record approved exceptions separately. The same evidence limits apply to contract tests, internal verification, and later project checks.
 
@@ -288,11 +308,11 @@ Mocks and tests can relate in several ways. Prototypes and rehearsals count too;
 | Relationship | What It Can Establish |
 | --- | --- |
 | Review a mock to create or refine checks | Explore expectations and cases to check against the agreed requirements and reviewed design. |
-| Test an actual element with mocked dependencies | Assess its behavior under controlled conditions. This leaves the actual dependencies and their integration unverified. |
+| Check a real part using stand-ins for the parts it relies on | Assess its behavior under controlled conditions. This leaves the real supporting parts, and how all the real parts work together, unverified. |
 | Test a mock itself | Check whether the mock is suitable for exploration or behaves as intended. A reusable substitute can also be checked for how faithfully it represents the relevant design. The result applies to the mock. |
-| Apply suitable shared checks to a substitute and its real replacement | Check relevant interface and behavior expectations and detect drift. Wider behavior and real integration still need their own evidence. |
+| Apply suitable shared checks to a substitute and its real replacement | Check relevant interface and behavior expectations and spot differences as the design or implementation changes. Wider behavior and the real parts working together still need their own evidence. |
 
-These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Useful dependency substitutes may remain for controlled conditions after implementation, alongside checks of the actual elements and combined result.
+These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Stand-ins for supporting parts may remain useful for controlled conditions after implementation, alongside checks of the real parts and combined result.
 
 ### Apply the Model at a Useful Scale
 
