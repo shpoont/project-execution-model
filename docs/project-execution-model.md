@@ -26,7 +26,7 @@ Six recurring steps give the project direction:
 | **[Design](#design)** | How should the whole system and its parts work? |
 | **[Mock](#mock)** | What can we learn by trying a representation before making it real? |
 | **[Prepare Tests](#prepare-tests)** | What must the next increment demonstrate, and how will we check it? |
-| **[Implement](#implement)** | How do we make the real result satisfy the agreed checks? |
+| **[Implement](#implement)** | How do we make the agreed result real and satisfy its checks? |
 | **[Deliver](#deliver)** | Can people use and accept it, and does it produce the intended benefit? |
 
 > Each step performs its own work, reviewing and building on earlier results, and produces the basis for the next step.
@@ -141,7 +141,7 @@ Prepare checks for the same parts and levels as the mocks, covering each element
 
 Tests can originate in any of the six steps; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** Identify and address gaps in assessment. An omitted or inadequate test does not remove an agreed expectation.
 
-**[Prepare these checks](#develop-tests-throughout) before implementing the piece of work.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Distinguish checks required to complete this increment from those assigned to later delivery or actual use, with responsibility and timing for the latter. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
+**[Prepare relevant checks](#develop-tests-throughout) before implementing the behavior they guide.** Agree on the conditions, what a pass looks like, the evidence needed, and which commitments depend on the result. Identify checks that need real people or parts working together. Distinguish checks required to complete this increment from those assigned to later delivery or actual use, with responsibility and timing for the latter. If those later checks need measurements or records, include the ability to collect them in the implementation contract now.
 
 See [Connect Mocks and Tests](#connect-mocks-and-tests) for how reviews, substitutes, and real parts can inform different checks.
 
@@ -165,7 +165,7 @@ Keep the increment's scenarios as a working list. Select the next behavior and p
 
 ### Implement
 
-> *How do we make the real result satisfy the agreed checks?*
+> *How do we make the agreed result real and satisfy its checks?*
 
 The agreed tests turn expectations into a concrete target for implementation. Make the reviewed design real, replacing some or all mocked parts and interactions and moving rehearsed human work into live practice. Satisfying the tests provides evidence that the real result meets those expectations under the tested conditions; failures guide corrections or reveal a decision that needs revisiting.
 
@@ -325,6 +325,8 @@ Investigate findings before choosing what to change. The problem may be in the i
 When work changes, coordinate updates to the affected design, mocks, checks and instructions with their owners. [Prepare checks for new scenarios](#prepare-the-next-scenario) before implementing the behavior they guide. Revisit relevant [assessment validation](#validate-assessments) when its basis changes. Distinguish current, superseded and historical work.
 
 Retain the decisions and reasons, findings, evidence and open questions needed to continue without reconstructing earlier discussions. Reuse suitable mocks, checks, methods and evidence. Select preparation and rechecks according to affected responsibilities and the next commitment, proportionate to risk and uncertainty.
+
+Check that contributors can use the relevant design, mocks, checks, instructions and evidence together through a representative workflow: find and select relevant work, establish prerequisites, explore or run a case, interpret the result, and update or extend the affected work using retained context. Reuse suitable evidence and keep the effort proportionate to risk and uncertainty.
 
 ### Apply the Model at a Useful Scale
 

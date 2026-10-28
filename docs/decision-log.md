@@ -432,6 +432,8 @@ Retain decisions and reasons, findings, evidence and open questions across
 contributors. Distinguish current, superseded and historical work, and reuse
 suitable work and evidence with effort proportionate to risk and uncertainty.
 Preserve existing coverage, authority, result states and evidence limits.
+Assess the collection's practical usability through a representative workflow,
+reusing suitable evidence and keeping the effort proportionate.
 
 Add no execution stage, required document, project layout, runner or framework.
 Keep the public model self-contained. The complete proposal still needs
