@@ -215,6 +215,8 @@ For every permitted pending check, identify when it will run, who will act on it
 
 **After the Project Closes.** While the result remains in use, the receiving owner is responsible for relevant testing and monitoring of how it works and whether it delivers the intended benefit. At handover, agree on the checks, responsibility, and timing or triggers, proportionate to risk and change. Use findings to guide maintenance, improvement, or reconsideration of the original need or approach. Routine work follows established procedures; substantial improvements use this model at a useful scale, carrying forward applicable goals, decisions, evidence, and open questions.
 
+![Deliver: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
+
 > **At the café:** The owner reviews the results and accepts the setup for regular use. Staff take over the revised packing and pickup routine, using the updated sketch and checklist, and know to bring new problems to the owner. With the handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and acting on the result.
 >
 > At the end of that week, the result is **seven in ten**.
@@ -224,8 +226,6 @@ For every permitted pending check, identify when it will run, who will act on it
 > The setup passed its delivery checks, but too many customers still wait too long or leave without food. The change has not achieved the benefit that justified it.
 >
 > The owner approves further improvement. The team returns to Design with the collection records to find the remaining delay, keeping the checks and evidence that still apply. What they learn may change the pickup process—or make them reconsider whether it addresses the main cause of the waiting.
-
-![Deliver: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
 
 #### Live Services
 

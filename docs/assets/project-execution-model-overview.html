@@ -3,79 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Execution Model — Six Recurring Steps</title>
+  <title>Project Execution Model — Evidence Builds the Result</title>
   <style>
-    /* Fit preset: 1280 × 480. Retains the existing approved overview's
-       white paper, blue accents and serif/sans contrast. Uses local system
-       font stacks; no original font-family match is claimed. */
-    :root { --paper: #ffffff; --ink: #202833; --muted: #495463;
-      --accent: #076da8; --accent-tint: #f0f7fc; --rule: #d6dee6; }
-    body { margin: 0; background: var(--paper); color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif; }
+    /* Pyramid overview, fit preset: 1280 × 864. Preserve the model's existing
+       white-and-blue palette and system serif/sans typography. Layer widths
+       are schematic: they do not measure effort, value or completion. */
+    :root {
+      --paper: #ffffff;
+      --paper-2: #f1f4f6;
+      --ink: #202833;
+      --muted: #495463;
+      --rule: #d6dee6;
+      --accent: #076da8;
+      --sans: Arial, Helvetica, sans-serif;
+      --serif: Georgia, 'Times New Roman', serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper);
+      font-family: var(--sans); }
     .diagram-container { width: 100%; overflow-x: auto; }
     svg { display: block; width: 100%; min-width: 1280px; }
-    .title { font-family: Georgia, 'Times New Roman', serif; font-size: 40px;
-      font-weight: 700; fill: var(--ink); }
+    .title { font-family: var(--serif); font-size: 40px; font-weight: 700;
+      fill: var(--ink); }
     .subtitle, .footer { font-size: 20px; fill: var(--muted); }
-    .node-name { font-size: 23px; font-weight: 700; fill: var(--ink); }
-    .focal-name { fill: var(--accent); }
-    .detail { font-size: 16px; fill: var(--ink); }
-    .step { fill: var(--paper); stroke: var(--rule); stroke-width: 1.5; }
-    .focal { fill: var(--accent-tint); stroke: var(--accent); stroke-width: 1.5; }
-    .connector { stroke: var(--muted); stroke-width: 1.5; }
-    @media print { .diagram-container { overflow: visible; } }
+    .detail { font-size: 18px; fill: var(--muted); }
+    .layer { fill: var(--paper-2); stroke: var(--paper); stroke-width: 4;
+      stroke-linejoin: round; }
+    .apex { fill: var(--accent); }
+    .step-name { font-size: 24px; font-weight: 600; fill: var(--ink);
+      text-anchor: middle; dominant-baseline: middle; }
+    .apex-name { fill: var(--paper); }
+    .return-path { fill: none; stroke: var(--muted); stroke-width: 2;
+      stroke-dasharray: 5 5; }
+    .fine { font-size: 16px; fill: var(--muted); }
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
   </style>
 </head>
 <body>
   <div class="diagram-container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 864"
          role="img" aria-labelledby="project-execution-model-overview-title project-execution-model-overview-desc">
-      <title id="project-execution-model-overview-title">Project Execution Model — Six Recurring Steps</title>
-      <desc id="project-execution-model-overview-desc">Define, Design, Mock, Prepare Tests, Implement and Deliver form one iterative process, with planning, review and testing throughout and findings returning to affected decisions.</desc>
+      <title id="project-execution-model-overview-title">Project Execution Model — Evidence Builds the Result</title>
+      <desc id="project-execution-model-overview-desc">Six recurring steps build from Define through Design, Mock, Prepare Tests and Implement to Deliver, carrying reasoning and evidence forward while findings can reopen any affected step.</desc>
       <defs>
-        <marker id="pem-arrow" viewBox="0 0 8 8" refX="7" refY="4"
+        <marker id="pem-return-arrow" viewBox="0 0 8 8" refX="7" refY="4"
                 markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M1 1 L7 4 L1 7" fill="none" stroke="#495463" stroke-width="1.3"/>
+          <path d="M1 1 L7 4 L1 7" fill="none" stroke="#495463"
+                stroke-width="1.3" stroke-linecap="round"/>
         </marker>
       </defs>
-      <rect width="1280" height="480" fill="#ffffff"/>
-      <text x="64" y="64" class="title">Project Execution Model</text>
-      <text x="64" y="104" class="subtitle">One iterative process · Planning, review and testing throughout</text>
+      <rect width="1280" height="864" fill="#ffffff"/>
+      <text x="64" y="72" class="title">Project Execution Model</text>
+      <text x="64" y="112" class="subtitle">One iterative process · Planning, review and testing throughout</text>
 
-      <g class="connector" marker-start="url(#pem-arrow)" marker-end="url(#pem-arrow)">
-        <line x1="240" y1="248" x2="256" y2="248"/>
-        <line x1="436" y1="248" x2="452" y2="248"/>
-        <line x1="632" y1="248" x2="648" y2="248"/>
-        <line x1="828" y1="248" x2="844" y2="248"/>
-        <line x1="1024" y1="248" x2="1040" y2="248"/>
+      <!-- The two-way return path spans the whole process, not only neighbors. -->
+      <line x1="72" y1="212" x2="72" y2="640" class="return-path"
+            marker-start="url(#pem-return-arrow)" marker-end="url(#pem-return-arrow)"/>
+
+      <!-- Named layers read from the foundation upward. The taller pointed
+           apex keeps Deliver legible. Widths are not a quantitative scale. -->
+      <g data-step="Define">
+        <polygon points="132,580 668,580 716,660 84,660" class="layer"/>
+        <text x="400" y="620" class="step-name">Define</text>
+        <text x="744" y="612" class="detail">Choose the need, intended benefit and limits.</text>
+        <text x="744" y="636" class="detail">Decide why the approach is worth pursuing.</text>
       </g>
-      <g text-anchor="middle">
-        <rect x="64" y="160" width="172" height="184" rx="6" class="step"/>
-        <text x="150" y="208" class="node-name">Define</text>
-        <text x="150" y="268" class="detail"><tspan x="150">Choose the need,</tspan><tspan x="150" dy="24">benefit and limits.</tspan></text>
-
-        <rect x="260" y="160" width="172" height="184" rx="6" class="step"/>
-        <text x="346" y="208" class="node-name">Design</text>
-        <text x="346" y="268" class="detail"><tspan x="346">Shape the whole</tspan><tspan x="346" dy="24">and its parts.</tspan></text>
-
-        <rect x="456" y="160" width="172" height="184" rx="6" class="focal"/>
-        <text x="542" y="208" class="node-name focal-name">Mock</text>
-        <text x="542" y="256" class="detail"><tspan x="542">Try prototypes</tspan><tspan x="542" dy="24">or rehearsals.</tspan><tspan x="542" dy="24">Review findings.</tspan></text>
-
-        <rect x="652" y="160" width="172" height="184" rx="6" class="focal"/>
-        <text x="738" y="196" class="node-name focal-name"><tspan x="738">Prepare</tspan><tspan x="738" dy="28">Tests</tspan></text>
-        <text x="738" y="268" class="detail"><tspan x="738">Agree expectations</tspan><tspan x="738" dy="24">and prepare checks.</tspan></text>
-
-        <rect x="848" y="160" width="172" height="184" rx="6" class="step"/>
-        <text x="934" y="208" class="node-name">Implement</text>
-        <text x="934" y="244" class="detail"><tspan x="934">Replace stand-ins;</tspan><tspan x="934" dy="24">satisfy agreed tests.</tspan><tspan x="934" dy="24">Verify the real</tspan><tspan x="934" dy="24">combined result.</tspan></text>
-
-        <rect x="1044" y="160" width="172" height="184" rx="6" class="step"/>
-        <text x="1130" y="208" class="node-name">Deliver</text>
-        <text x="1130" y="256" class="detail"><tspan x="1130">Accept, hand over.</tspan><tspan x="1130" dy="24">Monitor use;</tspan><tspan x="1130" dy="24">assess benefits.</tspan></text>
+      <g data-step="Design">
+        <polygon points="180,500 620,500 668,580 132,580" class="layer"/>
+        <text x="400" y="540" class="step-name">Design</text>
+        <text x="744" y="532" class="detail">Shape the whole and its parts:</text>
+        <text x="744" y="556" class="detail">responsibilities, ownership and interactions.</text>
       </g>
-      <text x="640" y="396" text-anchor="middle" class="footer">Carry forward goals, decisions, evidence and open questions.</text>
-      <text x="640" y="428" text-anchor="middle" class="footer">Findings can reopen any affected step. Reuse what still holds.</text>
+      <g data-step="Mock">
+        <polygon points="228,420 572,420 620,500 180,500" class="layer"/>
+        <text x="400" y="460" class="step-name">Mock</text>
+        <text x="744" y="452" class="detail">Explore prototypes or rehearsals.</text>
+        <text x="744" y="476" class="detail">Review findings and limits of the evidence.</text>
+      </g>
+      <g data-step="Prepare Tests">
+        <polygon points="276,340 524,340 572,420 228,420" class="layer"/>
+        <text x="400" y="380" class="step-name">Prepare Tests</text>
+        <text x="744" y="372" class="detail">Agree on the increment’s expectations.</text>
+        <text x="744" y="396" class="detail">Prepare checks before the behavior they guide.</text>
+      </g>
+      <g data-step="Implement">
+        <polygon points="324,260 476,260 524,340 276,340" class="layer"/>
+        <text x="400" y="300" class="step-name">Implement</text>
+        <text x="744" y="292" class="detail">Replace relevant stand-ins and satisfy tests.</text>
+        <text x="744" y="316" class="detail">Verify the real parts working together.</text>
+      </g>
+      <g data-step="Deliver">
+        <polygon points="400,132 400,132 476,260 324,260" class="layer apex"/>
+        <text x="400" y="240" class="step-name apex-name">Deliver</text>
+        <text x="744" y="212" class="detail">Accept and hand over.</text>
+        <text x="744" y="236" class="detail">Monitor use and assess actual benefits.</text>
+      </g>
+
+      <line x1="64" y1="704" x2="1216" y2="704" stroke="#d6dee6"/>
+      <text x="640" y="744" text-anchor="middle" class="footer">Carry goals, decisions, evidence and open questions forward.</text>
+      <text x="640" y="776" text-anchor="middle" class="footer">Findings can reopen any affected step. Reuse what still holds.</text>
+      <text x="640" y="820" text-anchor="middle" class="fine">Read from Define at the base · Apply the same cycle to substantial subsystems</text>
     </svg>
   </div>
 </body>
