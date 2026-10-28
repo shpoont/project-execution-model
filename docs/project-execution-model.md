@@ -241,7 +241,7 @@ Keep the project's scope, assumptions, decisions, and evidence current. Manage i
 
 As work moves between steps and contributors, carry forward the relevant goal, decisions and their reasons, evidence, and open questions. Build on what still holds. When a review supports the approach and readiness checks are satisfied, continue. **Finding a material problem before a larger commitment is progress:** it lets you correct course while change is less costly.
 
-Revisit affected decisions when findings challenge them, retain valid evidence, and repeat necessary checks. Actual use may challenge the original need or approach even after accepted delivery.
+Investigate findings before choosing what to change. Revisit the decisions they challenge and check which dependent work and evidence may be affected, including beyond the current contribution. Keep what still applies and repeat necessary checks. Use the readiness rules to decide what can continue and what must be resolved before the next commitment. Actual use may reopen the original need or approach even after accepted delivery.
 
 Correcting a test or adding coverage is different from changing the intended target. Agree on changes to expectations and the implementation contract with the responsible decision-maker, keeping the reasons and supporting evidence visible. Do not quietly redefine failure as success.
 
