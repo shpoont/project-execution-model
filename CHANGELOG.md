@@ -3,6 +3,41 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.2.0 — Six Steps, One Process](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.0) — 2026-10-28
+
+### Changed
+
+- Made **Mock** and **Prepare Tests** distinct recurring steps alongside
+  **Define, Design, Implement, and Deliver**. Planning, review and testing
+  continue throughout one iterative process; findings can reopen affected work.
+- Made architecture, responsibilities, ownership, interfaces and interactions
+  explicit in Design. Substantial subsystems can apply the full cycle within
+  their scope, inheriting parent context and returning real results and checks;
+  the parent still verifies the combined outcome.
+- Connected recursive mock and check coverage to every designed element's
+  responsibilities and constraints. Explained the four relationships between
+  mocks and tests, their evidence limits, and useful retained substitutes.
+- Clarified that the implementation contract covers all agreed expectations,
+  conditions and assessment, including obligations an omitted test does not
+  remove. Prepare checks before the behavior they guide while scenarios and
+  checks develop incrementally.
+- Added assessment validation against acceptable results and plausible
+  violations, coverage review for omissions, and explicit handling of
+  assessment failures and insufficient evidence.
+- Strengthened connected use, diagnosis, maintenance and extension of design,
+  mocks, checks and evidence across contributors, including a representative
+  practical-usability assessment with proportionate effort and evidence reuse.
+- Reorganized the café example and references for the six steps. Added a
+  pointed pyramid overview with step names inside its layers, editable source,
+  and consistent placement of café images before their matching examples.
+
+Retained readiness and authority safeguards, real combined-result verification,
+and separate acceptance, benefit, constraint and closure responsibilities.
+The reviews and walkthroughs do not establish improved outcomes in real projects.
+
+Sources: [six-step revision (#6)](https://github.com/shpoont/project-execution-model/pull/6)
+and [requirements (#4)](https://github.com/shpoont/project-execution-model/issues/4).
+
 ## [v1.1.0 — Evidence in Practice](https://github.com/shpoont/project-execution-model/releases/tag/v1.1.0) — 2026-10-03
 
 ### Changed

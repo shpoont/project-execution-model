@@ -242,7 +242,8 @@ standards without treating the whole collection as a required part of the model.
 
 ## D17 — 2026-09-24: Use Recurring Areas of Work and Implementation Contracts
 
-**Status: adopted for v1.1.0; structural revision proposed in D20.** Organize the
+**Status: adopted for v1.1.0; structure and contract definition revised by D24
+for v1.2.0.** Organize the
 model around Define, Design, Implement, and
 Deliver & Learn as recurring areas within one iterative process. Mock review,
 test preparation, and testing continue throughout the project rather than
@@ -325,7 +326,7 @@ and the [changelog](../CHANGELOG.md).
 
 ## D20 — 2026-10-24: Propose Six Recurring Steps and Subsystem Cycles
 
-**Status: proposal for issue #4, increment 1; not adopted.** Give Mock and
+**Status: proposed for issue #4, increment 1; adopted by D24 for v1.2.0.** Give Mock and
 Prepare Tests their own recurring steps alongside Define, Design, Implement
 and Deliver. Their work needs greater visibility and clearer connections to
 the designed system. Deliver retains learning, later outcome checks and
@@ -339,23 +340,22 @@ decisions, and return real results, checks and evidence. The parent remains
 responsible for integration and verification of the combined outcome. Minor,
 well-understood tasks need no nested cycle or separate set of documents.
 
-This proposes revising D17's four-area structure while preserving its iteration,
+This revises D17's four-area structure while preserving its iteration,
 implementation-contract, readiness and evidence principles. Implementation
 replaces relevant mocks with real parts; useful test substitutes may remain
 with their evidence limits explicit. Separate steps do not freeze earlier
 decisions or require a separate document for each activity.
 
-The remaining increments in [issue #4](https://github.com/shpoont/project-execution-model/issues/4)
-cover mock/test relationships, assessment validation and practical usability.
-Adoption and a release decision follow review of the complete revision.
+Mock/test relationships, assessment validation and practical usability are
+covered by D21–D23. D24 records adoption of the complete revision after review.
 
-**Proposal guidance:** [project journey](project-execution-model.md#the-project-journey),
+**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
 [design](project-execution-model.md#design), and
 [application at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale).
 
 ## D21 — 2026-10-26: Propose Recursive Coverage and Incremental Test Preparation
 
-**Status: proposal for issue #4, increment 2; not adopted.** Connect mock and
+**Status: proposed for issue #4, increment 2; adopted by D24 for v1.2.0.** Connect mock and
 check coverage to the designed system and every child element. Assess each
 element's significant aspects against its own responsibilities, requirements,
 constraints and interactions. Recursive coverage does not require a separate
@@ -376,18 +376,17 @@ without silently changing its target.
 
 Preserve contract coverage, readiness for each commitment, evidence states,
 real combined verification and later outcome obligations. A complete, frozen
-suite is not a prerequisite to starting implementation. Assessment calibration
-and the broader practical-use workflow remain for later increments in
-[issue #4](https://github.com/shpoont/project-execution-model/issues/4); adoption
-and release follow review of the complete revision.
+suite is not a prerequisite to starting implementation. Assessment validation
+and practical usability are covered by D22 and D23. D24 adopts the complete
+revision for v1.2.0.
 
-**Proposal guidance:** [mock coverage](project-execution-model.md#mock),
+**Current guidance:** [mock coverage](project-execution-model.md#mock),
 [mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
 and [incremental check preparation](project-execution-model.md#prepare-the-next-scenario).
 
 ## D22 — 2026-10-26: Propose Assessment Validation and Explicit Assessment Failures
 
-**Status: proposal for issue #4, increment 3; not adopted.** Validate checks
+**Status: proposed for issue #4, increment 3; adopted by D24 for v1.2.0.** Validate checks
 and assessment methods with representative acceptable results and plausible
 violations. Establish reference assessments independently from the method
 being checked, using agreed expectations, relevant evidence and appropriate
@@ -408,15 +407,14 @@ nor an authorized exception supplies a valid pass or changes an observed result.
 Keep Passed, Failed and Pending, commitment-specific readiness, real combined
 verification, later outcome responsibilities and the six-step process. Add no
 required framework, dataset or document. The broader practical-use workflow
-remains for increment 4 of [issue #4](https://github.com/shpoont/project-execution-model/issues/4);
-adoption and release follow review of the complete revision.
+is covered by D23. D24 adopts the complete revision for v1.2.0.
 
-**Proposal guidance:** [assessment validation](project-execution-model.md#validate-assessments)
+**Current guidance:** [assessment validation](project-execution-model.md#validate-assessments)
 and [result interpretation](project-execution-model.md#interpret-results).
 
 ## D23 — 2026-10-27: Propose Connected Use and Maintenance of Mocks and Checks
 
-**Status: proposal for issue #4, increment 4; not adopted.** Connect the current
+**Status: proposed for issue #4, increment 4; adopted by D24 for v1.2.0.** Connect the current
 design, mocks, checks and evidence so contributors can select relevant work,
 establish usable prerequisites, apply instructions and interpret scoped results.
 Include checks for affected smaller and larger parts and how they work together,
@@ -436,7 +434,45 @@ Assess the collection's practical usability through a representative workflow,
 reusing suitable evidence and keeping the effort proportionate.
 
 Add no execution stage, required document, project layout, runner or framework.
-Keep the public model self-contained. The complete proposal still needs
-integrated review and an adoption decision before release.
+Keep the public model self-contained. D24 records adoption of the complete
+revision after integrated review.
 
-**Proposal guidance:** [use and maintenance](project-execution-model.md#use-and-maintain-mocks-and-checks).
+**Current guidance:** [use and maintenance](project-execution-model.md#use-and-maintain-mocks-and-checks).
+
+## D24 — 2026-10-28: Adopt Six Recurring Steps and Release Version 1.2.0
+
+**Status: adopted.** Adopt the complete revision from
+[issue #4](https://github.com/shpoont/project-execution-model/issues/4), merged in
+[PR #6](https://github.com/shpoont/project-execution-model/pull/6), including D20–D23.
+Give Mock and Prepare Tests their own work and connections within **Define →
+Design → Mock → Prepare Tests → Implement → Deliver**. This makes exploration,
+assessment preparation and their relationship to design more visible without
+turning the model into a single pass. Planning, review and testing continue
+throughout; findings can reopen affected decisions while valid work is reused.
+
+Clarify Design's architecture and ownership, recursive mock and check coverage,
+assessment validation, and the connected collection's practical usability.
+Substantial subsystems can use the full cycle with inherited context and return
+real results, checks and evidence; the parent still verifies the combined outcome.
+
+Revise D17's implementation-contract definition: the agreement covers what an
+increment must deliver, its conditions and how completion will be assessed.
+Prepared tests guide and assess these expectations; missing tests do not remove
+agreed obligations. Preserve checks before the behavior they guide, incremental
+real replacement of mocks, real combined verification, honest evidence states,
+readiness and authority, and later outcome and receiving-owner responsibilities.
+Add no required document, hierarchy of named tiers, runner or framework.
+
+Release this model as **v1.2.0 — Six Steps, One Process**, with the pointed
+pyramid overview and café images introducing their matching examples. Retain
+the initial release date, 22 September 2026. Keep `v1.0.0` at `eb126d1` and
+`v1.1.0` at `fa06d11`; earlier published guidance remains available at those tags.
+
+Independent reviews and representative walkthroughs support the revision's
+clarity, consistency and bounded usability. They do not establish improved
+reliability, efficiency or benefits in real projects; those claims need evidence
+from subsequent use.
+
+**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
+[implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
+and [changelog](../CHANGELOG.md).

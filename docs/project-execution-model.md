@@ -1,8 +1,6 @@
 # Project Execution Model
 
-*Revision proposal — [issue #4](https://github.com/shpoont/project-execution-model/issues/4), increments 1–4*
-
-*Published baseline: Version 1.1.0 — Evidence in Practice | Released 3 October 2026*
+*Version 1.2.0 — Six Steps, One Process | Released 28 October 2026*
 
 *Initial release: 22 September 2026*
 
