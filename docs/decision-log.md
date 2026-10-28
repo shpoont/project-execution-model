@@ -50,7 +50,7 @@ the design is inexpensive to change.
 When used, draft documentation remains unverified until reconciled with the
 actual result. It complements appropriate usage evidence.
 
-**Current guidance:** [review the proposal with mocks](project-execution-model.md#review-the-proposal-with-mocks).
+**Current guidance:** [mock review](project-execution-model.md#mock).
 
 ## D04 — 2026-06-19: Check the project as a whole
 
@@ -64,7 +64,7 @@ document coverage, not empirical proof that the standard guarantees successful
 projects. Component results still need a combined-result assessment.
 
 **Current guidance:** [test the combined result](project-execution-model.md#implement)
-and [deliver and learn](project-execution-model.md#deliver--learn).
+and [delivery and learning](project-execution-model.md#deliver).
 
 ## D05 — 2026-06-19: One core standard with focused supporting standards
 
@@ -133,7 +133,7 @@ evidence where it is required. Review findings remain distinct from
 implementation or release authorization. Detailed universal approval gates
 were removed under D13; project readiness checks remain.
 
-**Current guidance:** [review the proposal with mocks](project-execution-model.md#review-the-proposal-with-mocks)
+**Current guidance:** [mock review](project-execution-model.md#mock)
 and [develop tests throughout](project-execution-model.md#develop-tests-throughout).
 
 ## D10 — 2026-07-04: Keep the project outcome central
@@ -242,7 +242,8 @@ standards without treating the whole collection as a required part of the model.
 
 ## D17 — 2026-09-24: Use Recurring Areas of Work and Implementation Contracts
 
-**Status: adopted.** Organize the model around Define, Design, Implement, and
+**Status: adopted for v1.1.0; structural revision proposed in D20.** Organize the
+model around Define, Design, Implement, and
 Deliver & Learn as recurring areas within one iterative process. Mock review,
 test preparation, and testing continue throughout the project rather than
 occupying separate stages. Findings can reopen affected decisions while valid
@@ -283,9 +284,9 @@ as their recorded decision and follow-up. Findings that challenge that
 agreement need a further decision. Exceptions remain bounded by the project's
 agreed limits, applicable obligations, and the decision-maker's authority.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
-and [tests throughout the project](project-execution-model.md#develop-tests-throughout).
+**Published v1.1.0 guidance:** [project journey](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#the-project-journey),
+[implementation contract](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#agree-on-the-implementation-contract),
+and [tests throughout the project](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#develop-tests-throughout).
 
 ## D18 — 2026-09-25: Update the Name of the Separate Work Model
 
@@ -318,6 +319,124 @@ release date, 22 September 2026, and the `v1.0.0` baseline at `eb126d1`.
 Versioned change summaries belong in the changelog; this log preserves decisions
 and their reasons.
 
-**Current guidance:** [mock review](project-execution-model.md#review-the-proposal-with-mocks),
-[test preparation](project-execution-model.md#develop-tests-throughout),
+**Published v1.1.0 guidance:** [mock review](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#review-the-proposal-with-mocks),
+[test preparation](https://github.com/shpoont/project-execution-model/blob/v1.1.0/docs/project-execution-model.md#develop-tests-throughout),
 and the [changelog](../CHANGELOG.md).
+
+## D20 — 2026-10-24: Propose Six Recurring Steps and Subsystem Cycles
+
+**Status: proposal for issue #4, increment 1; not adopted.** Give Mock and
+Prepare Tests their own recurring steps alongside Define, Design, Implement
+and Deliver. Their work needs greater visibility and clearer connections to
+the designed system. Deliver retains learning, later outcome checks and
+closure responsibilities.
+
+Make Design explicit about the system's elements, responsibilities, ownership,
+interfaces, interactions and decomposition. Apply the full cycle within
+substantial subsystems when uncertainty or consequential commitments warrant
+it. Inherit relevant parent context, return findings that challenge parent
+decisions, and return real results, checks and evidence. The parent remains
+responsible for integration and verification of the combined outcome. Minor,
+well-understood tasks need no nested cycle or separate set of documents.
+
+This proposes revising D17's four-area structure while preserving its iteration,
+implementation-contract, readiness and evidence principles. Implementation
+replaces relevant mocks with real parts; useful test substitutes may remain
+with their evidence limits explicit. Separate steps do not freeze earlier
+decisions or require a separate document for each activity.
+
+The remaining increments in [issue #4](https://github.com/shpoont/project-execution-model/issues/4)
+cover mock/test relationships, assessment validation and practical usability.
+Adoption and a release decision follow review of the complete revision.
+
+**Proposal guidance:** [project journey](project-execution-model.md#the-project-journey),
+[design](project-execution-model.md#design), and
+[application at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale).
+
+## D21 — 2026-10-26: Propose Recursive Coverage and Incremental Test Preparation
+
+**Status: proposal for issue #4, increment 2; not adopted.** Connect mock and
+check coverage to the designed system and every child element. Assess each
+element's significant aspects against its own responsibilities, requirements,
+constraints and interactions. Recursive coverage does not require a separate
+mock artifact or full project cycle for every child.
+
+Keep Mock and Prepare Tests distinct. Explain reviewing mocks to develop
+checks, checking actual elements with mocked dependencies, checking mocks
+themselves, and applying suitable shared checks to substitutes and their real
+replacements. Their evidence has different limits; useful dependency
+substitutes can remain alongside checks of actual elements and integration.
+
+Review and reuse existing checks, adapt or correct them, and retire obsolete
+or redundant checks without losing coverage of still-agreed expectations.
+Prepare usable checks for the next behavior before implementing it, while
+scenarios and checks develop incrementally. Set expected outcomes from agreed
+expectations rather than copying observed output, and refine implementation
+without silently changing its target.
+
+Preserve contract coverage, readiness for each commitment, evidence states,
+real combined verification and later outcome obligations. A complete, frozen
+suite is not a prerequisite to starting implementation. Assessment calibration
+and the broader practical-use workflow remain for later increments in
+[issue #4](https://github.com/shpoont/project-execution-model/issues/4); adoption
+and release follow review of the complete revision.
+
+**Proposal guidance:** [mock coverage](project-execution-model.md#mock),
+[mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
+and [incremental check preparation](project-execution-model.md#prepare-the-next-scenario).
+
+## D22 — 2026-10-26: Propose Assessment Validation and Explicit Assessment Failures
+
+**Status: proposal for issue #4, increment 3; not adopted.** Validate checks
+and assessment methods with representative acceptable results and plausible
+violations. Establish reference assessments independently from the method
+being checked, using agreed expectations, relevant evidence and appropriate
+review. Include acceptable variation, investigate mistaken acceptance and
+rejection, and check judgment consistency where it matters. Scale validation
+to the expectation and the decisions that depend on it.
+
+Review the collection for important omissions even when its included checks
+pass. Preserve the implementation contract and coverage of still-agreed
+expectations; correcting an assessment does not quietly change its target.
+
+Distinguish a failed assessment attempt or insufficient evidence from an
+observed violation of the work's criterion. An assessment that cannot establish
+an outcome remains pending with the reason. Missing access to evidence differs
+from evidence that a required result is absent. Neither an assessment failure
+nor an authorized exception supplies a valid pass or changes an observed result.
+
+Keep Passed, Failed and Pending, commitment-specific readiness, real combined
+verification, later outcome responsibilities and the six-step process. Add no
+required framework, dataset or document. The broader practical-use workflow
+remains for increment 4 of [issue #4](https://github.com/shpoont/project-execution-model/issues/4);
+adoption and release follow review of the complete revision.
+
+**Proposal guidance:** [assessment validation](project-execution-model.md#validate-assessments)
+and [result interpretation](project-execution-model.md#interpret-results).
+
+## D23 — 2026-10-27: Propose Connected Use and Maintenance of Mocks and Checks
+
+**Status: proposal for issue #4, increment 4; not adopted.** Connect the current
+design, mocks, checks and evidence so contributors can select relevant work,
+establish usable prerequisites, apply instructions and interpret scoped results.
+Include checks for affected smaller and larger parts and how they work together,
+and retain the checks required for each commitment.
+
+Use evidence to investigate whether a finding concerns implementation, a mock,
+an assessment, supporting arrangements or unresolved expectations. Involve the
+relevant owner or decision-maker and keep uncertain causes and follow-up visible.
+Coordinate affected updates, prepare checks before the behavior they guide,
+and revisit relevant assessment validation when its basis changes.
+
+Retain decisions and reasons, findings, evidence and open questions across
+contributors. Distinguish current, superseded and historical work, and reuse
+suitable work and evidence with effort proportionate to risk and uncertainty.
+Preserve existing coverage, authority, result states and evidence limits.
+Assess the collection's practical usability through a representative workflow,
+reusing suitable evidence and keeping the effort proportionate.
+
+Add no execution stage, required document, project layout, runner or framework.
+Keep the public model self-contained. The complete proposal still needs
+integrated review and an adoption decision before release.
+
+**Proposal guidance:** [use and maintenance](project-execution-model.md#use-and-maintain-mocks-and-checks).
