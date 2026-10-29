@@ -3,6 +3,31 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.2.1 — Iteration and Work Records](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.1) — 2026-10-29
+
+### Changed
+
+- Clarified how findings lead to investigation, review of challenged decisions,
+  assessment of affected work and evidence, and readiness for the next
+  commitment. Reuse what still applies and repeat necessary checks.
+- Made useful work-record preservation explicit throughout execution: retain
+  context and useful abandoned approaches, reuse adequate existing records,
+  distinguish observations from explanations and attempts from demonstrated
+  results, and keep material corrections and recording gaps understandable.
+- Clarified that concise project notes do not replace systematic evidence
+  needed for checks or operation. Consolidated overlapping retention guidance
+  in **Advance With Evidence**.
+
+Retained the six recurring steps and their existing safeguards, with no new
+required document, record schema or tool. Independent reviews and matched
+simulated cases support documentary readiness; both versions produced sound
+decisions, so comparative decision improvement and real-project benefits remain
+unproven.
+
+Sources: [iteration clarification (#7)](https://github.com/shpoont/project-execution-model/pull/7),
+[work-record clarification (#8)](https://github.com/shpoont/project-execution-model/pull/8),
+and [work-record requirements (#5)](https://github.com/shpoont/project-execution-model/issues/5).
+
 ## [v1.2.0 — Six Steps, One Process](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.0) — 2026-10-28
 
 ### Changed

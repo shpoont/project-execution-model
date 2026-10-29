@@ -476,3 +476,35 @@ from subsequent use.
 **Current guidance:** [project journey](project-execution-model.md#the-project-journey),
 [implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
 and [changelog](../CHANGELOG.md).
+
+## D25 — 2026-10-29: Clarify Iteration and Work Records
+
+**Status: adopted for v1.2.1.** Adopt the clarifications merged in
+[PR #7](https://github.com/shpoont/project-execution-model/pull/7) and
+[PR #8](https://github.com/shpoont/project-execution-model/pull/8), the latter
+addressing [issue #5](https://github.com/shpoont/project-execution-model/issues/5).
+
+Connect investigation of findings to the decisions they challenge, affected
+work and evidence, and readiness for the next commitment. Investigate before
+choosing a remedy rather than prescribing a fixed return to a particular step.
+Keep applicable work and evidence and repeat necessary checks.
+
+Make useful work-record preservation explicit in Advance With Evidence.
+Retain context, including useful exploration and abandoned approaches, while
+reusing adequate existing records. Distinguish observations from explanations
+and attempts from demonstrated results. Keep material corrections and known
+recording gaps understandable. Concise project notes do not replace the
+underlying evidence required for checks or operation, and missing records do
+not establish that nothing happened.
+
+Release these clarifications as **v1.2.1 — Iteration and Work Records**. They
+clarify the existing six-step model without adding a stage, required document,
+record schema or tool. Preserve the initial release date and earlier tags.
+
+The seven-step editorial cycle, independent meaning-preservation review and
+matched simulated cases support documentary readiness. Both original and
+revised versions produced sound decisions in the cases; comparative decision
+improvement and effectiveness in real projects remain unproven.
+
+**Current guidance:** [Advance With Evidence](project-execution-model.md#advance-with-evidence)
+and [changelog](../CHANGELOG.md).

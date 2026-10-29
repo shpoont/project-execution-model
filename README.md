@@ -6,11 +6,11 @@ and open questions connected as work passes between human or AI contributors.
 
 ## Documents
 
-- [Model v1.2.0 — Six Steps, One Process](docs/project-execution-model.md) — six
+- [Model v1.2.1 — Iteration and Work Records](docs/project-execution-model.md) — six
   recurring steps: Define, Design, Mock, Prepare Tests, Implement, and Deliver.
   Review and testing run throughout. Implementation replaces relevant mocks
   with real parts and satisfies agreed checks; findings can reopen decisions.
-- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.0)
+- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.1)
   — changes in the current release.
 - [Decision log](docs/decision-log.md) — lasting decisions and their rationale.
   The model document contains the guidance to use.

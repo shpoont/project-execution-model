@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Version 1.2.0 — Six Steps, One Process | Released 28 October 2026*
+*Version 1.2.1 — Iteration and Work Records | Released 29 October 2026*
 
 *Initial release: 22 September 2026*
 
