@@ -241,6 +241,10 @@ Keep the project's scope, assumptions, decisions, and evidence current. Manage i
 
 As work moves between steps and contributors, carry forward the relevant goal, decisions and their reasons, evidence, and open questions. Build on what still holds. When a review supports the approach and readiness checks are satisfied, continue. **Finding a material problem before a larger commitment is progress:** it lets you correct course while change is less costly.
 
+Preserve the context needed to continue work without reconstructing earlier discussions, and to support assessment, investigation, handover and operation. Include useful exploration and abandoned approaches when their reasons or findings would otherwise be lost. Choose recording detail for its intended use, reusing adequate existing records and adding only missing context or references. Routine events may still need systematic recording for checks or operation. At the café, for example, a brief project note does not replace the record of every collection attempt.
+
+Distinguish observations from explanations and attempted actions from demonstrated results, with the context needed to interpret them. Make material corrections and their reasons understandable while keeping the current view clear; a brief note or existing version reference can suffice. Identify known recording gaps when they limit a conclusion. Missing records do not establish that nothing happened, and recording a claim does not supply missing evidence for it.
+
 Investigate findings before choosing what to change. Revisit the decisions they challenge and check which dependent work and evidence may be affected, including beyond the current contribution. Keep what still applies and repeat necessary checks. Use the readiness rules to decide what can continue and what must be resolved before the next commitment. Actual use may reopen the original need or approach even after accepted delivery.
 
 Correcting a test or adding coverage is different from changing the intended target. Agree on changes to expectations and the implementation contract with the responsible decision-maker, keeping the reasons and supporting evidence visible. Do not quietly redefine failure as success.
@@ -322,7 +326,7 @@ Investigate findings before choosing what to change. The problem may be in the i
 
 When work changes, coordinate updates to the affected design, mocks, checks and instructions with their owners. [Prepare checks for new scenarios](#prepare-the-next-scenario) before implementing the behavior they guide. Revisit relevant [assessment validation](#validate-assessments) when its basis changes. Distinguish current, superseded and historical work.
 
-Retain the decisions and reasons, findings, evidence and open questions needed to continue without reconstructing earlier discussions. Reuse suitable mocks, checks, methods and evidence. Select preparation and rechecks according to affected responsibilities and the next commitment, proportionate to risk and uncertainty.
+Reuse suitable mocks, checks, methods and evidence. Select preparation and rechecks according to affected responsibilities and the next commitment, proportionate to risk and uncertainty.
 
 Check that contributors can use the relevant design, mocks, checks, instructions and evidence together through a representative workflow: find and select relevant work, establish prerequisites, explore or run a case, interpret the result, and update or extend the affected work using retained context. Reuse suitable evidence and keep the effort proportionate to risk and uncertainty.
 
