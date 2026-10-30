@@ -39,7 +39,7 @@ Work in **increments**: manageable pieces with a result you can check. Before im
 
 Progress brings greater commitments. Before a major purchase, live trial, wider rollout, or other consequential action, [check readiness](#check-readiness-before-committing) for that particular commitment. A milestone can record that decision and its scope; later findings may require it to be revisited.
 
-**Plan throughout the project**, including mock creation and reviews, and revise plans when findings change the approach.
+**Plan throughout the project**, including mock creation and reviews, and revise plans when findings change the approach. Use your project's planning and coordination practices to set priorities, identify dependencies and establish the people, time and resources available when needed, accounting for existing commitments. Use these inputs to choose the next increment and resolve conflicting demands before [confirming readiness](#check-readiness-before-committing) for its commitments. PEM guides the project's work and reasoning while leaving [how work is scheduled and assigned](#boundary) to those practices. You can use PEM without adopting another model or a particular planning tool or document.
 
 The whole project need not be specified upfront, and the steps and practices do not require separate documents.
 
