@@ -109,7 +109,11 @@ Mocks give people something concrete to try and question. They help expose misun
 
 For each system element defined in Design, mocks must cover whatever is needed to review how that element fulfils its responsibilities, meets its requirements and constraints, and interacts with other elements. These are the **significant aspects** of its design.
 
-Apply this to the whole system, then recursively to every child element in its decomposition. At each level, consider each part's own purpose and responsibilities as its design develops; being small within its parent does not remove it from consideration. Use simple mocks or rehearsals, prioritize coverage over polish, and reuse suitable mocks or still-applicable review evidence. A separate mock or [full execution cycle](#apply-the-model-at-a-useful-scale) is not required for every child.
+Apply this to the whole system and every part within it, including smaller parts at every level. Consider each part's own purpose and responsibilities as its design develops; being small does not remove it from consideration. Use simple mocks or rehearsals, prioritizing coverage over polish. One mock or still-applicable review evidence can cover several parts when the review addresses each part's significant aspects and their interactions under relevant conditions. A separate mock or [full execution cycle](#apply-the-model-at-a-useful-scale) is not required for every part.
+
+Before adding mock detail, ask what significant aspect remains unreviewed or what material question it could answer for the [next commitment](#check-readiness-before-committing). Stop adding detail when applicable review covers those needs; revisit affected coverage when design changes, changed conditions or new findings call it into question. Scale exploration to risk, uncertainty and what further evidence could change; naming more parts alone does not require more mocks.
+
+At the café, one rehearsal can review directions, order numbers and handover together. If a rehearsal had covered only successful collections, the kitchen check and customer update for a missing order would still need review. Rehearsal does not establish how the real lunch service performs.
 
 #### Review and Carry Findings Forward
 
@@ -135,7 +139,7 @@ Review existing checks: reuse or adapt what applies, create or correct checks wh
 
 Bring forward the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. Make the agreement findable from the increment's existing record, stating its expectations or referencing the specific current design, reviewed mocks, and tests that apply. No separate contract document or test framework is required. The [café example below](#prepare-the-next-scenario) records this agreement in a sketch and checklist.
 
-Prepare checks for the same parts and levels as the mocks, covering each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Choose manual or automated checks, including assessments of an AI agent's behavior where relevant, according to what each can credibly establish.
+Prepare checks for the same parts and levels as the mocks, covering each element's agreed responsibilities, requirements, constraints, interfaces and interactions, including cooperation within parents and across the system. Checks can cover several parts together while assessing each part's agreed expectations. Choose manual or automated checks, including assessments of an AI agent's behavior where relevant, according to what each can credibly establish.
 
 Tests can originate in any of the six steps; mock review informs and refines them. Keep the design and its reasons alongside the checks. Challenge their coverage against the agreed need and success criteria: **could all these checks pass while an important part of the intended result is missing or wrong?** Identify and address gaps in assessment. An omitted or inadequate test does not remove an agreed expectation.
 
