@@ -201,7 +201,9 @@ Run relevant contract and internal checks as each mocked part is replaced or inc
 >
 > The failed handover leads to another check: **do numbers stay readable when bags are stacked and carried?** The current labels fail. Staff move them higher on the bags and update the sketch. They add the visibility check beside the handover check, then repeat both and any other affected checks. This time, both pass in the small trial. The missing-order rehearsal result still applies: moving the labels changes neither the kitchen check nor the customer update.
 >
-> **Check the Full Lunch Service.** Once the small trial passes, they run a full lunchtime trial, checking customer routing and how the kitchen, packing, and pickup work together. All five checks pass under these conditions: customers find the right queue, the packer handles both jobs within budget, and the collection records are accurate. The setup is ready to hand over.
+> **Check the Full Lunch Service.** Once the small trial passes, they run a full lunchtime trial, checking customer routing and how the kitchen, packing, and pickup work together. All five checks pass during that lunch. Of 20 collection arrivals, 18 receive food within five minutes; two take longer and none leave without food.
+>
+> Staff also observe two brief pauses in packing during longer pickup enquiries. New orders wait, but the temporary queue clears after each enquiry without extra staff hours. One lunch does not establish the first week's benefit.
 
 ### Deliver
 
@@ -219,7 +221,9 @@ For every permitted pending check, identify when it will run, who will act on it
 
 ![Deliver: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
 
-> **At the café:** The owner reviews the results and accepts the setup for regular use. Staff take over the revised packing and pickup routine, using the updated sketch and checklist, and know to bring new problems to the owner. With the handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and acting on the result.
+> **At the café:** The owner accepts regular use of the current setup. The required checks passed, waiting times look promising, and the arrangement is inexpensive to reverse. The packing pauses need watching even though the queue cleared in the trial. Staff take over using the updated sketch and checklist. If packing cannot keep up or a required operating check fails, they pause the affected work and call the owner.
+>
+> With handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and packing observations and acting on the results. Until then, the weekly benefit remains unproven.
 >
 > At the end of that week, the result is **seven in ten**.
 >
@@ -298,6 +302,16 @@ Begin an implementation increment only when its relevant decisions have been suf
 **A required test without a valid, applicable pass blocks the commitment it governs**, unless an authorized decision-maker explicitly approves a permitted exception. An exception is permitted only within the project's agreed limits, applicable obligations, and the decision-maker's authority. Record the justification, the specific commitment permitted, remaining risk, and any conditions or follow-up. An exception permits a specified action; it does not change a test result or supply missing evidence.
 
 When a mock cannot credibly answer a material question, use a bounded real experiment. Give it a clear question, assessment method, limits, required authorization, and stopping conditions. Review its findings and remaining uncertainty; carry both into design, test preparation, and the next commitment decision.
+
+**At the café — Judge the Next Commitment.** Using the [full-lunch trial evidence](#implement), the owner compares three possible next commitments:
+
+| Possible Commitment | Decision and Value of Further Evidence |
+| --- | --- |
+| **Another limited trial** | Run one if a different order mix could expose a sustained packing delay that would change operating limits, and answering that question is worth the cost or delay. Repeating the same conditions merely to accumulate passes adds little. |
+| **Regular use of the current setup** | Accept the inexpensive, reversible arrangement with monitoring: required checks passed and the packing queue cleared. The first week's records are already needed to assess waiting times and packing; gathering them during regular use can inform whether to continue, improve or stop, while another trial just to accumulate passes adds little. The weekly benefit remains unproven. |
+| **An expensive permanent counter refit** | Defer this hard-to-reverse investment. One lunch does not establish sustained benefit or justify the refit against cheaper options. Evidence that the refit would offer enough advantage over the current or cheaper arrangement to justify its extra cost could change that judgment; obtain it if its decision value warrants the effort. The refit's design, budget and authorization must also be ready. |
+
+If an equally suitable, cheaper arrangement already meets those needs, the owner can stop pursuing the refit; more successful pickup trials would not justify its extra cost.
 
 ### Replace Mocks With Reality Progressively
 
