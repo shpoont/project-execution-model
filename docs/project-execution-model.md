@@ -336,7 +336,7 @@ These relationships need no one-to-one mapping. A manual prototype review can in
 
 #### Use and Maintain Mocks and Checks
 
-Start from the expectation or change and the part it concerns. Keep the relevant current design, mocks, checks and evidence connected and easy to find. Include checks for affected smaller parts, the larger parts they belong to, and how those parts work together. Include the checks required for the next commitment.
+Start from the expectation or change and the part it concerns. Keep the relevant current design, mocks, checks and evidence connected and easy to find. Include checks for affected smaller parts, the larger parts they belong to, and how those parts work together. Include the checks required for the next commitment. See the [café handover note](#example-a-handover-note) for an example.
 
 Make instructions and prerequisites easy to find. Before exploring a mock or running a check, confirm that the needed people, tools, access and records are ready. Follow the applicable instructions and keep the result and supporting evidence accessible: what was assessed, relevant conditions or versions, what was simulated and what remains unproven.
 
@@ -358,7 +358,21 @@ If a finding challenges an inherited decision, raise it for review in the parent
 
 Scale coordination and checks to risk, uncertainty, and complexity. Combine activities and records while covering relevant responsibilities. Reuse applicable evidence and existing records; a separate document, team, or ceremony is not required for each step.
 
-> **A compact café record:** “Order numbers hidden after stacking: label check failed. Shift lead moved the labels and reran the label and correct-order checks; both passed in the small trial.” This one note records the finding, action, owner, and scoped result without a separate review document.
+#### Example: A Handover Note
+
+For the [owner's decision after the full-lunch trial](#check-readiness-before-committing), an existing shared note could read:
+
+> **Pickup handover — café owner to staff**
+>
+> I approve regular use of the current setup within existing staff hours and budget. Use the updated sketch and [checklist](#prepare-the-next-scenario) for the [reviewed flow](#mock); the permanent counter refit remains deferred.
+>
+> **Passed:** the five agreed checks in the [full-lunch trial](#implement). Packing briefly paused, but the queue cleared without extra staff hours. This supports monitored use of the inexpensive, reversible setup.
+>
+> **Pending:** the [first-week benefit check](#define). Record every collection attempt from café arrival to handover or leaving without food, and watch packing. If packing cannot keep up or a [required operating check](#check-readiness-before-committing) fails, pause the affected work and call me.
+>
+> At the end of the first week of regular use, I’ll compare the waiting times with our target, review packing and decide whether to continue, improve, reconsider or stop. Setup work can close after handover; I retain this review.
+
+The note keeps permission, reasons, scoped results and follow-up together, with links to supporting context. It can live in an existing working record; this layout is illustrative.
 
 ## Boundary
 
