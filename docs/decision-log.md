@@ -380,9 +380,9 @@ suite is not a prerequisite to starting implementation. Assessment validation
 and practical usability are covered by D22 and D23. D24 adopts the complete
 revision for v1.2.0.
 
-**Current guidance:** [mock coverage](project-execution-model.md#mock),
+**Current guidance:** [mock coverage](project-execution-model.md#cover-the-system-and-its-parts),
 [mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
-and [incremental check preparation](project-execution-model.md#prepare-the-next-scenario).
+and [incremental check preparation](project-execution-model.md#prepare-scenario-checks).
 
 ## D22 — 2026-10-26: Propose Assessment Validation and Explicit Assessment Failures
 
@@ -552,7 +552,51 @@ fictional; improved human-reader usability, decisions, handovers and real-projec
 outcomes remain unproven.
 
 **Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[mock coverage](project-execution-model.md#mock),
+[mock coverage](project-execution-model.md#cover-the-system-and-its-parts),
 [commitment readiness](project-execution-model.md#check-readiness-before-committing),
 [handover note](project-execution-model.md#example-a-handover-note)
+and [changelog](../CHANGELOG.md).
+
+## D27 — 2026-11-01: Adopt the Journey and Working Reference
+
+**Status: adopted for v1.2.3.** Adopt the editorial revision from
+[issue #18](https://github.com/shpoont/project-execution-model/issues/18), merged
+in [PR #19](https://github.com/shpoont/project-execution-model/pull/19).
+
+Keep one canonical model with a learning journey, café example and complete
+working reference. First reading and later lookup need different levels of detail;
+qualified summaries, direct links and a task index connect them
+without making the full guidance optional. Place detailed mock review beside
+progressive replacement and the complete agreement and scenario rules beside
+test development.
+
+Distinguish the pickup agreement for the whole increment from choosing its
+next scenario. Place the handover example beside use and maintenance, and
+guidance for work after closure below the complete Deliver vignette. Introduce
+Design terms through their meanings; retire the two unused labels "child elements"
+and "decomposition" while retaining nested parts and all related obligations.
+Explain stopping, check coverage and evidence value in ordinary language.
+
+Preserve the six recurring steps, five Main Concepts, mocks-first and
+tests-first direction, agreed expectations, evidence and authority limits,
+real combined verification, and later outcome and receiving-owner duties.
+Keep the café's facts and images and the Work Management Model boundary.
+Add no stage, required artifact, template, tool or operating method. The
+question of using a real trial when a credible mock is disproportionately
+costly remains unresolved.
+
+Release this revision as **v1.2.3 — Journey and Working Reference**. Retain
+the initial release date, 22 September 2026, and every earlier version tag.
+Accept the trade-off of a shorter journey and a longer complete reference;
+word counts alone do not establish less effort or better understanding.
+
+Independent comparisons found no substantive loss, and a fresh blind
+application outside software found no required change. These reviews and
+fictional cases support documentary readiness, not measured human usability
+or real-project effectiveness. Optional preferences for image orientation and a
+component example do not require another revision before this release.
+
+**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
+[working reference](project-execution-model.md#main-concepts),
+[implementation agreement](project-execution-model.md#agree-on-the-implementation-contract)
 and [changelog](../CHANGELOG.md).

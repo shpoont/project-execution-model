@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Version 1.2.2 — Evidence for the Next Commitment | Released 1 November 2026*
+*Version 1.2.3 — Journey and Working Reference | Released 1 November 2026*
 
 *Initial release: 22 September 2026*
 

@@ -3,6 +3,41 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.2.3 — Journey and Working Reference](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.3) — 2026-11-01
+
+### Changed
+
+- Separated the learning journey and café example from complete working
+  guidance in one canonical document. Retained qualified summaries and direct
+  links where the full rules apply.
+- Moved full mock coverage and review guidance beside progressive replacement,
+  and the full implementation agreement and scenario guidance beside test
+  development. Added a task index, including monitoring and later benefit
+  assessment.
+- Introduced Design terms through concrete meanings. Retired the unused
+  labels "child elements" and "decomposition" while preserving nested parts
+  and their responsibilities. Clarified mock stopping, hierarchical check
+  coverage and the value of further evidence for an investment decision.
+- Gave the café agreement for the whole increment its own illustrative
+  heading before selecting the next scenario. Retargeted checklist links,
+  placed the handover note beside use and maintenance, and moved guidance
+  for work after closure below the complete Deliver vignette.
+
+Retained the six recurring steps, five Main Concepts, all substantive safeguards,
+café facts and images, and the Work Management Model boundary. Added no stage,
+required document, template, tool or operating method. The existing provision
+for bounded real experiments is unchanged. The question of using a real trial
+when a credible mock is disproportionately costly remains unresolved.
+
+The journey is shorter while the complete document and reference are longer.
+Comparative Pro reviews, the seven-step editorial cycle and simulated cases
+found no required correction within the reviewed scope. They do not establish
+measured human comprehension, reduced effort or real-project effectiveness;
+hosted rendering and assistive-technology use remain unverified.
+
+Sources: [readability and navigation (#19)](https://github.com/shpoont/project-execution-model/pull/19),
+addressing [issue #18](https://github.com/shpoont/project-execution-model/issues/18).
+
 ## [v1.2.2 — Evidence for the Next Commitment](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.2) — 2026-11-01
 
 ### Changed
