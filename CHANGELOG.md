@@ -3,6 +3,44 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.2.2 — Evidence for the Next Commitment](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.2) — 2026-11-01
+
+### Changed
+
+- Connected ongoing planning and coordination to choosing increments and
+  checking readiness, accounting for priorities, dependencies, available
+  resources and existing commitments. PEM remains self-contained; scheduling
+  and assignment mechanics remain outside its responsibility boundary.
+- Clarified shared mock and test coverage, reuse of applicable review evidence,
+  and when to stop adding mock detail or revisit affected coverage. Preserve
+  each part's significant responsibilities and the mocks-first direction.
+- Extended the café example to distinguish passing checks from sufficient
+  evidence for a particular commitment. Compare a targeted further trial,
+  monitored regular use and a permanent refit, including when more evidence
+  could change the decision and when repeating checks adds little.
+- Added an illustrative café handover note connecting permission, supporting
+  context, scoped passes, the pending benefit check, and ownership of recording,
+  escalation and later decisions after setup work closes.
+
+Retained the six recurring steps and existing safeguards, with no new stage,
+required document, template or tool. The question of substituting a real trial
+for a credible but disproportionately costly mock remains unresolved; the
+existing bounded-experiment provision is unchanged.
+
+Comparative Pro reviews, independent editorial reviews and simulated cases
+support documentary readiness. They do not establish improved human-reader
+usability, decisions, handovers or real-project outcomes. The café evidence is
+fictional, and its trial does not prove the later weekly benefit.
+
+Sources: [planning and coordination (#14)](https://github.com/shpoont/project-execution-model/pull/14),
+[proportionate mock coverage (#15)](https://github.com/shpoont/project-execution-model/pull/15),
+[evidence sufficiency (#16)](https://github.com/shpoont/project-execution-model/pull/16),
+and [worked handover record (#17)](https://github.com/shpoont/project-execution-model/pull/17),
+addressing issues [#10](https://github.com/shpoont/project-execution-model/issues/10),
+[#9](https://github.com/shpoont/project-execution-model/issues/9),
+[#11](https://github.com/shpoont/project-execution-model/issues/11)
+and [#12](https://github.com/shpoont/project-execution-model/issues/12).
+
 ## [v1.2.1 — Iteration and Work Records](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.1) — 2026-10-29
 
 ### Changed

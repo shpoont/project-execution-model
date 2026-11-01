@@ -508,3 +508,51 @@ improvement and effectiveness in real projects remain unproven.
 
 **Current guidance:** [Advance With Evidence](project-execution-model.md#advance-with-evidence)
 and [changelog](../CHANGELOG.md).
+
+## D26 — 2026-11-01: Clarify Evidence for the Next Commitment
+
+**Status: adopted for v1.2.2.** Adopt the clarifications addressing issues
+[#9](https://github.com/shpoont/project-execution-model/issues/9),
+[#10](https://github.com/shpoont/project-execution-model/issues/10),
+[#11](https://github.com/shpoont/project-execution-model/issues/11)
+and [#12](https://github.com/shpoont/project-execution-model/issues/12), merged in
+[PR #14](https://github.com/shpoont/project-execution-model/pull/14),
+[PR #15](https://github.com/shpoont/project-execution-model/pull/15),
+[PR #16](https://github.com/shpoont/project-execution-model/pull/16)
+and [PR #17](https://github.com/shpoont/project-execution-model/pull/17).
+
+Connect planning inputs and existing commitments to increment selection and
+readiness. Keep PEM usable without adopting the Work Management Model; general
+scheduling and assignment mechanics remain outside PEM.
+
+Judge additional mock detail by uncovered significant aspects and material
+questions for the next commitment. Shared mocks, checks and applicable review
+evidence can cover several parts without removing each part's obligations.
+Retain the mocks-first direction and current bounded-experiment provision;
+whether a credible but disproportionately costly mock may be replaced by a
+real trial remains unresolved.
+
+Use the café story to explain why the same evidence can justify monitored,
+reversible use while leaving a permanent investment unsupported. Show when
+further evidence could change the decision and when accumulating similar
+passes adds little. An ordinary handover note carries permission, reasons,
+scoped results and follow-up together without requiring a new record format.
+Acceptance and setup closure do not prove the benefit or remove its owner's
+later review and decision.
+
+Release these clarifications as **v1.2.2 — Evidence for the Next Commitment**.
+Preserve the six recurring steps, tests before the behavior they guide, readiness
+and authority, honest result states, real combined verification and later
+outcome responsibilities. Add no stage, required document, template or tool.
+Retain the initial release date and all earlier version tags.
+
+Comparative Pro reviews, independent editorial reviews and simulated cases
+support documentary readiness within the reviewed scope. The café evidence is
+fictional; improved human-reader usability, decisions, handovers and real-project
+outcomes remain unproven.
+
+**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
+[mock coverage](project-execution-model.md#mock),
+[commitment readiness](project-execution-model.md#check-readiness-before-committing),
+[handover note](project-execution-model.md#example-a-handover-note)
+and [changelog](../CHANGELOG.md).
