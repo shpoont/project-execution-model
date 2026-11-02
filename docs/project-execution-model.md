@@ -8,9 +8,9 @@ Author: **Leon.id Komarovsky** — [leonid@komarovsky.info](mailto:leonid@komaro
 
 ## Goal
 
-A project can deliver exactly what was agreed and still fail to solve the problem that started it. As plans, discussions, and results accumulate, the reason for a decision can become hard to find. When work changes hands, the next contributor may receive the result without knowing what has been checked or what remains uncertain.
+The Project Execution Model helps people turn a need into a working result and learn whether it produces the intended benefit. It connects defining the project, developing and reviewing an approach, preparing checks, making the result real, and delivering it for use and acceptance. Findings from reviews, tests, and actual use guide progress and can change earlier decisions before further commitments.
 
-The Project Execution Model guides a project from an initial idea through delivery, acceptance, and learning from real use. Throughout the project, carry forward the relevant goal, decisions, evidence, and open questions so the next human or AI contributor can build on what is known and challenge what no longer holds. It applies across domains, from one-person projects to large organizations.
+Human or AI contributors carry the relevant goal, decisions and their reasons, evidence, and open questions between steps. They use this context to build on what still holds, guide the next action, and revisit affected work when findings challenge it. The model applies across domains, from one-person projects to large organizations.
 
 ## The Project Journey
 
