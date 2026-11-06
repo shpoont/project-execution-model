@@ -115,7 +115,7 @@ Before adding detail, identify what is still needed for the next commitment: an 
 
 When a new review is needed, have appropriate people try the mock manually. For each meaningful mock, make clear what it represents, what people observed under the tested conditions, and what remains unproven. Carry open claims into later checks and revisit affected work when findings challenge it. The [review guidance](#review-and-carry-findings-forward) explains how to prepare the review, carry findings forward and organize the mocks.
 
-When no mock can credibly answer a material question, use reviewed findings from a [bounded real experiment](#check-readiness-before-committing). Keep mocks for questions they can answer.
+When mocks cannot credibly answer a material question, or a real trial is justified instead of a disproportionate mock, use reviewed findings from a [bounded real experiment](#check-readiness-before-committing). Keep mocks for other questions they can usefully answer.
 
 ### Prepare Tests
 
@@ -316,7 +316,11 @@ Begin an implementation increment only when its relevant decisions have been suf
 
 **A required test without a valid, applicable pass blocks the commitment it governs**, unless an authorized decision-maker explicitly approves a permitted exception. An exception is permitted only within the project's agreed limits, applicable obligations, and the decision-maker's authority. Record the justification, the specific commitment permitted, remaining risk, and any conditions or follow-up. An exception permits a specified action; it does not change a test result or supply missing evidence.
 
-When a mock cannot credibly answer a material question, use a bounded real experiment. Give it a clear question, assessment method, limits, required authorization, and stopping conditions. Review its findings and remaining uncertainty; carry both into design, test preparation, and the next commitment decision.
+When a mock cannot credibly answer a material question, use a bounded real experiment. A credible mock may also be replaced for a particular material question if its preparation or review would require disproportionate effort for the evidence it could add. In that case, compare suitable mock options, including simpler or reused work, with the proposed trial: expected evidence, effort, delay, consequences and remaining uncertainty. Use the trial only when that comparison justifies it. Record the reasons in the existing project record; cost alone is not sufficient.
+
+Give the experiment a clear question, prepared assessment method, limits, required authorization and stopping conditions. Its risks and commitments must fit the project's limits, obligations and decision-maker's authority. If neither a suitable mock nor an acceptable trial is available, retain the uncertainty and reconsider the next commitment.
+
+Review what the trial established under its conditions and what remains uncertain; carry both into design, test preparation and the next commitment decision. Other significant review obligations still apply.
 
 **At the café — Judge the Next Commitment.** Using the [full-lunch trial evidence](#implement), the owner compares three possible next commitments:
 
@@ -330,7 +334,7 @@ If an equally suitable, cheaper arrangement already meets those needs, the owner
 
 ### Replace Mocks With Reality Progressively
 
-For each useful increment, build on [reviewed mocks or still-applicable review evidence](#mock). Use a [bounded real experiment](#check-readiness-before-committing) when mocks cannot credibly answer a material question.
+For each useful increment, build on [reviewed mocks or still-applicable review evidence](#mock). Use reviewed findings from a [bounded real experiment](#check-readiness-before-committing) only when that route is justified by the readiness guidance.
 
 As stand-ins become real parts and rehearsals become live practice, [verify each change and the relevant real combined result](#implement). Carry unresolved claims into later checks.
 
@@ -352,7 +356,7 @@ Plan reviews around clear questions, conditions and participants, including draf
 
 For each meaningful mock, briefly identify **what it represents, what people observed under the tested conditions, and what remains unproven**. Carry those open claims into later checks. For example, a user interface connected to a simulated service can show how it handles a reply that does not arrive in time; it cannot show that the real service recovers correctly.
 
-If no mock can credibly answer a material question, use reviewed findings from a [bounded real experiment](#check-readiness-before-committing). Keep mocks for questions they can answer.
+When a [bounded real experiment](#check-readiness-before-committing) is justified, use its reviewed findings for the questions it addresses. Keep mocks for other questions they can usefully answer.
 
 Review findings develop the design and its tests together. If preparing a check exposes a problem with the mock or design, revise the affected work before relying on it. Carry forward the reviewed proposal, the reasons for its choices, the evidence, and the remaining uncertainty. Keep each element identifiable through its design, mocks, checks, implementation and later evidence.
 
