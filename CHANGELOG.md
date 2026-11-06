@@ -3,6 +3,42 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.3.1 — Guidance for Intended Use](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.1) — 2026-11-06
+
+### Changed
+
+- Clarified how to identify guidance for the delivered result's intended
+  users and participants, including operators, maintainers, AI agents and
+  connected systems where relevant. Match its form to actual tasks and
+  conditions: cues, assistance or training, operating references or interface
+  information. Reuse suitable guidance without assuming manual reading or
+  requiring a separate document per role.
+- Added representative usage checks with the support and prerequisites
+  participants will actually have, including unbriefed use where expected.
+  Keep applicable guidance consistent with the real result and verify it
+  through the agreed checks.
+- Made guidance upkeep and superseded instructions explicit at handover.
+  Distinguished customer directions from the staff reference in the café
+  example and added a direct handover lookup link to Deliver.
+
+This patch clarifies existing documentation, intended-use and handover
+responsibilities. Retained the six recurring steps, five Main Concepts,
+mocks-first and tests-first direction, bounded-trial policy, evidence and
+readiness safeguards, later outcome ownership and Work Management Model
+boundary. Added no stage, mandatory manual or general documentation standard.
+
+Comparative Pro review, the seven-step editorial cycle, independent full-model
+preservation and hypothetical applications found no required correction within
+the increment. Pro covered the substantive pre-editorial draft; final
+preservation and blind comprehension cover the subsequent navigation link.
+These checks support documentary readiness, not measured human comprehension,
+participant performance, interoperability or improved project outcomes.
+Hosted rendering and assistive-technology use remain unverified. Broader
+inherited pacing, wording and illustration preferences remain follow-ups.
+
+Source: [guidance for users and participants (#27)](https://github.com/shpoont/project-execution-model/pull/27),
+addressing [issue #26](https://github.com/shpoont/project-execution-model/issues/26).
+
 ## [v1.3.0 — Proportionate Real Trials](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.0) — 2026-11-06
 
 ### Changed

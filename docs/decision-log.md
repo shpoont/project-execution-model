@@ -680,3 +680,53 @@ case does not independently demonstrate the new proportionality route.
 [mock review](project-execution-model.md#mock),
 [review findings](project-execution-model.md#review-and-carry-findings-forward),
 [README summary](../README.md#the-model-in-brief) and [changelog](../CHANGELOG.md).
+
+## D30 — 2026-11-06: Provide Guidance Suited to Intended Users and Participants
+
+**Status: adopted for v1.3.1.** Adopt the clarification from
+[issue #26](https://github.com/shpoont/project-execution-model/issues/26), merged
+in [PR #27](https://github.com/shpoont/project-execution-model/pull/27).
+
+Project history and evidence explain decisions and what was established.
+People, AI agents or connected systems using or participating in the result
+also need guidance suited to their actual tasks and conditions. Customers may
+rely on signs, prompts, assistance or the experience itself; operators may
+need training and a current reference, and connected systems may need interface
+information. Reuse suitable guidance. Do not assume manual reading or require
+a separate document per role.
+
+Identify needed guidance during Design and use drafts in review where helpful.
+Prepare representative usage checks with the support and prerequisites
+participants will actually have, including unbriefed use where expected.
+Reconcile applicable guidance with the real result and check its use. A readable
+reference or rehearsal does not prove successful real operation. Retain the
+existing investigation, evidence and commitment rules when use fails or a
+check genuinely belongs later.
+
+Include current guidance and its upkeep responsibility in handover, keeping
+affected instructions aligned with changes and distinguishing superseded
+versions. Preserve useful project history and operational records. The café's
+customer directions and shared staff reference illustrate the different needs;
+the handover lookup row points directly to Deliver.
+
+Release this clarification as **v1.3.1 — Guidance for Intended Use**. Use a patch
+version for making existing documentation, intended-use and handover duties
+explicit. Preserve the six recurring steps, five Main Concepts, mocks-first
+and tests-first direction, justified bounded trials, readiness, evidence limits,
+later outcome ownership and Work Management Model boundary. Add no stage,
+mandatory manual, general documentation standard or operational planning method.
+Retain the initial release date and every earlier tag.
+
+Fresh comparative Pro review and the seven-step editorial cycle found no
+required correction within the increment. Pro covered the substantive draft;
+independent full-model preservation and final blind comprehension cover the
+later navigation link. The museum and book-swap applications were hypothetical.
+They support documentary readiness, not actual participant performance,
+interoperability or improved project outcomes. Broader inherited pacing,
+wording and illustration preferences remain follow-ups.
+
+**Current guidance:** [audiences and guidance](project-execution-model.md#design),
+[usage checks](project-execution-model.md#prepare-tests),
+[real-result verification](project-execution-model.md#implement),
+[handover and upkeep](project-execution-model.md#deliver)
+and [changelog](../CHANGELOG.md).
