@@ -55,9 +55,9 @@ reference for its complete guidance.
 
 ## Documents
 
-- [Model v1.2.4 — Purpose and First Steps](docs/project-execution-model.md)
+- [Model v1.3.0 — Proportionate Real Trials](docs/project-execution-model.md)
   — the full model, café example, and detailed guidance.
-- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.4)
+- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.0)
   — changes in the current release.
 - [Decision log](docs/decision-log.md) — lasting decisions and their rationale.
   The model document contains the guidance to use.

@@ -3,6 +3,45 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.3.0 — Proportionate Real Trials](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.0) — 2026-11-06
+
+### Changed
+
+- Added a justified bounded real-trial route for a particular material question
+  when preparing or reviewing a credible mock would require disproportionate
+  effort for the evidence it could add. Compare suitable options, including
+  simpler or reused mocks, against the trial's evidence, effort, delay,
+  consequences and uncertainty. Cost alone is insufficient.
+- Made the trial's question, prepared assessment, limits, authorization and
+  stopping conditions explicit. Keep risks and commitments within project
+  obligations and authority; reconsider the next commitment if neither route
+  is acceptable.
+- Carry reviewed findings and uncertainty into design, test preparation and
+  the next commitment decision. Other significant review obligations remain.
+  Aligned the related references and added a short linked README qualification.
+
+This minor release resolves the real-trial question left open in v1.2.2–v1.2.4.
+Those historical entries describe their releases' guidance. Retained mocks-first,
+the existing route for questions mocks cannot credibly answer, the six recurring
+steps, five Main Concepts and all other safeguards. The café example, figures
+and Work Management Model boundary are unchanged. Added no stage, required
+document, template, tool or operational planning method.
+
+Comparative Pro review, the seven-step editorial cycle, independent preservation
+across eleven areas and fresh blind applications found no required correction.
+They support documentary readiness, not measured human comprehension, reliable
+cost or risk estimates, safer real trials or improved project outcomes.
+
+Pro reviewed the pre-editorial draft; independent preservation and comprehension
+cover the final two qualifiers. Its temporary chat remained personalized, so
+strict blindness is unverified. The software and venue case comparisons depend
+on replacing an otherwise-needed credible mock review; the final music-school
+case exercises the existing experiment route. Hosted rendering and
+assistive-technology use remain unverified.
+
+Source: [bounded real trials (#25)](https://github.com/shpoont/project-execution-model/pull/25),
+addressing [issue #22](https://github.com/shpoont/project-execution-model/issues/22).
+
 ## [v1.2.4 — Purpose and First Steps](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.4) — 2026-11-06
 
 ### Changed

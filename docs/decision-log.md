@@ -635,3 +635,48 @@ this does not imply that the entire README fits one page or every viewport.
 **Current guidance:** [Goal](project-execution-model.md#goal),
 [README summary](../README.md#the-model-in-brief),
 [starting point](../README.md#start-here) and [changelog](../CHANGELOG.md).
+
+## D29 — 2026-11-06: Allow Justified Trials When Mocking Is Disproportionate
+
+**Status: adopted for v1.3.0.** Adopt the additional bounded-trial route from
+[issue #22](https://github.com/shpoont/project-execution-model/issues/22), merged
+in [PR #25](https://github.com/shpoont/project-execution-model/pull/25).
+
+A credible mock can answer a question yet require disproportionate preparation
+or review for the evidence it would add. Permit a bounded real trial instead
+for a particular material question when comparing suitable mock options,
+including simpler or reused work, with the proposed trial justifies that choice.
+Consider evidence, effort, delay, consequences and remaining uncertainty; cost
+alone is insufficient. Keep the reasons in the existing project record.
+
+Preserve mocks-first and the existing experiment route for questions no mock
+can credibly answer. Require a clear question, prepared assessment, limits,
+authorization and stopping conditions within project obligations and authority.
+The new permission does not waive required checks or prove untested claims.
+Review findings under their conditions and carry them and remaining uncertainty
+into design, test preparation and the next commitment. Other review obligations
+remain; reconsider a commitment with no acceptable route.
+
+This resolves the policy question left open in D26–D28. Their unresolved or
+deferred statements, and those in earlier changelog entries, record the state
+of those releases rather than the current policy.
+
+Release this addition as **v1.3.0 — Proportionate Real Trials**. Use a minor
+version because it adds a permitted approach, not merely an editorial correction.
+Retain the six recurring steps, five Main Concepts, tests-first direction,
+evidence and authority limits, real combined verification and later outcome
+responsibilities. Preserve the café example, figures, Work Management Model
+boundary, initial release date and all earlier tags. Add no stage, required
+document, template, tool or operational planning method.
+
+Comparative and independent editorial reviews support documentary readiness,
+not demonstrated human usability or real-project effectiveness. Pro covered the
+pre-editorial draft and its temporary chat remained personalized; final-source
+preservation and blind comprehension followed. The software and venue case
+differences depend on a missing credible mock review, and the final music-school
+case does not independently demonstrate the new proportionality route.
+
+**Current guidance:** [commitment readiness](project-execution-model.md#check-readiness-before-committing),
+[mock review](project-execution-model.md#mock),
+[review findings](project-execution-model.md#review-and-carry-findings-forward),
+[README summary](../README.md#the-model-in-brief) and [changelog](../CHANGELOG.md).

@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Version 1.2.4 — Purpose and First Steps | Released 6 November 2026*
+*Version 1.3.0 — Proportionate Real Trials | Released 6 November 2026*
 
 *Initial release: 22 September 2026*
 
