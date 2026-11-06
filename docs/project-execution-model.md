@@ -87,6 +87,8 @@ A part can contain smaller parts.
 
 Show where work or information passes between parts. These means of exchange are their **interfaces**; what happens through them are their **interactions**. At the café, the pickup point is an interface between the packer and collection customers; checking an order and handing over its bag are interactions there. Show dependencies and how failures are handled. Where relevant, clarify who makes decisions, takes actions and owns information during use.
 
+Identify the guidance intended users and participants need, including operators, maintainers, AI agents or connected systems where relevant. Match its form and detail to their tasks and conditions: signs or prompts, assistance or training, operating instructions or interface specifications. Do not assume users will read a manual. Reuse suitable guidance; a separate document per role is not required. Make current guidance findable without reconstructing project history.
+
 Refine the experience and structure together, within feasibility and resource limits. Maintain an overall view while developing detail incrementally. Plan how the result will be delivered, adopted, supported, and recovered if it fails, where relevant. Substantial subsystems can use the [full execution cycle within their own scope](#apply-the-model-at-a-useful-scale).
 
 > **At the café:** Before moving anything, staff sketch the journey from the entrance. Directions visible from outside split arrivals before they join a queue: **Place an order → Order** on the left; **Already ordered → Pickup** on the right. The cashier takes new orders. The existing packer labels each ready bag with the customer's name and hands it over at pickup.
@@ -127,6 +129,8 @@ Before implementing an increment, agree what it must deliver, the conditions it 
 
 Prepare usable checks before the behavior they guide. Distinguish checks needed to complete the increment from those assigned to later delivery or actual use, with responsibility and timing for the latter. If those checks need measurements or records, include the ability to collect them in the agreement now. The [complete agreement guidance](#agree-on-the-implementation-contract) connects scope, coverage, assessment and later checks.
 
+Include representative tasks and relevant exceptions or handoffs to check whether intended participants can use the result with the guidance, support and prerequisites they will actually have. Where use without a briefing is expected, check it that way.
+
 #### Example: The Pickup Agreement
 
 > **At the café:** Before putting the plan into practice, the owner and staff agree to introduce separate pickup using the existing packer. The setup must demonstrate five results:
@@ -165,7 +169,7 @@ A costly or destructive check need not run merely to confirm known missing work.
 
 Run relevant contract and internal checks as each mocked part is replaced or increment of real work is introduced. Use failures to guide changes, then rerun affected checks. After the relevant checks pass, refine or restructure the implementation as needed while preserving agreed behavior and applicable checks. Combine contributions and collect evidence. If a finding exposes a missing expectation or flawed approach, return it to the affected decision and explicitly agree on any change to the contract. Make deviations visible; do not weaken a check merely to obtain a pass.
 
-**Verify the combined result before finishing.** Check the real parts working together against the agreed criteria in their intended setting where available. Identify the real parts and conditions each piece of evidence applies to. Successful individual parts, mocks, or partial replacements do not establish that the whole works. Check documentation, quality, and readiness for delivery, adoption, support, and recovery where relevant. Reuse valid evidence already collected during implementation.
+**Verify the combined result before finishing.** Check the real parts working together against the agreed criteria in their intended setting where available. Identify the real parts and conditions each piece of evidence applies to. Successful individual parts, mocks, or partial replacements do not establish that the whole works. Check documentation, quality, and readiness for delivery, adoption, support, and recovery where relevant. Keep applicable guidance consistent with the real result and verify it through the agreed usage checks. Reuse valid evidence already collected during implementation.
 
 **An implementation increment is complete when its real result, including the relevant combined behavior, meets its agreed expectations and satisfies its required completion checks.** Any permitted exception remains explicit under the [commitment rules](#check-readiness-before-committing). Keep missing evidence visible. Completion does not establish results for checks assigned to later delivery or actual use; carry those obligations forward with responsibility and timing.
 
@@ -195,13 +199,13 @@ Run relevant contract and internal checks as each mocked part is replaced or inc
 
 **Follow through on the benefit.** When the benefit needs actual use to assess, assign an owner and a time or condition for the check. That owner compares the evidence with the intended benefit and makes or obtains an authorized decision to continue, improve, reconsider the approach, or stop. Acceptance alone does not prove that the benefit occurred.
 
-**Hand over and close.** Confirm acceptance and handover, settle required obligations, assign ongoing responsibilities, clean up temporary resources, and record lessons. If the project stops early, apply the relevant closure responsibilities even when nothing is delivered. See the [café handover note](#example-a-handover-note) for how these decisions can be kept together.
+**Hand over and close.** Confirm acceptance and handover, settle required obligations, assign ongoing responsibilities, clean up temporary resources, and record lessons. Include current guidance and responsibility for keeping it up to date as the result changes; clearly distinguish superseded instructions. If the project stops early, apply the relevant closure responsibilities even when nothing is delivered. See the [café handover note](#example-a-handover-note) for how these decisions can be kept together.
 
 For every permitted pending check, identify when it will run, who will act on its findings, and what decision it will inform. If it depends on conditions that may not occur, set a review date. Close according to the agreed completion boundary, with later testing and outcome-review responsibilities explicitly accepted by the receiving owner. Pending checks and exceptions remain distinct from passes after acceptance and closure.
 
 ![Deliver: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
 
-> **At the café:** The owner accepts regular use of the current setup. The required checks passed, waiting times look promising, and the arrangement is inexpensive to reverse. The packing pauses need watching even though the queue cleared in the trial. Staff take over using the updated sketch and checklist. If packing cannot keep up or a required operating check fails, they pause the affected work and call the owner.
+> **At the café:** The owner accepts regular use of the current setup. The required checks passed, waiting times look promising, and the arrangement is inexpensive to reverse. The packing pauses need watching even though the queue cleared in the trial. Staff take over using the updated sketch and checklist; customers use the entrance directions. The owner keeps the staff reference and customer directions current when the process changes. If packing cannot keep up or a required operating check fails, they pause the affected work and call the owner.
 >
 > With handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and packing observations and acting on the results. Until then, the weekly benefit remains unproven.
 >
@@ -229,7 +233,7 @@ Use this reference alongside the journey when making decisions or carrying out t
 
 | When You Need To… | Guidance |
 | --- | --- |
-| Continue work or hand it over | [Advance With Evidence](#advance-with-evidence), [connected use and maintenance](#use-and-maintain-mocks-and-checks), and the [handover note](#example-a-handover-note) |
+| Continue work or hand it over | [Advance With Evidence](#advance-with-evidence), [connected use and maintenance](#use-and-maintain-mocks-and-checks), [delivery and current guidance](#deliver), and the [handover note](#example-a-handover-note) |
 | Monitor use and assess benefits | [Delivery and outcome review](#deliver) and [After the Project Closes](#after-the-project-closes) |
 | Review a design through mocks | [Coverage and stopping conditions](#cover-the-system-and-its-parts) and [review findings](#review-and-carry-findings-forward) |
 | Agree and prepare checks | [Test development](#develop-tests-throughout), the [implementation contract](#agree-on-the-implementation-contract), [scenarios](#prepare-scenario-checks), and [assessment validation](#validate-assessments) |
