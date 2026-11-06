@@ -14,10 +14,11 @@ These six steps recur as the project develops.
 2. **[Design](docs/project-execution-model.md#design).** Work out how the result
    should work, including its parts, their responsibilities, and how people or
    parts pass work and information between them.
-3. **[Mock](docs/project-execution-model.md#mock).** Try and review suitable
-   prototypes, samples, or rehearsals before making the result real. Reuse
-   evidence from earlier reviews when it still applies. Record what the review
-   shows and what still needs evidence from real operation.
+3. **[Mock](docs/project-execution-model.md#mock).** Try and review prototypes,
+   samples or rehearsals first. Use a
+   [bounded real experiment](docs/project-execution-model.md#check-readiness-before-committing)
+   instead only where justified. Reuse reviewed evidence that still applies. Record
+   findings and what remains unproven in real operation.
 4. **[Prepare Tests](docs/project-execution-model.md#prepare-tests).** Agree what
    the next manageable piece must deliver and how to assess it, using the design
    and review findings. Prepare usable checks before doing the work they guide.
