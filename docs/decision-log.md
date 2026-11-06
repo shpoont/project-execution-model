@@ -600,3 +600,38 @@ component example do not require another revision before this release.
 [working reference](project-execution-model.md#main-concepts),
 [implementation agreement](project-execution-model.md#agree-on-the-implementation-contract)
 and [changelog](../CHANGELOG.md).
+
+## D28 — 2026-11-06: Lead With Purpose and Provide a Summary for First-Time Readers
+
+**Status: adopted for v1.2.4.** Adopt the Goal revision from
+[issue #20](https://github.com/shpoont/project-execution-model/issues/20), merged
+in [PR #23](https://github.com/shpoont/project-execution-model/pull/23), and the
+README summary from [issue #21](https://github.com/shpoont/project-execution-model/issues/21),
+merged in [PR #24](https://github.com/shpoont/project-execution-model/pull/24).
+
+Introduce the model through what it helps people accomplish: turn a need into
+a working result and assess the intended benefit. Explain connected reasoning
+as support for that journey. Retain the relevant goal, decisions and their
+reasons, evidence and open questions across steps and contributors.
+
+Give newcomers a concise, plain-language overview of the six recurring steps
+and a way to begin in the README. Maintain one summary rather than a second
+independent copy. The full model remains authoritative; link to its detailed
+guidance instead of compressing every safeguard into the introduction.
+
+Release these editorial changes as **v1.2.4 — Purpose and First Steps**. Preserve
+the existing model rules, café example, images and Work Management Model
+boundary. Add no stage, required document, tool or operating rule. Keep the
+initial release date, 22 September 2026, and all earlier version tags. The
+broader real-trial policy remains unresolved and deferred in
+[#22](https://github.com/shpoont/project-execution-model/issues/22).
+
+Comparative Pro reviews, the seven-step editorial cycles, independent
+preservation and fresh blind applications support documentary readiness.
+They do not establish measured human-reader usability or real-project
+effectiveness. The README summary fits the agreed one-page print format;
+this does not imply that the entire README fits one page or every viewport.
+
+**Current guidance:** [Goal](project-execution-model.md#goal),
+[README summary](../README.md#the-model-in-brief),
+[starting point](../README.md#start-here) and [changelog](../CHANGELOG.md).

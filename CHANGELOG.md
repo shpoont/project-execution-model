@@ -3,6 +3,35 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.2.4 — Purpose and First Steps](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.4) — 2026-11-06
+
+### Changed
+
+- Refocused the Goal on turning a need into a working result and learning
+  whether it produces the intended benefit. Explain the execution journey
+  first, then how contributors carry relevant reasoning between steps.
+- Added a short, plain-language README summary of the six recurring steps,
+  their connections and how to begin. Keep the full model authoritative and
+  the README as the single maintained summary.
+- Connected the overview to detailed guidance for readiness, evidence limits,
+  incremental real implementation, acceptance and later benefit assessment.
+
+This is an editorial patch release. Retained the six recurring steps, five Main
+Concepts, existing safeguards, café example, images and Work Management Model
+boundary. Added no stage, required document, tool or operating rule. The broader
+real-trial policy question remains unresolved and deferred in
+[#22](https://github.com/shpoont/project-execution-model/issues/22).
+
+Comparative Pro reviews, seven-step editorial cycles, independent meaning
+preservation and blind simulated applications support documentary readiness.
+They do not establish measured human-reader usability or improved project
+outcomes. Hosted rendering and assistive-technology use remain unverified.
+
+Sources: [Goal opening (#23)](https://github.com/shpoont/project-execution-model/pull/23),
+addressing [issue #20](https://github.com/shpoont/project-execution-model/issues/20),
+and [README summary (#24)](https://github.com/shpoont/project-execution-model/pull/24),
+addressing [issue #21](https://github.com/shpoont/project-execution-model/issues/21).
+
 ## [v1.2.3 — Journey and Working Reference](https://github.com/shpoont/project-execution-model/releases/tag/v1.2.3) — 2026-11-01
 
 ### Changed
