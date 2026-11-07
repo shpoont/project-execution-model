@@ -31,7 +31,49 @@ Six recurring steps give the project direction:
 
 These steps form **one iterative process**. Work moves between them as findings require: a review can change the design, a test can challenge an assumption, and actual use can reopen the original need. Revisit only affected work and retain what still holds. One contribution may already be in use while another is being designed. At any point, the decision may be to continue, investigate, revise, pause, or stop.
 
-Follow the café through the six steps to understand the model. Use [Main Concepts](#main-concepts) as a working reference for [checks](#develop-tests-throughout), [evidence](#replace-mocks-with-reality-progressively), [commitments](#check-readiness-before-committing) and [scale](#apply-the-model-at-a-useful-scale). Links beside the steps lead to their detailed guidance.
+For the next commitment, ask: **what evidence and review are needed, what already applies, and what is the simplest credible way to cover the rest?** Use the [coverage and stopping guidance](#cover-the-system-and-its-parts), [readiness rules](#check-readiness-before-committing) and [guidance on scale](#apply-the-model-at-a-useful-scale) to judge the effort.
+
+**A Small Change in Practice**
+
+Maya runs art classes. Boxes of paints and brushes occupy one end of the table, leaving students little room for their work.
+
+**1. Define**
+
+Maya wants to give students more working space while keeping supplies easy to reach. She considers buying a small shelf for the existing supply boxes.
+
+**2. Design**
+
+She measures and weighs the boxes, then checks a low shelf’s listed dimensions and weight limits. She plans to put it beside the door, close to the table.
+
+**3. Mock**
+
+Before buying it, Maya marks the shelf’s footprint on the floor with tape.
+
+She opens the door—and sees that it would hit the shelf. She moves the outline to another wall and walks between it and the chairs. That position leaves both the doorway and the route to the supplies clear.
+
+The outline is enough to choose the position. Whether the real shelf holds the boxes securely still needs checking.
+
+**4. Prepare Tests**
+
+Before buying and setting up the shelf, she lists three checks in her usual class notes, beside the measurements and chosen position:
+
+- All the supply boxes fit.
+- The door opens fully, and the route between the chairs and supplies stays clear.
+- The loaded shelf is steady and secured as its assembly instructions require.
+
+At the next class, she will also check whether students have enough working space and can get supplies easily.
+
+**5. Implement**
+
+Maya buys the shelf and assembles and secures it in the reviewed position. She puts the existing boxes onto it, then runs the three checks on the real setup. All three pass.
+
+**6. Deliver**
+
+Maya puts the new arrangement into use.
+
+At the next class, students can spread out their work across the table. She watches them collect materials and asks whether the arrangement works for them. They have more room, and the supplies remain easy to reach, so she keeps it.
+
+Maya remains responsible for keeping the shelf usable and the route clear as supplies change.
 
 **Review and testing run throughout.** Tests are checks against expectations, including manual assessments. They develop across all six steps as expectations emerge. Mocks—stand-ins or rehearsals—help people explore and review proposed behavior.
 
@@ -47,7 +89,9 @@ PEM guides the project's work and reasoning while leaving [how work is scheduled
 
 The whole project need not be specified upfront, and the steps and practices do not require separate documents.
 
-The example running through these steps follows a café. At lunchtime, bags of ready food pile up behind the counter. Customers who phoned ahead still wait ten minutes to collect them. Some give up and leave.
+For a fuller application, follow the café through the six steps below. Use [Main Concepts](#main-concepts) as a working reference for [checks](#develop-tests-throughout), [evidence](#replace-mocks-with-reality-progressively), [commitments](#check-readiness-before-committing) and [scale](#apply-the-model-at-a-useful-scale). Links beside the steps lead to their detailed guidance.
+
+At lunchtime, bags of ready food pile up behind the counter. Customers who phoned ahead still wait ten minutes to collect them. Some give up and leave.
 
 ### Define
 
