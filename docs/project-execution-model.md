@@ -193,7 +193,7 @@ The agreement also includes checks of whether intended participants can use the 
 
 #### Prepare the Next Scenario
 
-The increment's agreement can develop one concrete behavior at a time. For the next behavior, agree its expected result and prepare its check before implementing it. The scenario list grows as understanding develops; a complete, frozen test suite is not required upfront. The [scenario guidance](#prepare-scenario-checks) and [readiness rules](#check-readiness-before-committing) apply to the work being started.
+Scenario checks can develop one concrete behavior at a time within the increment's agreed expectations. For the next behavior, agree its expected result and prepare its check before implementing it. The scenario list grows as understanding develops; a complete, frozen test suite is not required upfront. The [scenario guidance](#prepare-scenario-checks) and [readiness rules](#check-readiness-before-committing) apply to the work being started.
 
 The café's routing check in [Implement](#implement) shows how to start with one behavior.
 
@@ -245,7 +245,7 @@ Where relevant, verification also covers documentation, quality and readiness fo
 
 > *Can people use and accept it, and does it produce the intended benefit?*
 
-**Accept delivery.** Delivery makes the result available for use through handover or activation, with support for adoption and intended use. Checks requiring the real setting or actual use run here. The agreed test requirements apply to delivery, acceptance and closure; new conditions or gaps call for added or refined checks. Evidence and unproven claims must be stated separately for delivery acceptance, outcome success and execution constraints.
+**Accept delivery.** Delivery makes the result available for use through handover or activation, with support for adoption and intended use. Checks requiring the real setting or actual use run at their agreed times, including during delivery. The agreed test requirements apply to delivery, acceptance and closure; new conditions or gaps call for added or refined checks. Evidence and unproven claims must be stated separately for delivery acceptance, outcome success and execution constraints.
 
 **Follow through on the benefit.** Some benefits can be assessed only through actual use. They need an owner and a time or condition for the check. That owner compares the evidence with the intended benefit and makes or obtains an authorized decision to continue, improve, reconsider the approach or stop. Acceptance alone does not prove that the benefit occurred.
 
@@ -280,6 +280,8 @@ While the result remains in use, the receiving owner is responsible for relevant
 ## Main Concepts
 
 This reference supports decisions and work throughout the journey, whether the project changes software, a service, a physical product or a way of working.
+
+The summaries explain the concepts; the expandable Working Guidance contains the applicable rules and conditions.
 
 | When You Need To… | Guidance |
 | --- | --- |
