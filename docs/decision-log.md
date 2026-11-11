@@ -1,7 +1,7 @@
 # Decision log
 
 This is the repository's dedicated record of lasting decisions. The
-[Project Execution Model](project-execution-model.md) contains current
+[Project Execution Model](../deliverables/project-execution-model.md) contains current
 project guidance; this log explains why it took its present form and where
 earlier decisions changed scope.
 
@@ -21,7 +21,7 @@ test framework, work-management tool, or organization design is not a
 prerequisite. Reusable quality standards are maintained separately under D16.
 General work-system design does not define this repository's deliverable.
 
-**Current guidance:** [goal](project-execution-model.md#goal).
+**Current guidance:** [goal](../deliverables/project-execution-model.md#goal).
 
 ## D02 — 2026-06-18 to 2026-06-19: Prepare delivery in useful increments
 
@@ -36,7 +36,7 @@ confidence from mocks as risks. The retained principle is to prepare at a useful
 scale, state what a mock leaves unproven, and verify the real combined result.
 
 **Current guidance:**
-[main concepts](project-execution-model.md#main-concepts).
+[main concepts](../deliverables/project-execution-model.md#main-concepts).
 
 ## D03 — 2026-06-19: Test draft end-user documentation before implementation
 
@@ -50,7 +50,7 @@ the design is inexpensive to change.
 When used, draft documentation remains unverified until reconciled with the
 actual result. It complements appropriate usage evidence.
 
-**Current guidance:** [mock review](project-execution-model.md#mock).
+**Current guidance:** [mock review](../deliverables/project-execution-model.md#mock).
 
 ## D04 — 2026-06-19: Check the project as a whole
 
@@ -63,8 +63,8 @@ The second review confirmed those additions. That review is evidence of
 document coverage, not empirical proof that the standard guarantees successful
 projects. Component results still need a combined-result assessment.
 
-**Current guidance:** [test the combined result](project-execution-model.md#implement)
-and [delivery and learning](project-execution-model.md#deliver).
+**Current guidance:** [test the combined result](../deliverables/project-execution-model.md#implement)
+and [delivery and learning](../deliverables/project-execution-model.md#deliver).
 
 ## D05 — 2026-06-19: One core standard with focused supporting standards
 
@@ -91,7 +91,7 @@ Generated summaries and positive reviews cannot replace the underlying result
 or source. Sensitive evidence should be minimized and retained only where it
 serves a real project need.
 
-**Current guidance:** [evidence limits](project-execution-model.md#main-concepts).
+**Current guidance:** [evidence limits](../deliverables/project-execution-model.md#main-concepts).
 
 ## D07 — 2026-06-26: Make material project decisions reviewable
 
@@ -105,8 +105,8 @@ owner, evidence, outcome, and scope. Routine work uses existing authorization;
 unresolved project decisions need clarification. This project model does not
 define the general meaning or effect of agreement or authority.
 
-**Current guidance:** [readiness and evidence](project-execution-model.md#main-concepts)
-and the [model boundary](project-execution-model.md#boundary).
+**Current guidance:** [readiness and evidence](../deliverables/project-execution-model.md#main-concepts)
+and the [model boundary](../deliverables/project-execution-model.md#boundary).
 
 ## D08 — 2026-06-28: Use issues for repository feedback
 
@@ -133,8 +133,8 @@ evidence where it is required. Review findings remain distinct from
 implementation or release authorization. Detailed universal approval gates
 were removed under D13; project readiness checks remain.
 
-**Current guidance:** [mock review](project-execution-model.md#mock)
-and [develop tests throughout](project-execution-model.md#develop-tests-throughout).
+**Current guidance:** [mock review](../deliverables/project-execution-model.md#mock)
+and [develop tests throughout](../deliverables/project-execution-model.md#develop-tests-throughout).
 
 ## D10 — 2026-07-04: Keep the project outcome central
 
@@ -145,7 +145,7 @@ The goal connects useful work, appropriate evidence, user understanding,
 managed change, real-result verification, acceptance, and ownership. Model
 exploration must not displace that project purpose.
 
-**Current guidance:** [project goal](project-execution-model.md#goal).
+**Current guidance:** [project goal](../deliverables/project-execution-model.md#goal).
 
 ## D11 — 2026-07-04 to 2026-07-05: Support nested and cross-team projects
 
@@ -160,8 +160,8 @@ individual contributions does not replace checking the combined project
 outcome. The general representation of work relationships is handled outside
 this repository.
 
-**Current guidance:** [apply the model at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale)
-and [test the combined result](project-execution-model.md#implement).
+**Current guidance:** [apply the model at a useful scale](../deliverables/project-execution-model.md#apply-the-model-at-a-useful-scale)
+and [test the combined result](../deliverables/project-execution-model.md#implement).
 
 ## D12 — 2026-07-09 to 2026-07-10: Keep general work semantics outside this model
 
@@ -174,7 +174,7 @@ Provisional definitions of generic work items, roles, relationships, and
 authority are not specifications for this repository. Its current scope and
 meaning are defined by the project model itself.
 
-**Current guidance:** [project model boundary](project-execution-model.md#boundary).
+**Current guidance:** [project model boundary](../deliverables/project-execution-model.md#boundary).
 
 ## D13 — 2026-09-05: Refocus this repository and consolidate its history
 
@@ -193,7 +193,7 @@ not rewritten. Required delivery evidence in adopting projects is not subject
 to this documentation-history cleanup.
 
 **Current guidance:** [README](../README.md) and
-[project model boundary](project-execution-model.md#boundary).
+[project model boundary](../deliverables/project-execution-model.md#boundary).
 
 ## D14 — 2026-09-05: Make execution stages the main document structure
 
@@ -204,7 +204,7 @@ longer sequence explicit, with project setup, repeated delivery stages,
 integration, release, and handoff. Version 1.0 later replaced that structure
 with seven steps while keeping the sequence visible and iterative.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey).
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey).
 
 ## D15 — 2026-09-22 to 2026-09-23: Adopt and lock Version 1.0
 
@@ -228,7 +228,7 @@ The former ten-stage standard, record template, and separate model-boundary
 file were retired. The version designation remains inside the model rather
 than in its filename.
 
-**Current guidance:** [Project Execution Model](project-execution-model.md).
+**Current guidance:** [Project Execution Model](../deliverables/project-execution-model.md).
 
 ## D16 — 2026-09-23: Maintain reusable quality standards separately
 
@@ -297,7 +297,7 @@ semantics unchanged. The responsibility boundary also remains unchanged:
 this repository covers project execution, while the separate model covers
 general work definitions and the mechanics of operational planning.
 
-**Current guidance:** [project model boundary](project-execution-model.md#boundary).
+**Current guidance:** [project model boundary](../deliverables/project-execution-model.md#boundary).
 
 ## D19 — 2026-10-03: Strengthen Mock and Test Practice and Release Version 1.1.0
 
@@ -349,9 +349,9 @@ decisions or require a separate document for each activity.
 Mock/test relationships, assessment validation and practical usability are
 covered by D21–D23. D24 records adoption of the complete revision after review.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[design](project-execution-model.md#design), and
-[application at a useful scale](project-execution-model.md#apply-the-model-at-a-useful-scale).
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey),
+[design](../deliverables/project-execution-model.md#design), and
+[application at a useful scale](../deliverables/project-execution-model.md#apply-the-model-at-a-useful-scale).
 
 ## D21 — 2026-10-26: Propose Recursive Coverage and Incremental Test Preparation
 
@@ -380,9 +380,9 @@ suite is not a prerequisite to starting implementation. Assessment validation
 and practical usability are covered by D22 and D23. D24 adopts the complete
 revision for v1.2.0.
 
-**Current guidance:** [mock coverage](project-execution-model.md#cover-the-system-and-its-parts),
-[mock/test relationships](project-execution-model.md#connect-mocks-and-tests),
-and [incremental check preparation](project-execution-model.md#prepare-scenario-checks).
+**Current guidance:** [mock coverage](../deliverables/project-execution-model.md#cover-the-system-and-its-parts),
+[mock/test relationships](../deliverables/project-execution-model.md#connect-mocks-and-tests),
+and [incremental check preparation](../deliverables/project-execution-model.md#prepare-scenario-checks).
 
 ## D22 — 2026-10-26: Propose Assessment Validation and Explicit Assessment Failures
 
@@ -409,8 +409,8 @@ verification, later outcome responsibilities and the six-step process. Add no
 required framework, dataset or document. The broader practical-use workflow
 is covered by D23. D24 adopts the complete revision for v1.2.0.
 
-**Current guidance:** [assessment validation](project-execution-model.md#validate-assessments)
-and [result interpretation](project-execution-model.md#interpret-results).
+**Current guidance:** [assessment validation](../deliverables/project-execution-model.md#validate-assessments)
+and [result interpretation](../deliverables/project-execution-model.md#interpret-results).
 
 ## D23 — 2026-10-27: Propose Connected Use and Maintenance of Mocks and Checks
 
@@ -437,7 +437,7 @@ Add no execution stage, required document, project layout, runner or framework.
 Keep the public model self-contained. D24 records adoption of the complete
 revision after integrated review.
 
-**Current guidance:** [use and maintenance](project-execution-model.md#use-and-maintain-mocks-and-checks).
+**Current guidance:** [use and maintenance](../deliverables/project-execution-model.md#use-and-maintain-mocks-and-checks).
 
 ## D24 — 2026-10-28: Adopt Six Recurring Steps and Release Version 1.2.0
 
@@ -473,8 +473,8 @@ clarity, consistency and bounded usability. They do not establish improved
 reliability, efficiency or benefits in real projects; those claims need evidence
 from subsequent use.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[implementation contract](project-execution-model.md#agree-on-the-implementation-contract),
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey),
+[implementation contract](../deliverables/project-execution-model.md#agree-on-the-implementation-contract),
 and [changelog](../CHANGELOG.md).
 
 ## D25 — 2026-10-29: Clarify Iteration and Work Records
@@ -506,7 +506,7 @@ matched simulated cases support documentary readiness. Both original and
 revised versions produced sound decisions in the cases; comparative decision
 improvement and effectiveness in real projects remain unproven.
 
-**Current guidance:** [Advance With Evidence](project-execution-model.md#advance-with-evidence)
+**Current guidance:** [Advance With Evidence](../deliverables/project-execution-model.md#advance-with-evidence)
 and [changelog](../CHANGELOG.md).
 
 ## D26 — 2026-11-01: Clarify Evidence for the Next Commitment
@@ -551,10 +551,10 @@ support documentary readiness within the reviewed scope. The café evidence is
 fictional; improved human-reader usability, decisions, handovers and real-project
 outcomes remain unproven.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[mock coverage](project-execution-model.md#cover-the-system-and-its-parts),
-[commitment readiness](project-execution-model.md#check-readiness-before-committing),
-[handover note](project-execution-model.md#example-a-handover-note)
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey),
+[mock coverage](../deliverables/project-execution-model.md#cover-the-system-and-its-parts),
+[commitment readiness](../deliverables/project-execution-model.md#check-readiness-before-committing),
+[handover note](../deliverables/project-execution-model.md#example-a-handover-note)
 and [changelog](../CHANGELOG.md).
 
 ## D27 — 2026-11-01: Adopt the Journey and Working Reference
@@ -596,9 +596,9 @@ fictional cases support documentary readiness, not measured human usability
 or real-project effectiveness. Optional preferences for image orientation and a
 component example do not require another revision before this release.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[working reference](project-execution-model.md#main-concepts),
-[implementation agreement](project-execution-model.md#agree-on-the-implementation-contract)
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey),
+[working reference](../deliverables/project-execution-model.md#main-concepts),
+[implementation agreement](../deliverables/project-execution-model.md#agree-on-the-implementation-contract)
 and [changelog](../CHANGELOG.md).
 
 ## D28 — 2026-11-06: Lead With Purpose and Provide a Summary for First-Time Readers
@@ -632,7 +632,7 @@ They do not establish measured human-reader usability or real-project
 effectiveness. The README summary fits the agreed one-page print format;
 this does not imply that the entire README fits one page or every viewport.
 
-**Current guidance:** [Goal](project-execution-model.md#goal),
+**Current guidance:** [Goal](../deliverables/project-execution-model.md#goal),
 [README summary](../README.md#the-model-in-brief),
 [starting point](../README.md#start-here) and [changelog](../CHANGELOG.md).
 
@@ -676,9 +676,9 @@ preservation and blind comprehension followed. The software and venue case
 differences depend on a missing credible mock review, and the final music-school
 case does not independently demonstrate the new proportionality route.
 
-**Current guidance:** [commitment readiness](project-execution-model.md#check-readiness-before-committing),
-[mock review](project-execution-model.md#mock),
-[review findings](project-execution-model.md#review-and-carry-findings-forward),
+**Current guidance:** [commitment readiness](../deliverables/project-execution-model.md#check-readiness-before-committing),
+[mock review](../deliverables/project-execution-model.md#mock),
+[review findings](../deliverables/project-execution-model.md#review-and-carry-findings-forward),
 [README summary](../README.md#the-model-in-brief) and [changelog](../CHANGELOG.md).
 
 ## D30 — 2026-11-06: Provide Guidance Suited to Intended Users and Participants
@@ -725,10 +725,10 @@ They support documentary readiness, not actual participant performance,
 interoperability or improved project outcomes. Broader inherited pacing,
 wording and illustration preferences remain follow-ups.
 
-**Current guidance:** [audiences and guidance](project-execution-model.md#design),
-[usage checks](project-execution-model.md#prepare-tests),
-[real-result verification](project-execution-model.md#implement),
-[handover and upkeep](project-execution-model.md#deliver)
+**Current guidance:** [audiences and guidance](../deliverables/project-execution-model.md#design),
+[usage checks](../deliverables/project-execution-model.md#prepare-tests),
+[real-result verification](../deliverables/project-execution-model.md#implement),
+[handover and upkeep](../deliverables/project-execution-model.md#deliver)
 and [changelog](../CHANGELOG.md).
 
 ## D31 — 2026-11-07: Show Proportionate Preparation Through a Small Example
@@ -758,8 +758,8 @@ Reviews and hypothetical applications support the example's clarity and
 preservation of existing guidance. They do not establish physical safety,
 reduced project effort or improved outcomes in actual use.
 
-**Current guidance:** [small example and project journey](project-execution-model.md#the-project-journey),
-[coverage and stopping](project-execution-model.md#cover-the-system-and-its-parts)
+**Current guidance:** [small example and project journey](../deliverables/project-execution-model.md#the-project-journey),
+[coverage and stopping](../deliverables/project-execution-model.md#cover-the-system-and-its-parts)
 and [changelog](../CHANGELOG.md).
 
 ## D32 — 2026-11-11: Explain the Model Clearly While Preserving Its Substance
@@ -810,7 +810,46 @@ readability or real-project effectiveness; some reference density remains.
 The editorial-cycle skill work and practical validation remain separate
 from this adopted document revision.
 
-**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
-[working reference](project-execution-model.md#main-concepts),
-[implementation agreement](project-execution-model.md#agree-on-the-implementation-contract)
+**Current guidance:** [project journey](../deliverables/project-execution-model.md#the-project-journey),
+[working reference](../deliverables/project-execution-model.md#main-concepts),
+[implementation agreement](../deliverables/project-execution-model.md#agree-on-the-implementation-contract)
 and [changelog](../CHANGELOG.md).
+
+## D33 — 2026-11-11: Adopt Project Structure and Publish Results in Deliverables
+
+**Status: adopted for v2.0.0.** Implement the repository adoption in
+[issue #31](https://github.com/shpoont/project-execution-model/issues/31), using
+[Project Structure v1.1.0](https://github.com/shpoont/project-structure/tree/v1.1.0).
+The adopted starter baseline is separate from PEM's release version.
+
+Give readers an actual result area: move the canonical model and its five PNGs
+to `deliverables/`, with a landing page identifying published and working
+versions. Move the editable overview HTML to `src/diagrams/`. Keep one maintained
+copy of each result. Retain forwarding routes from the former model document
+and leave all earlier release tags unchanged.
+
+Use a short project agreement and contributor guide, with connected repository,
+check, evidence and delivery records. GitHub issues and pull requests remain
+the current sources for increment agreements and active work. Combine records
+and omit unused template areas rather than populate every starter folder.
+Preserve the existing local instructions and publication responsibilities.
+
+This organization governs maintaining the repository, not projects using PEM.
+The model remains self-contained and its body, rules, examples, image placement,
+author and initial release date are unchanged. Earlier decisions retain their
+wording; their current-guidance links now point to the moved model.
+
+Release as **v2.0.0 — Published Deliverables and Project Structure** because the
+published layout changes. A forwarding document helps existing readers, but
+direct raw-model, image and source paths on a moving branch are not fully
+backward compatible. Pinned earlier releases keep their original contents and
+paths. Adoption of Project Structure introduces no new model stage, required
+project record, runtime or work-management tool.
+
+Source, link and navigation checks support repository adoption and publication
+readiness. Editorial reviews and hypothetical lookup tasks do not establish
+usability for people unfamiliar with PEM, downstream migration or real-project effectiveness.
+
+**Current records:** [project agreement](../PROJECT.md),
+[repository guide](README.md), [published results](../deliverables/README.md),
+[delivery](delivery.md) and [adoption checks](../evidence/project-structure-adoption.md).
