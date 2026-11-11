@@ -8,15 +8,15 @@ Author: **Leon.id Komarovsky** — [leonid@komarovsky.info](mailto:leonid@komaro
 
 ## Goal
 
-The Project Execution Model helps people turn a need into a working result and learn whether it produces the intended benefit. It connects defining the project, developing and reviewing an approach, preparing checks, making the result real, and delivering it for use and acceptance. Findings from reviews, tests, and actual use guide progress and can change earlier decisions before further commitments.
+The Project Execution Model (PEM) helps people turn a need into a working result and learn whether it produces the intended benefit. It connects defining the project, developing and reviewing an approach, preparing checks, making the result real, and delivering it for use and acceptance. Findings from reviews, tests, and actual use guide progress and can change earlier decisions before further commitments.
 
-Human or AI contributors carry the relevant goal, decisions and their reasons, evidence, and open questions between steps. They use this context to build on what still holds, guide the next action, and revisit affected work when findings challenge it. The model applies across domains, from one-person projects to large organizations.
+Human or AI contributors carry the relevant goal, decisions and their reasons, evidence, and open questions between steps. They use this context to build on what still holds, guide the next action, and revisit affected work when findings challenge it. The model is intended for projects across domains, from one-person efforts to large organizations.
 
 ## The Project Journey
 
 ![Project Execution Model: Define, Design, Mock, Prepare Tests, Implement, and Deliver, with planning, review, and testing throughout. Findings can reopen any affected step.](assets/project-execution-model-overview.png)
 
-Six recurring steps give the project direction:
+Six recurring steps connect the choice of what to pursue with a reviewed approach, prepared checks, a real result and evidence from use:
 
 | Step | Guiding Question |
 | --- | --- |
@@ -27,11 +27,11 @@ Six recurring steps give the project direction:
 | **[Implement](#implement)** | How do we make the agreed result real and satisfy its checks? |
 | **[Deliver](#deliver)** | Can people use and accept it, and does it produce the intended benefit? |
 
-> Each step performs its own work, reviewing and building on earlier results, and produces the basis for the next step.
+> Each step does its own work, reviews and builds on earlier results, and contributes the basis for work that follows.
 
-These steps form **one iterative process**. Work moves between them as findings require: a review can change the design, a test can challenge an assumption, and actual use can reopen the original need. Revisit only affected work and retain what still holds. One contribution may already be in use while another is being designed. At any point, the decision may be to continue, investigate, revise, pause, or stop.
+The order shows how the work builds within **one iterative process**. It does not require each step to finish before another begins: tests can develop with early expectations, and implementation and delivery can overlap. Findings can also send work back: a review can change the design, a test can challenge an assumption, and actual use can reopen the original need. Revisit only affected work and retain what still holds. One contribution may already be in use while another is being designed. At any point, the decision may be to continue, investigate, revise, pause, or stop.
 
-For the next commitment, ask: **what evidence and review are needed, what already applies, and what is the simplest credible way to cover the rest?** Use the [coverage and stopping guidance](#cover-the-system-and-its-parts), [readiness rules](#check-readiness-before-committing) and [guidance on scale](#apply-the-model-at-a-useful-scale) to judge the effort.
+For the next commitment, ask: **what evidence and review are needed, what already applies, and what is the simplest credible way to cover the rest?** Use the [coverage and stopping guidance](#cover-the-system-and-its-parts), [readiness rules](#check-readiness-before-committing) and [guidance on scale](#apply-the-model-at-a-useful-scale) to judge the effort and whether the action is ready. Completing a named step does not replace that judgment.
 
 **A Small Change in Practice**
 
@@ -75,13 +75,13 @@ At the next class, students can spread out their work across the table. She watc
 
 Maya remains responsible for keeping the shelf usable and the route clear as supplies change.
 
-**Work in checkable increments.** An increment is a manageable piece with a result you can check. Its **[implementation contract](#agree-on-the-implementation-contract)** connects the agreed expectations with the checks: what that piece must deliver and demonstrate. This agreement is in place before implementation, with relevant checks prepared before the behavior they guide. Implementation must satisfy the contract and check how the real parts are built and work together.
+**Work in checkable increments.** An increment is a manageable piece with a result you can check. Its **[implementation contract](#agree-on-the-implementation-contract)** connects the agreed expectations with the checks: what that piece must deliver and demonstrate. This agreement is in place before implementation, with relevant checks prepared before implementing the behavior they guide. Implementation must satisfy the contract and check how the real parts are built and work together.
 
 Review and testing run throughout the project. Tests are checks against expectations, including manual assessments. They develop across all six steps as expectations emerge. Mocks—stand-ins or rehearsals—help people explore and review proposed behavior.
 
 **Plan and coordinate throughout.** Plans develop alongside the work, including mock creation and reviews. They need revision when findings change the approach.
 
-The choice of the next increment depends on priorities, dependencies and the people, time and resources available when needed. Your project's planning and coordination practices establish these inputs, accounting for existing commitments. Conflicting demands need to be resolved before [confirming readiness](#check-readiness-before-committing) for the increment's commitments.
+The choice of the next increment depends on priorities, dependencies and the people, time and resources available when needed. Your project's planning and coordination practices establish these inputs, accounting for existing commitments and [who has authority to decide](#define). Conflicting demands need to be resolved before [confirming readiness](#check-readiness-before-committing) for the increment's commitments. Findings that change the work or its demands go back to the people responsible for those priorities, resources or commitments.
 
 PEM guides the project's work and reasoning while leaving [how work is scheduled and assigned](#boundary) to those practices. You can use PEM without adopting another model or a particular planning tool or document.
 
@@ -89,9 +89,7 @@ The whole project need not be specified upfront, and the steps and practices do 
 
 **Check readiness as commitments grow.** Before a major purchase, live trial, wider rollout or other consequential action, [check readiness](#check-readiness-before-committing) for that action. A milestone can record the decision and its scope; later findings may require it to be revisited.
 
-For a fuller application, follow the café through the six steps below. Use [Main Concepts](#main-concepts) as a working reference for [checks](#develop-tests-throughout), [evidence](#replace-mocks-with-reality-progressively), [commitments](#check-readiness-before-committing) and [scale](#apply-the-model-at-a-useful-scale). Links beside the steps lead to their detailed guidance.
-
-At lunchtime, bags of ready food pile up behind the counter. Customers who phoned ahead still wait ten minutes to collect them. Some give up and leave.
+The fictional café example below follows all six steps, using illustrative images, numbers and operating limits. Use [Main Concepts](#main-concepts) as a working reference for [checks](#develop-tests-throughout), [evidence](#replace-mocks-with-reality-progressively), [commitments](#check-readiness-before-committing) and [scale](#apply-the-model-at-a-useful-scale). Links beside the steps lead to their detailed guidance.
 
 ### Define
 
@@ -113,7 +111,11 @@ These decisions also need clear authority. Identify who can authorize commitment
 
 ![Define: ready takeaway orders pile up while customers queue through the café doorway and the manager observes the bottleneck.](assets/cafe-define.png)
 
-> **At the café:** The owner watches the queue. One employee packs orders, but the bags wait for the cashier, who is busy taking new orders. The owner compares hiring another cashier with having the existing packer hand orders directly to collection customers. A separate pickup point could avoid another hire—if the packer can manage both jobs. The owner chooses to explore that option within the existing staffing budget.
+> **At the café:** At lunchtime, bags of ready food pile up behind the counter. Customers who phoned ahead still wait ten minutes to collect them. Some give up and leave.
+>
+> Over three lunches, the owner follows collection customers from arrival through handover or leaving without food. Four in ten receive their food within five minutes. These one-off observations give a starting point; staff do not yet keep routine records.
+>
+> The owner watches the queue. One employee packs orders, but the bags wait for the cashier, who is busy taking new orders. The owner compares hiring another cashier with having the existing packer hand orders directly to collection customers. A separate pickup point could avoid another hire—if the packer can manage both jobs. The owner chooses to explore that option within the existing staffing budget.
 >
 > The target is that **at least nine in ten customers arriving to collect food receive it within five minutes**. During the first week of regular use, the team will record arrival at the café and handover, or that the customer left without food. Time spent finding the right queue counts too; leaving empty-handed counts as missing the target.
 >
@@ -157,9 +159,9 @@ Mocks give people something concrete to try and question. They help expose misun
 >
 > They change the design: each order gets a number, shared by the customer, the order record, and the bag. They repeat the arrivals, collection, and missing-order scenarios. The revised flow works in rehearsal. They replace the old sketch and keep those scenarios for future checks.
 
-The value of review evidence depends on what it covers. Applicable reviews must collectively address the significant aspects of the whole system and each designed part, including smaller parts: what each must do, the requirements and constraints it must meet, and how it interacts with other parts. One mock or still-applicable review evidence can cover several parts when the review addresses their significant aspects and interactions under relevant conditions.
+Review starts with what needs coverage: the responsibilities, requirements, constraints and interactions of the whole system and each designed part, including smaller parts. Applicable reviews must collectively address these significant aspects under relevant conditions. The [coverage guidance](#cover-the-system-and-its-parts) explains how shared mocks and existing evidence can do that.
 
-The next commitment gives this preparation a stopping point. Before adding mock detail, identify what is still needed: an important unanswered question or a significant aspect of the design that has not been reviewed. Stop adding detail when applicable review evidence covers those needs. See [coverage, reuse and stopping conditions](#cover-the-system-and-its-parts).
+Existing review evidence is the starting point for the next commitment. Reuse what still covers the relevant design and conditions. More mock detail is useful when it addresses an uncovered significant aspect or an important unanswered question. Stop adding detail when applicable review evidence covers those needs. Dividing the same design into more named parts does not itself create more review work.
 
 In a new review, appropriate people try the mock manually. For each meaningful mock, the review makes clear what it represents, what people observed under the tested conditions, and what remains unproven. Those open claims carry into later checks; findings that challenge earlier work require it to be revisited. The [review guidance](#review-and-carry-findings-forward) explains preparation, carrying findings forward and organizing the mocks.
 
@@ -171,11 +173,11 @@ Reviewed findings from a [bounded real experiment](#check-readiness-before-commi
 
 Test preparation connects what an increment must deliver with a usable way to assess it. Existing checks are the starting material: reuse or adapt what applies, create or correct checks where needed, and retire obsolete or redundant ones while preserving coverage of still-agreed expectations. The [checks and assessment methods](#validate-assessments) must be validated before their results are relied on.
 
-Before implementation, the increment needs an agreement about what it must deliver, the conditions it must meet and how completion will be assessed. This is the **[implementation contract](#agree-on-the-implementation-contract)**. It covers all agreed expectations assigned to that work; an omitted or inadequate test does not remove an obligation. The agreement must be findable in existing records or references to the current design, reviewed mocks and tests. No separate contract document is required.
+Before implementation, the increment needs an agreement about what it must deliver, the conditions it must meet and how completion will be assessed. This is the **[implementation contract](#agree-on-the-implementation-contract)**. It covers all agreed expectations assigned to that work; an omitted or inadequate test does not remove an obligation. The agreement must be findable in existing records; no separate contract document is required.
 
-Usable checks are prepared before the behavior they guide. Some are needed to complete the increment; others belong to later delivery or actual use and need assigned responsibility and timing. If any of these checks need measurements or records, the agreement includes the ability to collect them now. The [complete agreement guidance](#agree-on-the-implementation-contract) connects scope, coverage, assessment and later checks.
+Usable checks are prepared before implementing the behavior they guide. Some are needed to complete the increment; others belong to later delivery or actual use and need assigned responsibility and timing. The current agreement includes any measurement or record-keeping capability these checks will need, even when they run later.
 
-The agreement also includes checks of whether intended participants can use the result. Representative tasks, relevant exceptions and handoffs test use with the guidance, support and prerequisites they will actually have. Where use without a briefing is expected, it must be checked that way.
+Checks also cover [whether intended participants can use the result](#agree-on-the-implementation-contract).
 
 #### Example: The Pickup Agreement
 
@@ -184,16 +186,18 @@ The agreement also includes checks of whether intended participants can use the 
 > 1. Customers find the right queue and receive their own food, matched by order number.
 > 2. Every missing order gets a kitchen check and an accurate update to the customer.
 > 3. Every order passes the café's usual food-handling checks.
-> 4. The packer completes both packing and handover within the agreed staff hours and budget.
+> 4. The packer completes both packing and handover within the agreed staff hours and budget, without making new orders miss the café's quoted preparation times.
 > 5. Every collection attempt is recorded accurately, including customers who leave without food.
 >
 > A numbered bag alone cannot satisfy the first check: they must follow the food through to its recipient. They write the scope on the checklist and keep it beside the reviewed sketch; together these record the increment's contract. They note when each check applies and separate rehearsal results from live results.
+>
+> Brief packing pauses are allowed, but each resulting backlog of orders waiting to be packed must clear within five minutes of the interruption that started it. Further pickup enquiries do not reset the clock. If that limit is exceeded or a new order misses its quoted time, staff pause the pickup change and call the owner. Recording and the owner's comparison timings count within the same agreed hours and budget.
 >
 > The owner prepares the recording sheet and tries it from arrival at the entrance through collection or leaving without food. Every attempt is captured. During the live trial, recorded times must also match the owner's comparison timings within ten seconds. All five checks must pass during busy service before the setup is accepted for regular use.
 
 #### Prepare the Next Scenario
 
-Scenario checks can develop one concrete behavior at a time within the increment's agreed expectations. For the next behavior, agree its expected result and prepare its check before implementing it. The scenario list grows as understanding develops; a complete, frozen test suite is not required upfront. The [scenario guidance](#prepare-scenario-checks) and [readiness rules](#check-readiness-before-committing) apply to the work being started.
+Scenario checks can develop one concrete behavior at a time within the increment's agreed expectations. For the next behavior, agree its expected result and prepare its check before implementing it. The scenario list grows as understanding develops; a complete set of checks fixed in advance is not required. The [scenario guidance](#prepare-scenario-checks) and [readiness rules](#check-readiness-before-committing) apply to the work being started.
 
 The café's routing check in [Implement](#implement) shows how to start with one behavior.
 
@@ -225,7 +229,7 @@ Where relevant, verification also covers documentation, quality and readiness fo
 
 ![Implement: a worker hands over order 17, matching the customer's phone, while the manager records checks during the live trial.](assets/cafe-implement.png)
 
-> **At the café — Build and Rehearse:** The team puts the sketch and checklist on the counter and starts making the plan real. They first run the checks they can against the current service. The recording check fails: nobody records arrivals or customers leaving empty-handed. Checks requiring the new pickup point remain “not yet tested.”
+> **At the café — Build and Rehearse:** The team puts the sketch and checklist on the counter and starts making the plan real. They first run the checks they can against the current service. The owner's earlier observations have not become an operating routine: staff still do not record arrivals or customers leaving empty-handed, so the recording check fails. Checks requiring the new pickup point remain “not yet tested.”
 >
 > First, collection customers must find pickup without joining the order queue. Staff clear space within the packer's reach and install the entrance directions, with Order on the left and Pickup on the right. Colleagues approach as customers while others form a queue. One joins the wrong line: people standing in front of the entrance sign hide its arrow. Staff move the sign higher, update the sketch, and repeat the walk-through. Both routes now work in this check.
 >
@@ -239,7 +243,7 @@ Where relevant, verification also covers documentation, quality and readiness fo
 >
 > **Check the Full Lunch Service.** Once the small trial passes, they run a full lunchtime trial, checking customer routing and how the kitchen, packing, and pickup work together. All five checks pass during that lunch. Of 20 collection arrivals, 18 receive food within five minutes; two take longer and none leave without food.
 >
-> Staff also observe two brief pauses in packing during longer pickup enquiries. New orders wait, but the temporary queue clears after each enquiry without extra staff hours. One lunch does not establish the first week's benefit.
+> Staff also observe two brief pauses in packing during longer pickup enquiries. New orders wait, but each backlog clears within five minutes of the interruption that started it and the orders stay within their quoted preparation times. Staff recording and the owner's comparison timings fit within the agreed hours and budget, without extra staff hours. One lunch does not establish the first week's benefit.
 
 ### Deliver
 
@@ -255,13 +259,17 @@ Pending checks connect closure to later decisions. For every permitted pending c
 
 ![Deliver: the manager and workers review pickup performance together, comparing the 70% first-week result with the 90% target.](assets/cafe-deliver-learn.png)
 
-> **At the café:** The owner accepts regular use of the current setup. The required checks passed, waiting times look promising, and the arrangement is inexpensive to reverse. The packing pauses need watching even though the queue cleared in the trial. Staff take over using the updated sketch and checklist; customers use the entrance directions. The owner keeps the staff reference and customer directions current when the process changes. If packing cannot keep up or a required operating check fails, they pause the affected work and call the owner.
+*The dashboard illustrates the story. The outcome measure counts every collection attempt, including departures without food; the timing bars alone do not show that complete record.*
+
+> **At the café:** The owner accepts regular use of the current setup. The required checks passed, waiting times look promising, and the arrangement is inexpensive to reverse. The packing pauses need watching even though the queue cleared in the trial. Staff take over using the updated sketch and checklist, including the backlog and new-order limits; customers use the entrance directions. The owner keeps the staff reference and customer directions current when the process changes. If packing cannot keep up or a required operating check fails, they pause the affected work and call the owner.
 >
 > With handover complete, the setup work can close. The owner remains responsible for reviewing the first week's waiting times and packing observations and acting on the results. Until then, the weekly benefit remains unproven.
 >
 > At the end of that week, the result is **seven in ten**.
 >
 > The target was nine.
+>
+> The observed rate is higher than the four-in-ten baseline. The comparison alone does not establish how much improvement the pickup change caused; demand and order mix may differ.
 >
 > The setup passed its delivery checks, but too many customers still wait too long or leave without food. The change has not achieved the benefit that justified it.
 >
@@ -281,18 +289,20 @@ While the result remains in use, the receiving owner is responsible for relevant
 
 This reference supports decisions and work throughout the journey, whether the project changes software, a service, a physical product or a way of working.
 
-The summaries explain the concepts; the expandable Working Guidance contains the applicable rules and conditions.
+The summaries explain the concepts; the expandable Working Guidance contains the applicable rules and conditions. The index points to guidance for common decisions. Examples use particular layouts and records to illustrate the rules; those formats are not requirements for every project.
 
 | When You Need To… | Guidance |
 | --- | --- |
+| Choose what to pursue and who can decide | [Define](#define) |
+| Design how the system and its parts work | [Design](#design) |
 | Choose how much preparation is enough | [Coverage and stopping conditions](#cover-the-system-and-its-parts) and [scale and reuse](#apply-the-model-at-a-useful-scale) |
-| Continue work or hand it over | [Advance With Evidence](#advance-with-evidence), [connected use and maintenance](#use-and-maintain-mocks-and-checks), [delivery and current guidance](#deliver), and the [handover note](#example-a-handover-note) |
-| Coordinate contributions and changes across teams | [Affected decisions](#advance-with-evidence), [coordinated updates](#use-and-maintain-mocks-and-checks), and [contributions within a larger project](#apply-the-model-at-a-useful-scale) |
+| Continue work, hand it over or close the project | [Advance With Evidence](#advance-with-evidence), [connected use and maintenance](#use-and-maintain-mocks-and-checks), [acceptance, handover and closure](#deliver), and the [handover note](#example-a-handover-note) |
+| Coordinate contributions and changes across teams | [Affected decisions](#decisions-and-commitments), [coordinated updates](#use-and-maintain-mocks-and-checks), and [contributions within a larger project](#apply-the-model-at-a-useful-scale) |
 | Monitor use and assess benefits | [Delivery and outcome review](#deliver) and [After the Project Closes](#after-the-project-closes) |
 | Review a design through mocks | [Coverage and stopping conditions](#cover-the-system-and-its-parts) and [review findings](#review-and-carry-findings-forward) |
 | Agree and prepare checks | [Test development](#develop-tests-throughout), the [implementation contract](#agree-on-the-implementation-contract), [scenarios](#prepare-scenario-checks), and [assessment validation](#validate-assessments) |
-| Understand an unexpected result | [Investigate findings](#advance-with-evidence) and [interpret results](#interpret-results) |
-| Make a consequential commitment | [Readiness, required checks and exceptions](#check-readiness-before-committing) |
+| Understand an unexpected result | [Investigate findings](#use-and-maintain-mocks-and-checks) and [interpret results](#interpret-results) |
+| Make a consequential commitment | [Readiness, required checks and exceptions](#check-readiness-before-committing) and [live-service timing](#live-services) |
 | Replace stand-ins and interpret their evidence | [Progressive replacement and evidence limits](#replace-mocks-with-reality-progressively) and [mock/test relationships](#connect-mocks-and-tests) |
 | Work within a larger project or system | [Apply the Model at a Useful Scale](#apply-the-model-at-a-useful-scale) |
 
@@ -366,11 +376,13 @@ Assessment can be manual or automated. Before anyone relies on a method, its too
 
 All agreed expectations assigned to the increment belong in that agreement: what it must do, how people or parts exchange work or information, the required quality and limits, and how those people or parts work together. Those responsibilities determine the tests, not what is easiest to pass.
 
+The agreement also includes checks of whether intended participants can use the result. Representative tasks, relevant exceptions and handoffs test use with the guidance, support and prerequisites they will actually have. Where use without a briefing is expected, it must be checked that way.
+
 The agreement brings together the applicable scope and constraints, inherited requirements, agreed design, and decisions from mock reviews or real experiments. It must be findable from the increment's existing record. That record can state the expectations or reference the specific current design, reviewed mocks and tests that apply. No separate contract document or test framework is required. The [café's sketch and checklist](#example-the-pickup-agreement) show one way to record this agreement.
 
 The checks follow the same parts and levels as the mocks. They must cover each part's agreed responsibilities, requirements, constraints, interfaces and interactions, including how parts work together within their larger parts and across the whole system. A shared check can cover several parts while assessing each part's agreed expectations. The choice of manual or automated checks, including assessments of an AI agent's behavior where relevant, depends on what each can credibly establish.
 
-Tests can begin in any of the six steps, and mock review informs and refines them. The design and its reasons remain alongside the checks. The coverage question is: **could all these checks pass while an important part of the intended result is missing or wrong?** Any gap in assessment must be identified and addressed against the agreed need and success criteria. An omitted or inadequate test does not remove an agreed expectation.
+Mock review informs and refines the tests. The design and its reasons remain alongside the checks. The coverage question is: **could all these checks pass while an important part of the intended result is missing or wrong?** Any gap in assessment must be identified and addressed against the agreed need and success criteria. An omitted or inadequate test does not remove an agreed expectation.
 
 For the [checks prepared before implementation](#develop-tests-throughout), the agreement states the conditions, what a pass looks like, the evidence needed and which commitments depend on the result. It identifies checks that need real people or parts working together.
 
@@ -380,9 +392,11 @@ Checks needed to complete this increment remain distinct from those assigned to 
 
 #### Prepare Scenario Checks
 
-A scenario gives a check a concrete situation: **given these conditions, when this action or event occurs, then this observable result is expected**. Scenarios help participants agree relevant rules, assumptions and open questions. Expected results come from the agreed expectations, independently of what the implementation happens to produce. Observable results are preferred; a particular interaction is checked when that interaction is itself required behavior.
+A scenario gives a check a concrete situation: **given these conditions, when this action or event occurs, then this observable result is expected**. Scenarios help participants agree relevant rules, assumptions and open questions. Expected results come from the agreed expectations, independently of what the implementation happens to produce.
 
-The increment's scenarios form a working list. The next behavior is selected and a usable check is prepared for it before implementation. As understanding grows, the list and affected checks are extended. The whole suite need not be complete or frozen before implementation begins. The [readiness rules](#check-readiness-before-committing) still apply to each commitment.
+Observable results are preferred. An interaction also needs checking when it is itself required: for a missing order, the café requires a kitchen check as well as an accurate customer update.
+
+The increment's scenarios form a working list. The next behavior is selected and a usable check is prepared for it before implementation. As understanding grows, the list and affected checks are extended. The whole set of checks need not be complete or fixed before implementation begins. The [readiness rules](#check-readiness-before-committing) still apply to each commitment.
 
 #### Validate Assessments
 
@@ -398,13 +412,17 @@ Mistaken acceptance or rejection needs investigation. Where judgment matters, co
 
 #### Interpret Results
 
-An assessment sometimes cannot establish whether a criterion was met. The check then stays **pending**, with the reason explained. A problem with the person, tool, process or supporting systems used for assessment is recorded separately from the work being assessed. An unsuccessful assessment attempt supplies neither a valid pass nor proof that the work violates the criterion. Inability to access evidence differs from reliable evidence that a required result is absent; insufficient evidence must remain explicit.
-
 The three outcomes are:
 
 - **Passed:** valid, applicable evidence shows that the agreed criteria were met under the recorded conditions.
 - **Failed:** the check ran and its criteria were not met. This includes a check that fails as expected because the real component has not yet been built; record why it failed.
 - **Pending:** no valid outcome is available yet: the check has not run or completed, or the assessment could not determine whether its criteria were met. This differs from a valid failed result; neither status is a pass.
+
+An assessment sometimes cannot establish whether a criterion was met. The check then stays **pending**, with the reason explained. A problem with the person, tool, process or supporting systems used for assessment is recorded separately from the work being assessed. An unsuccessful assessment attempt supplies neither a valid pass nor proof that the work violates the criterion. Inability to access evidence differs from reliable evidence that a required result is absent; insufficient evidence must remain explicit.
+
+For example, an observed collection attempt missing from the completed record fails the recording check. If the record is inaccessible and the assessment cannot determine whether the attempt was recorded, the check remains pending.
+
+A pass for one case does not establish how reliably the result will work across future cases. Further observations can reduce uncertainty or reveal variation, including when the stated conditions are unchanged. Their value depends on what they could change about the next decision. Later passes do not erase earlier failures or their follow-up decisions.
 
 Every known failure needs a recorded decision and any follow-up, even when it does not block the next commitment. For an expected failure caused by work not yet implemented, the existing agreement to complete that work can serve as the record. A failure that challenges the agreement needs a further decision. Approved exceptions are recorded separately. The same evidence limits apply to contract tests, internal verification and later project checks.
 
@@ -453,7 +471,7 @@ Using the [full-lunch trial evidence](#implement), the owner compares three poss
 
 ##### Another Limited Trial
 
-The owner would run another limited trial if a different order mix could expose a sustained packing delay that would change operating limits, and answering that question would be worth the cost or delay. Repeating the same conditions merely to accumulate passes adds little.
+The owner would run another limited trial if a different order mix could expose a sustained packing delay that would change operating limits, and answering that question would be worth the cost or delay. A similar lunch could also be worth observing if it would reduce uncertainty enough to change that decision. Repetition just to raise a pass count adds little; the question is what another observation could establish.
 
 ##### Regular Use of the Current Setup
 
@@ -461,7 +479,7 @@ The owner accepts the inexpensive, reversible arrangement with monitoring: requi
 
 ##### An Expensive Permanent Counter Refit
 
-The owner defers this hard-to-reverse investment. One lunch does not establish sustained benefit or justify the refit against cheaper options. Evidence that the refit would offer enough advantage over the current or cheaper arrangement to justify its extra cost could change that judgment. The owner would gather that evidence if its likely benefit for this decision were worth the effort. The refit's design, budget and authorization must also be ready.
+The owner defers this hard-to-reverse investment. One lunch does not establish sustained benefit or justify the refit against cheaper options. The owner would reconsider if evidence showed that the refit offered enough advantage over the current or a cheaper arrangement to justify its extra cost. They would gather that evidence if its likely value for the refit decision were worth the effort. The refit's design, budget and authorization must also be ready.
 
 If an equally suitable, cheaper arrangement already meets those needs, the owner can stop pursuing the refit; more successful pickup trials would not justify its extra cost.
 
@@ -482,13 +500,13 @@ As stand-ins become real parts and rehearsals become live practice, [each change
 
 #### Cover the System and Its Parts
 
-Mock coverage follows the system defined in Design. It must let people review how each element fulfils its responsibilities, meets its requirements and constraints, and interacts with other elements. These are the **significant aspects** of its design.
+Mock coverage follows the system defined in [Design](#design). It must let people review how each element fulfils its responsibilities, meets its requirements and constraints, and interacts with other elements. These are the **significant aspects** of its design.
 
 The coverage includes the whole system and every part, down to smaller parts at every level. Each part’s own purpose and responsibilities need consideration as its design develops. Being small does not remove it from consideration.
 
-Simple mocks or rehearsals prioritize coverage over polish. One mock or still-applicable review evidence can cover several parts when the review addresses each part’s significant aspects and interactions under relevant conditions. A separate mock or [full execution cycle](#apply-the-model-at-a-useful-scale) is not required for every part.
+Simple mocks or rehearsals prioritize coverage over polish. Start with the current design and applicable review evidence. One mock or still-applicable evidence can cover several parts when the review addresses each part’s significant aspects and interactions under relevant conditions. This coverage can be reused; a separate mock, repeated review or [full execution cycle](#apply-the-model-at-a-useful-scale) is not required merely because the design has several parts.
 
-Coverage also gives mock preparation a stopping point. Before adding detail, ask what significant aspect remains unreviewed or what material question it could answer for the [next commitment](#check-readiness-before-committing). Stop adding detail when applicable review covers those needs. Design changes, changed conditions or new findings require the affected coverage to be revisited. Exploration follows risk, uncertainty and what further evidence could change; naming more parts alone does not require more mocks.
+Coverage also gives mock preparation a stopping point. For the [next commitment](#check-readiness-before-committing), identify any significant aspect still unreviewed or material question left unanswered. Further detail or review addresses those remaining needs. Stop adding detail when applicable review covers them. Design changes, changed conditions or new findings reopen the affected coverage; retain what still applies. Exploration follows risk, uncertainty and what further evidence could change. Naming more parts alone does not require more mocks or reviews, but an uncovered responsibility or interaction still needs attention.
 
 At the café, one rehearsal can review directions, order numbers and handover together. A rehearsal of successful collections alone would leave the kitchen check and customer update for a missing order unreviewed. Rehearsal does not establish how the real lunch service performs.
 
@@ -517,7 +535,7 @@ A mock may help people decide what to check or create controlled conditions for 
 | Test a mock itself | Check whether the mock is suitable for exploration or behaves as intended. A reusable substitute can also be checked for how faithfully it represents the relevant design. The result applies to the mock. |
 | Apply suitable shared checks to a substitute and its real replacement | Check relevant interface and behavior expectations and spot differences as the design or implementation changes. Wider behavior and the real parts working together still need their own evidence. |
 
-These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Stand-ins for supporting parts may remain useful for [controlled conditions](#connect-mocks-and-tests) after implementation, such as replies that do not arrive in time. Their passes support only what was actually tested; they do not prove that the substituted component works or that the real parts work together. Checks of the real parts and combined result are still needed.
+These relationships need no one-to-one mapping. A manual prototype review can inform a later automated check. Stand-ins for supporting parts may remain useful for [controlled conditions](#connect-mocks-and-tests) after implementation, such as replies that do not arrive in time. Their passes support only what was actually tested; they do not prove that the real part represented by the stand-in works or that the real parts work together. Checks of the real parts and combined result are still needed.
 
 #### Use and Maintain Mocks and Checks
 
@@ -545,7 +563,7 @@ For the [owner's decision after the full-lunch trial](#check-readiness-before-co
 >
 > **Passed:** the five agreed checks in the [full-lunch trial](#implement). Packing briefly paused, but the queue cleared without extra staff hours. This supports monitored use of the inexpensive, reversible setup.
 >
-> **Pending:** the [first-week benefit check](#define). Record every collection attempt from café arrival to handover or leaving without food, and watch packing. If packing cannot keep up or a [required operating check](#check-readiness-before-committing) fails, pause the affected work and call me.
+> **Pending:** the [first-week benefit check](#define). Record every collection attempt from café arrival to handover or leaving without food, and watch packing against our five-minute backlog limit and quoted new-order times. If packing cannot keep up or a [required operating check](#check-readiness-before-committing) fails, pause the affected work and call me.
 >
 > At the end of the first week of regular use, I’ll compare the waiting times with our target, review packing and decide whether to continue, improve, reconsider or stop. Setup work can close after handover; I retain this review.
 
@@ -565,4 +583,4 @@ The level of coordination and checking follows risk, uncertainty and complexity.
 
 ## Boundary
 
-This model is self-contained guidance for project execution. General definitions and rules for work, roles, work-item structures, and the mechanics of operational planning belong to the separate Work Management Model.
+This model is self-contained guidance for project execution: it can be understood and used without adopting another model. It works with the project's existing arrangements for planning, coordination and decision authority. General definitions and rules for work, roles, work-item structures, and the mechanics of operational planning belong to the separate Work Management Model.
