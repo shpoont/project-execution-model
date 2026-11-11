@@ -3,6 +3,54 @@
 Versioned summaries of changes to the model. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
 
+## [v1.3.2 — Clearer Explanations and Examples](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.2) — 2026-11-11
+
+### Changed
+
+- Added a compact shelf story across all six steps. Show sufficient
+  preparation for a small change, reuse of existing information and ordinary
+  notes, checks of the real result, and a separate check of the benefit in use.
+- Reworked the journey and Main Concepts as connected explanations, with
+  short introductions and expandable Working Guidance. Improved navigation
+  for early decisions, preparation, coordination, checks, handover and closure.
+- Clarified how the six steps build on one another without requiring each
+  to finish before another starts. Retained readiness judgment for each
+  consequential action and connected changed demands to decision authority.
+- Consolidated intended-use checks in the implementation contract. Clarified
+  test timing, present measurement capability for later checks, valid failure
+  versus indeterminate assessment, and what repeated observations can establish.
+- Made reuse and stopping conditions clearer without reducing whole-system
+  or designed-part coverage. Kept operational planning mechanics outside PEM.
+- Kept the café opening with Define and labelled its images, numbers and
+  operating limits as illustrative. Added starting observations, a packing
+  backlog clock that further enquiries do not reset, quoted-time limits and
+  their response. Carried those limits into the trial and handover; distinguished
+  an observed improvement from causal proof and qualified the dashboard evidence.
+
+This patch explains and illustrates existing guidance. Retained the six
+recurring steps, five Main Concepts, mocks-first and tests-first direction,
+justified bounded trials, coverage, evidence and authority safeguards, real
+combined verification, later outcome ownership and closure. Added no stage,
+required document or general operating threshold. The figures, initial release
+date and earlier version tags are unchanged.
+
+Comparative Pro reviews, editorial cycles, independent complete-source
+preservation checks and hypothetical applications found no required correction
+within their reviewed scopes. The final small wording changes received a
+separate preservation check and targeted Pro verification. The user read and
+approved the final model. These checks support documentary readiness, not
+measured unfamiliar-human usability, reduced effort or real-project
+effectiveness. The document remains a substantial reference; hosted rendering
+and assistive-technology behavior remain unverified.
+
+Sources: [small worked example (#29)](https://github.com/shpoont/project-execution-model/pull/29),
+addressing [issue #28](https://github.com/shpoont/project-execution-model/issues/28),
+and [readability revision (#32)](https://github.com/shpoont/project-execution-model/pull/32),
+addressing the model-document part of
+[issue #30](https://github.com/shpoont/project-execution-model/issues/30).
+The separate editorial-cycle skill work and practical validation are not
+claimed by this release.
+
 ## [v1.3.1 — Guidance for Intended Use](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.1) — 2026-11-06
 
 ### Changed

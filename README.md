@@ -48,16 +48,17 @@ check supports only what was tested; failed or pending checks are not passes.
 
 ## Start Here
 
-Start with a current need: who needs what, and why? Follow the full model's
-[café journey](docs/project-execution-model.md#the-project-journey), then use
+Start with a current need: who needs what, and why? Read the
+[Project Journey](docs/project-execution-model.md#the-project-journey) for a
+small shelf example and a fuller café story. Use
 [Main Concepts](docs/project-execution-model.md#main-concepts) as a working
-reference for its complete guidance.
+reference for the complete guidance.
 
 ## Documents
 
-- [Model v1.3.1 — Guidance for Intended Use](docs/project-execution-model.md)
-  — the full model, café example, and detailed guidance.
-- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.1)
+- [Model v1.3.2 — Clearer Explanations and Examples](docs/project-execution-model.md)
+  — the full model, worked examples, and detailed guidance.
+- [Release notes](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.2)
   — changes in the current release.
 - [Decision log](docs/decision-log.md) — lasting decisions and their rationale.
   The model document contains the guidance to use.

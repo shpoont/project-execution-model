@@ -1,6 +1,6 @@
 # Project Execution Model
 
-*Version 1.3.1 — Guidance for Intended Use | Released 6 November 2026*
+*Version 1.3.2 — Clearer Explanations and Examples | Released 11 November 2026*
 
 *Initial release: 22 September 2026*
 

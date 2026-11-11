@@ -730,3 +730,87 @@ wording and illustration preferences remain follow-ups.
 [real-result verification](project-execution-model.md#implement),
 [handover and upkeep](project-execution-model.md#deliver)
 and [changelog](../CHANGELOG.md).
+
+## D31 — 2026-11-07: Show Proportionate Preparation Through a Small Example
+
+**Status: adopted for v1.3.2.** Adopt the clarification from
+[issue #28](https://github.com/shpoont/project-execution-model/issues/28), merged
+in [PR #29](https://github.com/shpoont/project-execution-model/pull/29).
+
+Make lightweight use easier to judge without asking readers to reconstruct
+the existing proportionality rules from several sections. Start with the
+next commitment: what evidence and review are needed, what still applies,
+and what is the simplest credible way to cover the rest?
+
+Use one compact classroom-shelf story across the six steps. Existing product
+information and class notes support the work. A taped outline reveals a
+positioning problem before purchase; prepared checks then assess the real
+assembled and loaded result. The next class supplies separate evidence of
+the intended benefit, with continuing ownership of the arrangement.
+
+The example illustrates sufficient preparation for that change, not a new
+universal minimum or permission to omit obligations. Preserve significant
+coverage, manual review where required, tests before the work they guide,
+readiness and authorization, and the justified bounded-trial routes. Reuse
+applicable evidence and records rather than require new artifacts.
+
+Reviews and hypothetical applications support the example's clarity and
+preservation of existing guidance. They do not establish physical safety,
+reduced project effort or improved outcomes in actual use.
+
+**Current guidance:** [small example and project journey](project-execution-model.md#the-project-journey),
+[coverage and stopping](project-execution-model.md#cover-the-system-and-its-parts)
+and [changelog](../CHANGELOG.md).
+
+## D32 — 2026-11-11: Explain the Model Clearly While Preserving Its Substance
+
+**Status: adopted for v1.3.2.** Adopt the model-document revision from
+[issue #30](https://github.com/shpoont/project-execution-model/issues/30), merged
+in [PR #32](https://github.com/shpoont/project-execution-model/pull/32).
+
+Explain the work and its reasons in connected prose rather than relying on
+long sequences of commands. Keep the learning journey and complete working
+reference in one model. Short concept introductions, expandable Working
+Guidance and direct lookup routes serve different reading needs; summaries
+do not replace the applicable rules and conditions.
+
+Keep all six steps in their existing order, with Mock prominent. The order
+shows how work builds within one iterative process, not a requirement to
+finish one step before another begins. Tests can develop with expectations,
+and implementation and delivery can overlap. Readiness remains specific to
+the consequential action; findings return changed demands to the people
+responsible for priorities, resources and commitments. PEM remains usable
+without adopting the Work Management Model or its planning mechanics.
+
+Give intended-use checks one complete home in the implementation agreement.
+Clarify current measurement capability for later checks, evidence reuse,
+coverage and stopping, failure versus an indeterminate assessment, and the
+value of another observation without weakening any existing condition.
+Retain the distinction between acceptance, actual benefit and constraints,
+along with real combined verification, authority, exceptions and later owners.
+
+Keep the café opening in Define. Mark the story and figures as illustrative;
+use starting observations, a backlog clock with no reset on further enquiries,
+quoted-time limits and their operating response to make the example concrete.
+Carry those conditions into the trial and handover. Preserve the target and
+outcomes, and distinguish an observed improvement from proof of causation.
+These example details add no general operating threshold.
+
+Release D31 and this revision as **v1.3.2 — Clearer Explanations and Examples**.
+Use a patch version because the changes explain and illustrate the existing
+model without adding a stage, required document or execution route. Retain
+the six steps, five Main Concepts, all rules and qualifications, shelf story,
+figures, initial release date and earlier version tags.
+
+Independent complete-source preservation and fresh blind comprehension
+reviews, comparative Pro reviews and checks of the final wording found no
+required correction within their scopes. The user read and approved the
+final model. This supports documentary readiness, not measured human
+readability or real-project effectiveness; some reference density remains.
+The editorial-cycle skill work and practical validation remain separate
+from this adopted document revision.
+
+**Current guidance:** [project journey](project-execution-model.md#the-project-journey),
+[working reference](project-execution-model.md#main-concepts),
+[implementation agreement](project-execution-model.md#agree-on-the-implementation-contract)
+and [changelog](../CHANGELOG.md).
