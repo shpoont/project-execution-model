@@ -1,7 +1,34 @@
 # Changelog
 
-Versioned summaries of changes to the model. For lasting decisions and their
+Versioned summaries of model and repository changes. For lasting decisions and their
 rationale, see the [decision log](docs/decision-log.md).
+
+## [v2.0.0 — Published Deliverables and Project Structure](https://github.com/shpoont/project-execution-model/releases/tag/v2.0.0) — 2026-11-11
+
+### Changed
+
+- Moved the canonical model to `deliverables/project-execution-model.md` and
+  its five PNG illustrations to `deliverables/assets/`. Added a published-results
+  page with tagged models, release notes and earlier versions.
+- Moved the editable overview HTML to `src/diagrams/`. Retained one maintained
+  source for the model and each image; the model is editable Markdown as delivered.
+- Adopted Project Structure v1.1.0 for maintaining this repository. Added a
+  project agreement and connected contributor, repository, check, evidence and
+  delivery guides. Active agreements remain in GitHub issues and pull requests.
+- Updated current links and release references. Kept a forwarding document at
+  the old model path, including its section routes, and left earlier tags fixed.
+
+This major version changes published file paths. Update raw-model, direct image
+or diagram-source URLs that follow a moving branch. Existing pinned releases
+remain unchanged. The model body and rules are unchanged apart from its release
+line; image bytes, placement, author, initial release date and legal text are
+preserved. Repository guidance adds no requirements for projects using PEM.
+
+The [adoption record](evidence/project-structure-adoption.md) reports the checks
+and their limits. Source preservation and simulated reader tasks support
+documentary readiness, not actual adoption or improved project outcomes.
+
+Source: [repository adoption (#31)](https://github.com/shpoont/project-execution-model/issues/31).
 
 ## [v1.3.2 — Clearer Explanations and Examples](https://github.com/shpoont/project-execution-model/releases/tag/v1.3.2) — 2026-11-11
 
